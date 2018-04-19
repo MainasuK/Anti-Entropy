@@ -1,0 +1,6 @@
+framework module Pods_Anti_EntropyTests {
+  umbrella header "Pods-Anti-EntropyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
