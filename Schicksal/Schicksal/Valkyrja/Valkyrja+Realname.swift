@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct KianaKaslana: Explanation {
+struct KianaKaslana: Explainable {
     var caption_EN: String = "Kiana Kaslana"
     var content_EN: String = ""
 
@@ -19,7 +19,7 @@ struct KianaKaslana: Explanation {
     var content_JP: String = ""
 }
 
-struct RaidenMei: Explanation {
+struct RaidenMei: Explainable {
     var caption_EN: String = "Raiden Mei"
     var content_EN: String = ""
 
@@ -31,7 +31,7 @@ struct RaidenMei: Explanation {
 }
 
 
-struct BronyaZaychik: Explanation {
+struct BronyaZaychik: Explainable {
     var caption_EN: String = "Bronya Zaychik"
     var content_EN: String = ""
 

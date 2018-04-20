@@ -8,10 +8,10 @@
 
 import Foundation
 
-public let SKS_WhiteComet_LeaderSkill: Skill = .leaderSkill(SK_WhiteComet_MeteorBless(), [SK_WhiteComet_Guider()])
+//public let SKS_WhiteComet_LeaderSkill: Skill = .leaderSkill(SK_WhiteComet_MeteorBless(), [SK_WhiteComet_Guider()])
 
 // MARK: - Meteor Bless - Guider
-struct SK_WhiteComet_MeteorBless_Guider_Explanation: Explanation {
+struct SK_WhiteComet_MeteorBless_Guider_Explainable: Explainable {
     let caption_EN: String = "Guider"
     let content_EN: String = """
         Increases maximum HP by 10% during team battles
@@ -22,22 +22,17 @@ struct SK_WhiteComet_MeteorBless_Guider_Explanation: Explanation {
 
     let caption_JP: String = "導く者"
     let content_JP: String = """
-        戦闘中チーム全員のHP上限+10%
+        戦闘中チーム全員のHP上限+18%
         """
 }
 
 struct SK_WhiteComet_MeteorBless_Guider: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_MeteorBless_Guider_Explanation()
-    let skillType: SkillType = .buff
-}
-
-extension SK_WhiteComet_MeteorBless_Guider {
-    var passiveHPUP: Percentage { return 0.10 }
+    let skillType: DamageType = .buff
 }
 
 
 // MARK: - Meteor Bless
-struct SK_WhiteComet_MeteorBless_Explanation: Explanation {
+struct SK_WhiteComet_MeteorBless_Explainable: Explainable {
     let caption_EN: String = "Meteor Bless"
     let content_EN: String = """
         Team receives bonus if leader
@@ -53,13 +48,12 @@ struct SK_WhiteComet_MeteorBless_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorBless: MainSkill {
-    let explanation: Explanation = SK_WhiteComet_MeteorBless_Explanation()
-    let skillType: SkillType = .buff
-    let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorBless_Guider()]
+    let skillType: DamageType = .buff
+//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorBless_Guider()]
 }
 
 // MARK: - Guide
-struct SK_WhiteComet_Guider_Explanation: Explanation {
+struct SK_WhiteComet_Guider_Explainable: Explainable {
     let caption_EN: String = "Guider"
     let content_EN: String = """
         Increases maximum HP by 18% during team battles
@@ -75,11 +69,10 @@ struct SK_WhiteComet_Guider_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_Guider: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_Guider_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .A
 }
 
 extension SK_WhiteComet_Guider {
-    var passiveHPUP: Percentage { return 0.080 }    // except 0.10 UP in passive skill
+    var passiveHPUP: Percentage { return 0.180 }
 }

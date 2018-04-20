@@ -13,15 +13,14 @@ struct S_JixuanyuanAqua_C: Stigmata {
     let position: StigmataPosition = .C
     let starRank: StarRank = 3
     let lvRank: [StigmataLv] = [.twentyFive, .thirtyFive]
-    let explanation: Explanation = S_JixuanyuanAqua_Explanation()
-    var skillExplanation: [Explanation] {
-        switch currentLv {
-        case .twentyFive: return [S_JixuanyuanAqua_C_Skill_Explanation_25()]
-        default:          return [S_JixuanyuanAqua_C_Skill_Explanation_35()]
-        }
-    }
-    let twoSetsSkillExplanation: Explanation = S_JixuanyuanAqua_2Sets_Skill_Explanation()
-    let threeSetsSkillExplanation: Explanation = S_JixuanyuanAqua_3Sets_Skill_Explanation()
+//    var skillExplainable: [Explainable] {
+//        switch currentLv {
+//        case .twentyFive: return [S_JixuanyuanAqua_C_Skill_Explainable_25()]
+//        default:          return [S_JixuanyuanAqua_C_Skill_Explainable_35()]
+//        }
+//    }
+//    let twoSetsSkillExplainable: Explainable = S_JixuanyuanAqua_2Sets_Skill_Explainable()
+//    let threeSetsSkillExplainable: Explainable = S_JixuanyuanAqua_3Sets_Skill_Explainable()
 
     var currentLv: StigmataLv
 

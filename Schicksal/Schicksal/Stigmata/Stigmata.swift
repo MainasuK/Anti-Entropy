@@ -11,13 +11,13 @@ import Foundation
 public typealias StigmataTag = String
 public typealias StarRank = Int
 
-public enum StigmataPosition {
+public enum StigmataPosition: String, Codable {
     case T
     case C      // a.k.a M
     case B
 }
 
-public enum StigmataLv: Int {
+public enum StigmataLv: Int, Codable {
     /// 5
     case five       = 5
     /// 15
@@ -44,26 +44,22 @@ struct EmptyStigmataSetSkill: Measurable {
     let criticalDamageUP: Percentage       = 0.0
 }
 
-protocol StigmataSetSkill {
-    var twoSuits: Explanation { get }
-    var threeSuits: Explanation { get }
-
-    var twoSuitEffect: Measurable { get }
-    var threeSuitEffect: Measurable { get }
-
-    var twoSuitEffectSwitch: Bool { get set }
-    var threeSuitEffectSwitch: Bool { get set }
-}
+//protocol StigmataSetSkill {
+//    var twoSuits: Explainable { get }
+//    var threeSuits: Explainable { get }
+//
+//    var twoSuitEffect: Measurable { get }
+//    var threeSuitEffect: Measurable { get }
+//
+//    var twoSuitEffectSwitch: Bool { get set }
+//    var threeSuitEffectSwitch: Bool { get set }
+//}
 
 public protocol Stigmata: Measurable {
     var tag: StigmataTag { get }
     var position: StigmataPosition { get }
     var starRank: StarRank { get }
     var lvRank: [StigmataLv] { get }
-    var explanation: Explanation { get }
-    var skillExplanation: [Explanation] { get }
-    var twoSetsSkillExplanation: Explanation { get }
-    var threeSetsSkillExplanation: Explanation { get }
 
     var currentLv: StigmataLv { get set }
 
@@ -85,43 +81,52 @@ extension Stigmata {
     }
 
     public var name: String {
-        return explanation.caption + positionName
+//        return explanation.caption + positionName
+        return positionName
     }
+
+    var skillExplainable: String { return "" }
+    public var twoSetsSkillExplainable: String { return "" }
+    public var threeSetsSkillExplainable: String { return "" }
 
 }
 
-public struct StigmataSuit {
-    var suit: [StigmataPosition: Stigmata]
+public struct StigmataSuit: Codable {
+//    public var suit: [StigmataPosition: Stigmata]
+//
+//    public init(suit: [StigmataPosition: Stigmata] = [:]) {
+//        self.suit = suit
+//    }
 }
 
 extension StigmataSuit {
 
     var isTwoSuit: Bool {
-        guard suit.values.count != 1 else {
-            return false
-        }
-
-        let topTag = suit.filter({ $0.key == .T }).first?.value.tag
-        let centerTag = suit.filter({ $0.key == .C }).first?.value.tag
-        let bottomTag = suit.filter({ $0.key == .B }).first?.value.tag
-
-        if topTag == centerTag { return true }
-        if topTag == bottomTag { return true }
-        if centerTag == bottomTag { return true }
+//        guard suit.values.count != 1 else {
+//            return false
+//        }
+//
+//        let topTag = suit.filter({ $0.key == .T }).first?.value.tag
+//        let centerTag = suit.filter({ $0.key == .C }).first?.value.tag
+//        let bottomTag = suit.filter({ $0.key == .B }).first?.value.tag
+//
+//        if topTag == centerTag { return true }
+//        if topTag == bottomTag { return true }
+//        if centerTag == bottomTag { return true }
 
         return false
     }
 
     var isThreeSuit: Bool {
-        guard suit.values.count == 3 else {
-            return false
-        }
-
-        let topTag = suit.filter({ $0.key == .T }).first?.value.tag
-        let centerTag = suit.filter({ $0.key == .C }).first?.value.tag
-        let bottomTag = suit.filter({ $0.key == .B }).first?.value.tag
-
-        if topTag == centerTag, centerTag == bottomTag { return true }
+//        guard suit.values.count == 3 else {
+//            return false
+//        }
+//
+//        let topTag = suit.filter({ $0.key == .T }).first?.value.tag
+//        let centerTag = suit.filter({ $0.key == .C }).first?.value.tag
+//        let bottomTag = suit.filter({ $0.key == .B }).first?.value.tag
+//
+//        if topTag == centerTag, centerTag == bottomTag { return true }
 
         return false
     }

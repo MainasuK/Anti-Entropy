@@ -14,16 +14,6 @@ struct S_JixuanyuanAqua_T: Stigmata {
     let position: StigmataPosition = .T
     let starRank: StarRank = 3
     let lvRank: [StigmataLv] = [.twentyFive, .thirtyFive]
-    let explanation: Explanation = S_JixuanyuanAqua_Explanation()
-    var skillExplanation: [Explanation] {
-        switch currentLv {
-        case .twentyFive: return [S_JixuanyuanAqua_T_Skill_Explanation_25()]
-        default:          return [S_JixuanyuanAqua_T_Skill_Explanation_35()]
-        }
-    }
-
-    let twoSetsSkillExplanation: Explanation = S_JixuanyuanAqua_2Sets_Skill_Explanation()
-    let threeSetsSkillExplanation: Explanation = S_JixuanyuanAqua_3Sets_Skill_Explanation()
 
     var currentLv: StigmataLv
 
@@ -52,4 +42,15 @@ struct S_JixuanyuanAqua_T: Stigmata {
         }
     }
 
+}
+
+extension S_JixuanyuanAqua_T {
+
+//    var caption: String {
+//        switch currentLv {
+//        case .twentyFive: "Jixuanyuan Aqua"
+//        default:          ""
+//        }
+//    }
+//    
 }

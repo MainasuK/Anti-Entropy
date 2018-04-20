@@ -8,12 +8,12 @@
 
 import Foundation
 
-public let SKS_WhiteComet_Ultimate: Skill = .ultimate(SK_WhiteComet_ValkyrieBurst(), [SK_WhiteComet_ValkyrieImpact(),
-                                                                                      SK_WhiteComet_ValkyrieBarrier(),
-                                                                                      SK_WhiteComet_ValkyrieCharge()])
+//public let SKS_WhiteComet_Ultimate: Skill = .ultimate(SK_WhiteComet_ValkyrieBurst(), [SK_WhiteComet_ValkyrieImpact(),
+//                                                                                      SK_WhiteComet_ValkyrieBarrier(),
+//                                                                                      SK_WhiteComet_ValkyrieCharge()])
 
 // MARK: - Valkyrie Burst - Burst
-struct SK_WhiteComet_ValkyrieBurst_Burst_Explanation: Explanation {
+struct SK_WhiteComet_ValkyrieBurst_Burst_Explainable: Explainable {
     let caption_EN: String = "Burst"
     let content_EN: String = """
         Consumes SP continuously to increase own Attack Speed and Ignore Interrupt.
@@ -29,12 +29,11 @@ struct SK_WhiteComet_ValkyrieBurst_Burst_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ValkyrieBurst_Burst: MainSubskill {
-    let skillType: SkillType = .buff
-    let explanation: Explanation = SK_WhiteComet_ValkyrieBurst_Burst_Explanation()
+    let skillType: DamageType = .buff
 }
 
 // MARK: - Valkyrie Burst - Continuous Burst
-struct SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Explanation: Explanation {
+struct SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Explainable: Explainable {
     let caption_EN: String = "Continuous Burst"
     let content_EN: String = """
         Consumes 20 SP to activate and 10 SP per second until SP is depleted.
@@ -50,12 +49,11 @@ struct SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ValkyrieBurst_ContinuousBurst: MainSubskill {
-    let skillType: SkillType = .buff
-    let explanation: Explanation = SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Explanation()
+    let skillType: DamageType = .buff
 }
 
 // MARK: - Valkyrie Burst
-struct SK_WhiteComet_ValkyrieBurst_Explanation: Explanation {
+struct SK_WhiteComet_ValkyrieBurst_Explainable: Explainable {
     let caption_EN: String = "Valkyrie Burst"
     let content_EN: String = """
         Enters the goddess state using Valkyrie's energy burst.
@@ -71,13 +69,12 @@ struct SK_WhiteComet_ValkyrieBurst_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ValkyrieBurst: MainSkill {
-    let explanation: Explanation = SK_WhiteComet_ValkyrieBurst_Explanation()
-    let skillType: SkillType = .buff
-    let mainSubskills: [MainSubskill] = [SK_WhiteComet_ValkyrieBurst_Burst(), SK_WhiteComet_ValkyrieBurst_ContinuousBurst()]
+    let skillType: DamageType = .buff
+//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_ValkyrieBurst_Burst(), SK_WhiteComet_ValkyrieBurst_ContinuousBurst()]
 }
 
 // MARK: - Valkyrie Impact
-struct SK_WhiteComet_ValkyrieImpact_Explanation: Explanation {
+struct SK_WhiteComet_ValkyrieImpact_Explainable: Explainable {
     let caption_EN: String = "Valkyrie Impact"
     let content_EN: String = """
         Stuns surrounding enemies for 5 sec when Burst occurs, dealing 2610 pysical damage.
@@ -93,8 +90,7 @@ struct SK_WhiteComet_ValkyrieImpact_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ValkyrieImpact: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_ValkyrieImpact_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
@@ -103,7 +99,7 @@ extension SK_WhiteComet_ValkyrieImpact {
 }
 
 // MARK: - Valkyrie Barrier
-struct SK_WhiteComet_ValkyrieBarrier_Explanation: Explanation {
+struct SK_WhiteComet_ValkyrieBarrier_Explainable: Explainable {
     let caption_EN: String = "Valkyrie Barrier"
     let content_EN: String = """
         Grants the whole team protection during Burst, increasing Ignore Interrupt and increasing DEF by 100%
@@ -119,13 +115,12 @@ struct SK_WhiteComet_ValkyrieBarrier_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ValkyrieBarrier: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_ValkyrieBarrier_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .S
 }
 
 // MARK: - Valkyrie Charge
-struct SK_WhiteComet_ValkyrieCharge_Explanation: Explanation {
+struct SK_WhiteComet_ValkyrieCharge_Explainable: Explainable {
     let caption_EN: String = "Valkyrie Charge"
     let content_EN: String = """
         Receives an Energy Charge every 12.0 sec. The next attack stuns enemy for 3.0 sec.
@@ -141,7 +136,6 @@ struct SK_WhiteComet_ValkyrieCharge_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ValkyrieCharge: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_ValkyrieCharge_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .none
 }

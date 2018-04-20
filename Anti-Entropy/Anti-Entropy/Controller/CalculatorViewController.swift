@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import RxSwift
 import Schicksal
 
 class CalculatorViewController: UIViewController {
 
-    var basicStatus = BasicStatus(HP: 697, SP: 104, ATK: 100, DEF: 46, CRT: 11)
+    private let disposeBag = DisposeBag()
+
+    var viewModel = CalculatorViewModel()
 
     // All buff damage - 1 sections (0)
     var damage = [Measurable]()
 
+    // TODO: ViewModel
     // All skill - 6 sections (1 - 6)
-    var skills = [SKS_WhiteComet_SpecialAttack, SKS_WhiteComet_Ultimate, SKS_WhiteComet_BasicAttack,
-                  SKS_WhiteComet_Evasion, SKS_WhiteComet_PassiveSkill, SKS_WhiteComet_LeaderSkill]
+
 
     lazy var basicStatusView = BasicStatusView()
     lazy var basicStatusView2 = BasicStatusView()
@@ -26,12 +29,17 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var topPagingScrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.contentInset.top = 160.0
-            tableView.scrollIndicatorInsets.top = 160.0
-            tableView.backgroundColor = .black
+            tableView.contentInset.top             = 160.0
+            tableView.scrollIndicatorInsets.top    = 160.0
+            tableView.backgroundColor              = .black
+            tableView.indicatorStyle               = .white
             tableView.insetsContentViewsToSafeArea = true
-            tableView.tableHeaderView = UIView()
-            tableView.tableFooterView = UIView()
+            tableView.tableHeaderView              = UIView()
+            tableView.tableFooterView              = UIView()
+
+            let nib = UINib(nibName: "CalculatorTableViewCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "CalculatorTableViewCell")
+
             tableView.delegate = self
             tableView.dataSource = self
         }
@@ -39,7 +47,7 @@ class CalculatorViewController: UIViewController {
 
 }
 
-// MARK: View Life Cycle
+// MARK: - View Life Cycle
 extension CalculatorViewController {
 
     override func viewDidLoad() {
@@ -53,72 +61,64 @@ extension CalculatorViewController {
         basicStatusView.crtTextField.text = "11"
 
         setupTopPagingScrollView()
+        setupViewModel()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
+        tableView.indexPathForSelectedRow.flatMap {
+            tableView.deselectRow(at: $0, animated: true)
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        view.endEditing(true)
     }
 
 }
 
+// MARK: - UITableViewDelegate
 extension CalculatorViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let detailViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalculatorDetailViewController") as! CalculatorDetailViewController
+        detailViewController.viewModel = viewModel.createCalculatorDetailViewModel()
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 
 }
 
+// MARK: - UITableViewDataSource
 extension CalculatorViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 + 6
+        return viewModel.numberOfSections()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:                         return damage.count
-        case _ where 1...6 ~= section:  return skills[section-1].count
-        default:                        return 0
-        }
+        return viewModel.numberOfRows(in: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CalculatorTableViewCell", for: indexPath) as! CalculatorTableViewCell
 
-        switch indexPath.section {
-        case 0:
-            break
-        case _ where 1...6 ~= indexPath.section:
-            let skill = skills[indexPath.section - 1]
-            cell.configure(with: skill, of: basicStatus, at: indexPath)
-        default:
-            break
-        }
+        viewModel.configure(cell, at: indexPath)
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let skillsRange = 1..<(1 + skills.count)
-
-        switch section {
-        case 0:
-            return nil
-        case _ where skillsRange ~= section:
-            return skills[section - 1].text
-        default:
-            assertionFailure()
-            return nil
-        }
+        return viewModel.titleForHeader(in: section)
     }
 
 }
 
 extension CalculatorViewController {
 
-    func setupTopPagingScrollView() {
+    private func setupTopPagingScrollView() {
         topPagingScrollView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 160.0)
         topPagingScrollView.contentSize.width = view.bounds.width * 2
         topPagingScrollView.contentSize.height = 160.0
@@ -148,5 +148,16 @@ extension CalculatorViewController {
 
         vibrancyEffectView.contentView.addSubview(basicStatusView)
         vibrancyEffectView.contentView.addSubview(basicStatusView2)
+    }
+
+    private func setupViewModel() {
+        viewModel.basicStatusViewModel.bind(to: basicStatusView)
+        viewModel.basicStatusViewModel.basicStatus.asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                guard let `self` = self else { return }
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+
     }
 }

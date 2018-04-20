@@ -9,11 +9,11 @@
 import Foundation
 
 
-public let SKS_WhiteComet_Evasion: Skill = .evasion(SK_WhiteComet_TimeShift(), [SK_WhiteComet_TimeBlink(),
-                                                                                SK_WhiteComet_PowerFlow()])
+//public let SKS_WhiteComet_Evasion: Skill = .evasion(SK_WhiteComet_TimeShift(), [SK_WhiteComet_TimeBlink(),
+//                                                                                SK_WhiteComet_PowerFlow()])
 
 // MARK: - Time Shift - Time Fracture
-struct SK_WhiteComet_TimeShift_TimeFracture_Explanation: Explanation {
+struct SK_WhiteComet_TimeShift_TimeFracture_Explainable: Explainable {
     let caption_EN: String = "Time Fracture"
     let content_EN: String = """
         Triggers Time Fracture upon an Ultimate Evasion, slowing all enemies for 3 sec. Cooldown: 15 sec.
@@ -29,12 +29,11 @@ struct SK_WhiteComet_TimeShift_TimeFracture_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_TimeShift_TimeFracture: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_TimeShift_TimeFracture_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
 }
 
 // MARK: - Time Shift
-struct SK_WhiteComet_TimeShift_Explanation: Explanation {
+struct SK_WhiteComet_TimeShift_Explainable: Explainable {
     let caption_EN: String = "Time Shift"
     let content_EN: String = """
         Rolls quickly to evade enemy attacks.
@@ -50,13 +49,12 @@ struct SK_WhiteComet_TimeShift_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_TimeShift: MainSkill {
-    let explanation: Explanation = SK_WhiteComet_TimeShift_Explanation()
-    let skillType: SkillType = .buff
-    let mainSubskills: [MainSubskill] = [SK_WhiteComet_TimeShift_TimeFracture()]
+    let skillType: DamageType = .buff
+//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_TimeShift_TimeFracture()]
 }
 
 // MARK: - Time Blink
-struct SK_WhiteComet_TimeBlink_Explanation: Explanation {
+struct SK_WhiteComet_TimeBlink_Explainable: Explainable {
     let caption_EN: String = "Time Blink"
     let content_EN: String = """
         Decreases cooldown of Time Fracture by 4 sec.
@@ -72,13 +70,12 @@ struct SK_WhiteComet_TimeBlink_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_TimeBlink: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_TimeBlink_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .A
 }
 
 // MARK: - Power Flow
-struct SK_WhiteComet_PowerFlow_Explanation: Explanation {
+struct SK_WhiteComet_PowerFlow_Explainable: Explainable {
     let caption_EN: String = "Power Flow"
     let content_EN: String = """
         Recovers an additional 5 EP for the whole team when \
@@ -95,7 +92,6 @@ struct SK_WhiteComet_PowerFlow_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_PowerFlow: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_PowerFlow_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .none
 }

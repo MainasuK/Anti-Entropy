@@ -8,10 +8,14 @@
 
 import UIKit
 import Schicksal
+import RxSwift
+import RxCocoa
 
 let valkyrjaRank: SkillUnlockRank = .none
 
 class CalculatorTableViewCell: UITableViewCell {
+
+    private let disposeBag = DisposeBag()
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
@@ -38,17 +42,17 @@ extension CalculatorTableViewCell {
     func configure(with skill: Skill, of basicStatus: BasicStatus, at indexPath: IndexPath) {
         switch skill {
         case let .specialAttack(main, sub):
-            configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
+            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
         case let .ultimate(main, sub):
-            configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
+            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
         case let .basicAttack(main, sub):
-            configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
+            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
         case let .evasion(main, sub):
-            configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
+            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
         case let .passiveSkill(main, sub):
-            configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
+            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
         case let .leaderSkill(main, sub):
-            configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
+            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
         }
     }
 
@@ -85,6 +89,14 @@ extension CalculatorTableViewCell {
         default:
             assertionFailure()
         }
+    }
+
+}
+
+extension CalculatorTableViewCell {
+
+    func configure(with skillTypeBase: [SkillTypeBase], at row: Int) {
+        
     }
 
 }

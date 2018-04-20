@@ -11,7 +11,7 @@ import Foundation
 public typealias Percentage = Double
 public typealias Increment = Double
 
-public protocol Measurable {
+public protocol Measurable: Codable {
     var damageUP: Percentage { get }
     var physicalDamageUP: Percentage { get }
     var physicalDamageComboAttackUP: Percentage { get }
@@ -27,12 +27,15 @@ public protocol Measurable {
 
     var criticalDamageUP: Percentage { get }
 
-    var physicalDamageTransform: Percentage { get }
+    var meleePhysicalDamageTransform: Percentage { get }
+    var rangedPhysicalDamageTransform: Percentage { get }
     var physicalDamagePlus: Increment { get }
+
     var fireDamagePlus: Increment { get }
 
     var passiveCriticalDamageUP: Percentage { get }
     var passiveHPUP: Percentage { get }
+
 }
 
 extension Measurable {
@@ -98,7 +101,8 @@ extension Measurable {
     public var fireDamageTakenUP: Percentage { return 0.0 }
     public var iceDamageTakenUP: Percentage { return 0.0 }
     public var criticalDamageUP: Percentage { return 0.0 }
-    public var physicalDamageTransform: Percentage { return 0.0 }
+    public var meleePhysicalDamageTransform: Percentage { return 0.0 }
+    public var rangedPhysicalDamageTransform: Percentage { return 0.0 }
     public var physicalDamagePlus: Increment { return 0.0 }
     public var fireDamagePlus: Increment { return 0.0 }
     public var passiveCriticalDamageUP: Percentage { return 0.0 }

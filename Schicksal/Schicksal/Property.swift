@@ -15,27 +15,46 @@ public typealias DEF = Int
 public typealias CRT = Int
 public typealias LV  = Int
 
-public protocol Explanation {
+public typealias DMG = Double
 
-    var caption_EN: String { get }
-    var content_EN: String { get }
-
-    var caption_CN: String { get }
-    var content_CN: String { get }
-
-    var caption_JP: String { get }
-    var content_JP: String { get }
-
+public protocol Explainable: Codable {
+    var caption: String { get }
+    var content: String { get }
 }
 
-extension Explanation {
+extension Explainable {
+    var caption: String { return "" }
+    var content: String { return "" }
+}
 
-    public var caption: String {
-        return caption_JP
-    }
+public typealias DamageTrigger = [DamageTriggerType: Bool]
 
-    public var content: String {
-        return content_JP
+public enum DamageTriggerType: String, Codable {
+    case none
+    case combo
+}
+
+public enum DamageType: String, Codable {
+    case normal             // 普攻攻击
+    case charging           // 蓄力攻击
+    case switchSkill        // 出场技
+    case comboSkill         // 分支
+    case QTE                // QTE
+    case goddess            // 爆发状态
+    case weapon             // 武器技能
+    case buff
+    case debuff
+}
+
+extension DamageType {
+
+    public var text: String? {
+        switch self {
+        case .switchSkill:  return "Switch Skill"
+        case .comboSkill:   return "Combo Skill"
+        case .QTE:          return "QTE"
+        default:            return nil
+        }
     }
 
 }

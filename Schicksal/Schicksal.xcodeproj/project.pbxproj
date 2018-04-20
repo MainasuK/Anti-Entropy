@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB188D532089F1300052E77D /* Valkyrjia+Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D522089F1300052E77D /* Valkyrjia+Skill.swift */; };
+		DB188D552089F16F0052E77D /* Valkyrjia+Subskill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D542089F16F0052E77D /* Valkyrjia+Subskill.swift */; };
+		DB188D572089F18E0052E77D /* Valkyrjia+SkillBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D562089F18E0052E77D /* Valkyrjia+SkillBase.swift */; };
+		DB188D592089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D582089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift */; };
+		DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */; };
+		DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */; };
+		DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */; };
+		DB188D612089F2880052E77D /* Valkyrja+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D602089F2880052E77D /* Valkyrja+Property.swift */; };
 		DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */; };
 		DB715899208469B300FC164B /* Schicksal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB71588F208469B300FC164B /* Schicksal.framework */; };
 		DB71589E208469B300FC164B /* SchicksalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71589D208469B300FC164B /* SchicksalTests.swift */; };
@@ -44,6 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB188D522089F1300052E77D /* Valkyrjia+Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+Skill.swift"; sourceTree = "<group>"; };
+		DB188D542089F16F0052E77D /* Valkyrjia+Subskill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+Subskill.swift"; sourceTree = "<group>"; };
+		DB188D562089F18E0052E77D /* Valkyrjia+SkillBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+SkillBase.swift"; sourceTree = "<group>"; };
+		DB188D582089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+SkillUnlockRank.swift"; sourceTree = "<group>"; };
+		DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+MainSubskill.swift"; sourceTree = "<group>"; };
+		DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+MainSkill.swift"; sourceTree = "<group>"; };
+		DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+BasicStatus.swift"; sourceTree = "<group>"; };
+		DB188D602089F2880052E77D /* Valkyrja+Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+Property.swift"; sourceTree = "<group>"; };
 		DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_LeaderSkill.swift; sourceTree = "<group>"; };
 		DB71588F208469B300FC164B /* Schicksal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Schicksal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB715892208469B300FC164B /* Schicksal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schicksal.h; sourceTree = "<group>"; };
@@ -92,6 +108,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB06B9F5208997EF00776553 /* WhiteComet */ = {
+			isa = PBXGroup;
+			children = (
+				DB7158B820847B4500FC164B /* V_WhiteComet.swift */,
+				DBCE87AE2085935900704B3B /* V_WhiteComet_SpecialAttack.swift */,
+				DBCE87B22085B34900704B3B /* V_WhiteComet_Ultimate.swift */,
+				DBCE87B42085B9C900704B3B /* V_WhiteComet_BasicAttack.swift */,
+				DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */,
+				DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */,
+				DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */,
+			);
+			path = WhiteComet;
+			sourceTree = "<group>";
+		};
 		DB715885208469B200FC164B = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +180,15 @@
 			children = (
 				DB7158B120846D0200FC164B /* Valkyrja.swift */,
 				DB7158B5208476C400FC164B /* Valkyrja+Realname.swift */,
-				DB7158B820847B4500FC164B /* V_WhiteComet.swift */,
-				DBCE87AE2085935900704B3B /* V_WhiteComet_SpecialAttack.swift */,
-				DBCE87B22085B34900704B3B /* V_WhiteComet_Ultimate.swift */,
-				DBCE87B42085B9C900704B3B /* V_WhiteComet_BasicAttack.swift */,
-				DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */,
-				DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */,
-				DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */,
+				DB188D602089F2880052E77D /* Valkyrja+Property.swift */,
+				DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */,
+				DB188D562089F18E0052E77D /* Valkyrjia+SkillBase.swift */,
+				DB188D582089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift */,
+				DB188D522089F1300052E77D /* Valkyrjia+Skill.swift */,
+				DB188D542089F16F0052E77D /* Valkyrjia+Subskill.swift */,
+				DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */,
+				DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */,
+				DB06B9F5208997EF00776553 /* WhiteComet */,
 			);
 			path = Valkyrja;
 			sourceTree = "<group>";
@@ -282,10 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB188D572089F18E0052E77D /* Valkyrjia+SkillBase.swift in Sources */,
 				DBCE87B52085B9C900704B3B /* V_WhiteComet_BasicAttack.swift in Sources */,
 				DBCE87B120859EB200704B3B /* Enemy.swift in Sources */,
+				DB188D612089F2880052E77D /* Valkyrja+Property.swift in Sources */,
 				DB7158B920847B4500FC164B /* V_WhiteComet.swift in Sources */,
 				DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */,
+				DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */,
 				DB7158AF20846B5900FC164B /* Property.swift in Sources */,
 				DBCE87B32085B34900704B3B /* V_WhiteComet_Ultimate.swift in Sources */,
 				DBB3FB872084AEDA00601085 /* S_JixuanyuanAqua_C.swift in Sources */,
@@ -293,14 +328,19 @@
 				DB7158AB20846A5600FC164B /* Weapon.swift in Sources */,
 				DBCE87AF2085935900704B3B /* V_WhiteComet_SpecialAttack.swift in Sources */,
 				DBAC2E8820875EC300A9A3F5 /* V_WhiteComet_Evasion.swift in Sources */,
+				DB188D592089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift in Sources */,
+				DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */,
 				DBB3FB812084AD0D00601085 /* Album.swift in Sources */,
 				DBB3FB892084AEE200601085 /* S_JixuanyuanAqua_B.swift in Sources */,
 				DB7158B6208476C400FC164B /* Valkyrja+Realname.swift in Sources */,
 				DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */,
 				DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */,
+				DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */,
 				DB7158AD20846AFB00FC164B /* Stigmata.swift in Sources */,
+				DB188D552089F16F0052E77D /* Valkyrjia+Subskill.swift in Sources */,
 				DBB3FB8D2084B20100601085 /* S_JixuanyuanAqua.swift in Sources */,
 				DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */,
+				DB188D532089F1300052E77D /* Valkyrjia+Skill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

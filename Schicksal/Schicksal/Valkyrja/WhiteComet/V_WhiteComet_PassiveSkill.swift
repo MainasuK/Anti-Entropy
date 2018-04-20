@@ -8,11 +8,11 @@
 
 import Foundation
 
-public let SKS_WhiteComet_PassiveSkill: Skill = .passiveSkill(SK_WhiteComet_PassiveSkill(), [SK_WhiteComet_ShieldBreaker(),
-                                                                                             SK_WhiteComet_CriticalMastery()])
+//public let SKS_WhiteComet_PassiveSkill: Skill = .passiveSkill(SK_WhiteComet_PassiveSkill(), [SK_WhiteComet_ShieldBreaker(),
+//                                                                                             SK_WhiteComet_CriticalMastery()])
 
 // MARK: - Passive Skill
-struct SK_WhiteComet_PassiveSkill_Explanation: Explanation {
+struct SK_WhiteComet_PassiveSkill_Explainable: Explainable {
     let caption_EN: String = "Passive Skill"
     let content_EN: String = """
         Character receives boost from passive skills automatically.
@@ -28,13 +28,12 @@ struct SK_WhiteComet_PassiveSkill_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_PassiveSkill: MainSkill {
-    let explanation: Explanation = SK_WhiteComet_PassiveSkill_Explanation()
-    let skillType: SkillType = .buff
-    let mainSubskills: [MainSubskill] = []
+    let skillType: DamageType = .buff
+//    let mainSubskills: [MainSubskill] = []
 }
 
 // MARK: - Shield Breaker
-struct SK_WhiteComet_ShieldBreaker_Explanation: Explanation {
+struct SK_WhiteComet_ShieldBreaker_Explainable: Explainable {
     let caption_EN: String = "Shield Breaker"
     let content_EN: String = """
         Increases damage done to Shields by 50%
@@ -50,13 +49,12 @@ struct SK_WhiteComet_ShieldBreaker_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_ShieldBreaker: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_ShieldBreaker_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
 // MARK: - Critical Mastery
-struct SK_WhiteComet_CriticalMastery_Explanation: Explanation {
+struct SK_WhiteComet_CriticalMastery_Explainable: Explainable {
     let caption_EN: String = "Critical Mastery"
     let content_EN: String = """
         Increases Critical Damage by 40% when HP is ablove 80%
@@ -72,8 +70,7 @@ struct SK_WhiteComet_CriticalMastery_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_CriticalMastery: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_CriticalMastery_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .SS
 }
 

@@ -9,12 +9,12 @@
 import Foundation
 
 
-public let SKS_WhiteComet_BasicAttack: Skill = .basicAttack(SK_WhiteComet_MeteorTarget(), [SK_WhiteComet_MeteorShard(),
-                                                                                           SK_WhiteComet_MeteorExplosion(),
-                                                                                           SK_WhiteComet_MeteorImpact()])
+//public let SKS_WhiteComet_BasicAttack: Skill = .basicAttack(SK_WhiteComet_MeteorTarget(), [SK_WhiteComet_MeteorShard(),
+//                                                                                           SK_WhiteComet_MeteorExplosion(),
+//                                                                                           SK_WhiteComet_MeteorImpact()])
 
 // MARK: - Meteor Target - 1st Strike
-struct SK_WhiteComet_MeteorTarget_1stStrike_Explanation: Explanation {
+struct SK_WhiteComet_MeteorTarget_1stStrike_Explainable: Explainable {
     let caption_EN: String = "1st Strike"
     let content_EN: String = """
         Deals physical damage equal to 100% of ATK
@@ -30,16 +30,15 @@ struct SK_WhiteComet_MeteorTarget_1stStrike_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorTarget_1stStrike: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_MeteorTarget_1stStrike_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
 }
 
 extension SK_WhiteComet_MeteorTarget_1stStrike {
-    var physicalDamageTransform: Percentage { return 1.0 }
+    var meleePhysicalDamageTransform: Percentage { return 1.0 }
 }
 
 // MARK: - Meteor Target - 2nd Strike
-struct SK_WhiteComet_MeteorTarget_2ndStrike_Explanation: Explanation {
+struct SK_WhiteComet_MeteorTarget_2ndStrike_Explainable: Explainable {
     let caption_EN: String = "2nd Strike"
     let content_EN: String = """
         Deals physical damage equal to 100% of ATK
@@ -55,16 +54,16 @@ struct SK_WhiteComet_MeteorTarget_2ndStrike_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorTarget_2ndStrike: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_MeteorTarget_2ndStrike_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
 }
 
 extension SK_WhiteComet_MeteorTarget_2ndStrike {
-    var physicalDamageTransform: Percentage { return 1.0 }
+    var meleePhysicalDamageTransform: Percentage { return 0.50 }
+    var rangedPhysicalDamageTransform: Percentage { return 0.50}
 }
 
 // MARK: - Meteor Target - 3rd Strike
-struct SK_WhiteComet_MeteorTarget_3rdStrike_Explanation: Explanation {
+struct SK_WhiteComet_MeteorTarget_3rdStrike_Explainable: Explainable {
     let caption_EN: String = "3rd Strike"
     let content_EN: String = """
         Deals physical damage equal to 100% of ATK
@@ -80,16 +79,16 @@ struct SK_WhiteComet_MeteorTarget_3rdStrike_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorTarget_3rdStrike: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_MeteorTarget_3rdStrike_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
 }
 
 extension SK_WhiteComet_MeteorTarget_3rdStrike {
-    var physicalDamageTransform: Percentage { return 1.0 }
+    var meleePhysicalDamageTransform: Percentage { return 0.50 }
+    var rangedPhysicalDamageTransform: Percentage { return 0.50 }
 }
 
 // MARK: - Meteor Target - 4th Strike
-struct SK_WhiteComet_MeteorTarget_4thStrike_Explanation: Explanation {
+struct SK_WhiteComet_MeteorTarget_4thStrike_Explainable: Explainable {
     let caption_EN: String = "4th Strike"
     let content_EN: String = """
         Deals physical damage equal to 150% of ATK
@@ -105,16 +104,15 @@ struct SK_WhiteComet_MeteorTarget_4thStrike_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorTarget_4thStrike: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_MeteorTarget_4thStrike_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
 }
 
 extension SK_WhiteComet_MeteorTarget_4thStrike {
-    var physicalDamageTransform: Percentage { return 1.50 }
+    var meleePhysicalDamageTransform: Percentage { return 1.50 }
 }
 
 // MARK: - Meteor Target - 5th Strike
-struct SK_WhiteComet_MeteorTarget_5thStrike_Explanation: Explanation {
+struct SK_WhiteComet_MeteorTarget_5thStrike_Explainable: Explainable {
     let caption_EN: String = "5th Strike"
     let content_EN: String = """
         Deals physical damage equal to 250% of ATK
@@ -130,16 +128,15 @@ struct SK_WhiteComet_MeteorTarget_5thStrike_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorTarget_5thStrike: MainSubskill {
-    let explanation: Explanation = SK_WhiteComet_MeteorTarget_5thStrike_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
 }
 
 extension SK_WhiteComet_MeteorTarget_5thStrike {
-    var physicalDamageTransform: Percentage { return 2.50 }
+    var meleePhysicalDamageTransform: Percentage { return 2.50 }
 }
 
 // MARK: - Meteor Target
-struct SK_WhiteComet_MeteorTarget_Explanation: Explanation {
+struct SK_WhiteComet_MeteorTarget_Explainable: Explainable {
     let caption_EN: String = "Meteor Target"
     let content_EN: String = """
         Uses Gun Kata to unleash a penta-strike
@@ -155,17 +152,16 @@ struct SK_WhiteComet_MeteorTarget_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorTarget: MainSkill {
-    let explanation: Explanation = SK_WhiteComet_MeteorTarget_Explanation()
-    let skillType: SkillType = .normal
-    let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorTarget_1stStrike(),
-                                         SK_WhiteComet_MeteorTarget_2ndStrike(),
-                                         SK_WhiteComet_MeteorTarget_3rdStrike(),
-                                         SK_WhiteComet_MeteorTarget_4thStrike(),
-                                         SK_WhiteComet_MeteorTarget_5thStrike()]
+    let skillType: DamageType = .normal
+//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorTarget_1stStrike(),
+//                                         SK_WhiteComet_MeteorTarget_2ndStrike(),
+//                                         SK_WhiteComet_MeteorTarget_3rdStrike(),
+//                                         SK_WhiteComet_MeteorTarget_4thStrike(),
+//                                         SK_WhiteComet_MeteorTarget_5thStrike()]
 }
 
 // MARK: - Meteor Shard
-struct SK_WhiteComet_MeteorShard_Explanation: Explanation {
+struct SK_WhiteComet_MeteorShard_Explainable: Explainable {
     let caption_EN: String = "Meteor Shard"
     let content_EN: String = """
         Increases physical damage of basic attacks by 143.
@@ -181,8 +177,7 @@ struct SK_WhiteComet_MeteorShard_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorShard: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_MeteorShard_Explanation()
-    let skillType: SkillType = .buff
+    let skillType: DamageType = .buff
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
@@ -191,7 +186,7 @@ extension SK_WhiteComet_MeteorShard {
 }
 
 // MARK: - Meteor Explosion
-struct SK_WhiteComet_MeteorExplosion_Explanation: Explanation {
+struct SK_WhiteComet_MeteorExplosion_Explainable: Explainable {
     let caption_EN: String = "Meteor Explosion"
     let content_EN: String = """
         Deals an additional 1485 physical damage to enemy upon breaking its shield using basic or combo attacks.
@@ -207,8 +202,7 @@ struct SK_WhiteComet_MeteorExplosion_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorExplosion: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_MeteorExplosion_Explanation()
-    let skillType: SkillType = .normal
+    let skillType: DamageType = .normal
     let skillUnlockRank: SkillUnlockRank = .A
 }
 
@@ -217,7 +211,7 @@ extension SK_WhiteComet_MeteorExplosion {
 }
 
 // MARK: - Meteor Impact
-struct SK_WhiteComet_MeteorImpact_Explanation: Explanation {
+struct SK_WhiteComet_MeteorImpact_Explainable: Explainable {
     let caption_EN: String = "Meteor Impact"
     let content_EN: String = """
         Basic attacks have a 40.0% chance of stunning enemy for 2 sec upon a successful interrupt.
@@ -233,7 +227,6 @@ struct SK_WhiteComet_MeteorImpact_Explanation: Explanation {
 }
 
 struct SK_WhiteComet_MeteorImpact: SubSkill {
-    let explanation: Explanation = SK_WhiteComet_MeteorImpact_Explanation()
-    let skillType: SkillType = .debuff
+    let skillType: DamageType = .debuff
     let skillUnlockRank: SkillUnlockRank = .SSS
 }
