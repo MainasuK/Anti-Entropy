@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Schicksal
+
+  Created by Cirno MainasuK on 2018-4-22.
+  Copyright © 2018年 MainasuK. All rights reserved.
+*/
+
+"HP" = "HP";
+"SP" = "SP";
+"ATK" = "ATK";
+"DEF" = "DEF";
+"CRT" = "CRT";
+
+"LV" = "LV";
+
+"Special Attack" = "Special Attack";
+"Ultimate" = "Ultimate";
+"Basic Attack" = "Basic Attack";
+"Evasion" = "Evasion";
+"Passive Skill" = "Passive Skill";
+"Leader Skill" = "Leader Skill";
+
+"Creature" = "Creature";
+"Psychic" = "Psychic";
+"Mecha" = "Mecha";
+
+"Kiana Kaslana" = "Kiana Kaslana";
+"Raiden Mei" = "Raiden Mei";
+"Bronya Zaychik" = "Bronya Zaychik";

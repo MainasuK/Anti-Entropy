@@ -8,6 +8,15 @@
 
 import Foundation
 
+public enum WeaponType: String {
+    case pistol
+    case katana
+    case cannon
+    case claymore
+    case cross
+    case glove
+}
+
 public protocol Weapon: Measurable {
     var ATK: ATK { get }
     var CRT: CRT { get }

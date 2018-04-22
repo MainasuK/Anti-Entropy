@@ -8,6 +8,14 @@
 
 import Foundation
 
+struct SKS_WhiteComet_Ultimate: Skill {
+    public let type: SkillType = .ultimate
+    public let mainSkill: MainSkill = SK_WhiteComet_CometFall()
+    public let subSkills: SubSkills = [SK_WhiteComet_CometExplosion(),
+                                       SK_WhiteComet_TopHelix(),
+                                       SK_WhiteComet_GravityFreak()]
+}
+
 //public let SKS_WhiteComet_Ultimate: Skill = .ultimate(SK_WhiteComet_ValkyrieBurst(), [SK_WhiteComet_ValkyrieImpact(),
 //                                                                                      SK_WhiteComet_ValkyrieBarrier(),
 //                                                                                      SK_WhiteComet_ValkyrieCharge()])
@@ -29,7 +37,7 @@ struct SK_WhiteComet_ValkyrieBurst_Burst_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ValkyrieBurst_Burst: MainSubskill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
 }
 
 // MARK: - Valkyrie Burst - Continuous Burst
@@ -49,7 +57,7 @@ struct SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ValkyrieBurst_ContinuousBurst: MainSubskill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
 }
 
 // MARK: - Valkyrie Burst
@@ -69,8 +77,8 @@ struct SK_WhiteComet_ValkyrieBurst_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ValkyrieBurst: MainSkill {
-    let skillType: DamageType = .buff
-//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_ValkyrieBurst_Burst(), SK_WhiteComet_ValkyrieBurst_ContinuousBurst()]
+    let attackTag: AttackTag = .none
+    let mainSubskills: [MainSubskill] = [SK_WhiteComet_ValkyrieBurst_Burst(), SK_WhiteComet_ValkyrieBurst_ContinuousBurst()]
 }
 
 // MARK: - Valkyrie Impact
@@ -90,7 +98,7 @@ struct SK_WhiteComet_ValkyrieImpact_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ValkyrieImpact: SubSkill {
-    let skillType: DamageType = .normal
+    let attackTag: AttackTag = .normal
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
@@ -115,7 +123,7 @@ struct SK_WhiteComet_ValkyrieBarrier_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ValkyrieBarrier: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .S
 }
 
@@ -136,6 +144,6 @@ struct SK_WhiteComet_ValkyrieCharge_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ValkyrieCharge: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .none
 }

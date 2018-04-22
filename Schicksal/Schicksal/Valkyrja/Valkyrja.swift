@@ -8,18 +8,40 @@
 
 import Foundation
 
+enum ValkyrjaKey {
+    
+}
+
 public protocol Valkyrja: Measurable {
-//    var nickname: Explainable { get }
-//    var realname: Explainable { get }
-//    var characteristics: Explainable { get }
-//    var property: Property { get }
-//    var skills: Skills { get }
-//    var rank: ValkyrjaRank { get }
+
+    var firstname: String { get }
+    var lastname: String { get }
+    var shortName: String { get }
+    var fullName: String { get }
+    var description: String { get }
+
+    var localizeTableName: String? { get }
+    var bundleIdentifier: String { get }
+
+//    var recommendedWeaponForBeginners: Weapon { get }
+//    var recommendedStigmataSuitForBeginners: StigmataSuit { get }
 //
-//    var currentRank: ValkyrjaRank { get set }
-//    var basicStatus: BasicStatus { get set }
-//    var weapon: Weapon? { get set }
-//    var stigmataSuit: StigmataSuit { get set }
+//    var recommendedWeaponForAdvancedPlayers: Weapon { get }
+//    var recommendedStigmataSuitForAdvancedPlayers: StigmataSuit { get }
+
+    var initialRank: ValkyrjaRank { get }
+//    var weaponType: WeaponType { get }
+//    var initalWeapon: Weapon { get }
+    var skills: Skills { get }
+
+    var level: LV { get set }
+    var rank: ValkyrjaRank { get set }
+//    var weapon: Weapon { get }
+//    var stigmataSuit: StigmataSuit { get }
+}
+
+extension Valkyrja {
+    public var bundleIdentifier: String { return frameworkBundleIdentifier }
 }
 
 //extension Valkyrja {

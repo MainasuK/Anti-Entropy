@@ -25,15 +25,16 @@ struct CalculatorViewModel {
     var member: Variable<(Valkyrja?, Valkyrja?)>
     var supporter: Variable<Valkyrja?>
 
-    var skills = [SKS_WhiteComet_SpecialAttack,
-                  SKS_WhiteComet_Ultimate,
-                  SKS_WhiteComet_BasicAttack,
-                  SKS_WhiteComet_Evasion,
-                  SKS_WhiteComet_PassiveSkill,
-                  SKS_WhiteComet_LeaderSkill]
+    var skills: Skills = []
+//    var skills = [SKS_WhiteComet_SpecialAttack,
+//                  SKS_WhiteComet_Ultimate,
+//                  SKS_WhiteComet_BasicAttack,
+//                  SKS_WhiteComet_Evasion,
+//                  SKS_WhiteComet_PassiveSkill,
+//                  SKS_WhiteComet_LeaderSkill]
 
     init() {
-        let whiteComet = V_WhiteComet()
+        let whiteComet = V_WhiteComet(level: 80, rank: .SSS)
 
         leader = Variable<Valkyrja>(whiteComet)
         member = Variable<(Valkyrja?, Valkyrja?)>((nil, nil))

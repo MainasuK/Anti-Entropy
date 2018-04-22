@@ -37,29 +37,31 @@ public struct BasicStatus: Codable {
 
 extension BasicStatus {
 
-    public func DMG(for measurables: [Measurable], with trigger: DamageTrigger = [:], with buff: [Measurable] = []) -> DMG {
-        // Melee Physical Base
-        let mellPhysicalDamage = measurables.map { $0.meleePhysicalDamageTransform }.reduce(0, +) * Double(ATK)
-
-        // Ranged Physical Base
-        let rangedPhysicalDamage = measurables.map { $0.rangedPhysicalDamageTransform }.reduce(0, +) * Double(ATK)
-
-        // Physical Plus
-        let physicalDamagePlus = [measurables, buff].flatMap { $0 }.map { $0.physicalDamagePlus }.reduce(0, +)
-
-        // Melee Ice
-        // Ranged Ice
-        // Melee Fire
-        // Ranged Fire
-        // Melee Lightning
-        // Ranged Lightning
-
-        let fireDamage = measurables.map { $0.fireDamagePlus }.reduce(0, +)
-
-        let physicalDamage = mellPhysicalDamage + rangedPhysicalDamage + physicalDamagePlus
-
-        return physicalDamage + fireDamage
-    }
+//    public func DMG(for measurables: [Measurable], with trigger: DamageTrigger = [:], with buff: [Measurable] = []) -> DMG {
+//        // Melee Physical Base
+//        let mellPhysicalDamage = measurables.map { $0.meleePhysicalDamageTransform }.reduce(0, +) * Double(ATK)
+//
+//        // Ranged Physical Base
+//        let rangedPhysicalDamage = measurables.map { $0.rangedPhysicalDamageTransform }.reduce(0, +) * Double(ATK)
+//
+//        // Physical Plus
+//        let physicalDamagePlus = [measurables, buff].flatMap { $0 }.map { $0.physicalDamagePlus }.reduce(0, +)
+//
+//        // Melee Ice
+//        // Ranged Ice
+//        // Melee Fire
+//        // Ranged Fire
+//        // Melee Lightning
+//        // Ranged Lightning
+//
+//        let fireDamage = measurables.map { $0.fireDamagePlus }.reduce(0, +)
+//
+//        let physicalDamage = mellPhysicalDamage + rangedPhysicalDamage + physicalDamagePlus
+//
+//        return physicalDamage + fireDamage
+//
+//        return 0
+//    }
 
 }
 

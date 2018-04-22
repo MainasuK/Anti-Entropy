@@ -8,5 +8,5 @@
 
 import Foundation
 
-public protocol SubSkill: SkillTypeBase {
+public protocol SubSkill: SkillBase {
 }

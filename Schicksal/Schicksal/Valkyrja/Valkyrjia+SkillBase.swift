@@ -8,13 +8,11 @@
 
 import Foundation
 
-public protocol SkillTypeBase: Measurable {
-    var skillType: DamageType { get }
+public protocol SkillBase: Measurable, Explainable {
+    var attackTag: AttackTag { get }
     var skillUnlockRank: SkillUnlockRank { get }
-    var damageTriggerType: DamageTriggerType { get }
 }
 
-extension SkillTypeBase {
+extension SkillBase {
     var skillUnlockRank: SkillUnlockRank { return .none }
-    var damageTriggerType: DamageTriggerType { return .none }
 }

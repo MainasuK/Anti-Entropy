@@ -12,7 +12,7 @@ extension String {
     var localized: String {
         if let _ = UserDefaults.standard.string(forKey: "i18n_language") {} else {
             // we set a default, just in case
-            UserDefaults.standard.set("fr", forKey: "i18n_language")
+            UserDefaults.standard.set("en", forKey: "i18n_language")
             UserDefaults.standard.synchronize()
         }
 

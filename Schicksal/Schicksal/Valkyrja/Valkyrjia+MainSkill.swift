@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol MainSkill: SkillTypeBase {
-//    var mainSubskills: [MainSubskill] { get }
+public protocol MainSkill: SkillBase {
+    var mainSubskills: [MainSubskill] { get }
 }

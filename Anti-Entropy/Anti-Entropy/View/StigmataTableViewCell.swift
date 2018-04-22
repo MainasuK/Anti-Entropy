@@ -30,8 +30,8 @@ class StigmataTableViewCell: UITableViewCell {
 extension StigmataTableViewCell {
 
     func configure(with stigmata: Stigmata) {
-        nameLabel.text  = stigmata.name
-        levelLabel.text = "Lv.\(stigmata.currentLv.rawValue)"
+//        nameLabel.text  = stigmata.name
+//        levelLabel.text = "Lv.\(stigmata.currentLv.rawValue)"
     }
     
 }

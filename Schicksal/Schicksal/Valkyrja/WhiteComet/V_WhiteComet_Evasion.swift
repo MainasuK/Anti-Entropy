@@ -29,7 +29,7 @@ struct SK_WhiteComet_TimeShift_TimeFracture_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_TimeShift_TimeFracture: MainSubskill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
 }
 
 // MARK: - Time Shift
@@ -49,8 +49,8 @@ struct SK_WhiteComet_TimeShift_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_TimeShift: MainSkill {
-    let skillType: DamageType = .buff
-//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_TimeShift_TimeFracture()]
+    let attackTag: AttackTag = .none
+    let mainSubskills: [MainSubskill] = [SK_WhiteComet_TimeShift_TimeFracture()]
 }
 
 // MARK: - Time Blink
@@ -70,7 +70,7 @@ struct SK_WhiteComet_TimeBlink_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_TimeBlink: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .A
 }
 
@@ -92,6 +92,6 @@ struct SK_WhiteComet_PowerFlow_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_PowerFlow: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .none
 }

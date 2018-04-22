@@ -14,7 +14,7 @@
 		DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */; };
 		DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */; };
 		DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */; };
-		DB188D612089F2880052E77D /* Valkyrja+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D602089F2880052E77D /* Valkyrja+Property.swift */; };
+		DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */; };
 		DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */; };
 		DB715899208469B300FC164B /* Schicksal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB71588F208469B300FC164B /* Schicksal.framework */; };
 		DB71589E208469B300FC164B /* SchicksalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71589D208469B300FC164B /* SchicksalTests.swift */; };
@@ -23,10 +23,10 @@
 		DB7158AD20846AFB00FC164B /* Stigmata.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158AC20846AFB00FC164B /* Stigmata.swift */; };
 		DB7158AF20846B5900FC164B /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158AE20846B5900FC164B /* Property.swift */; };
 		DB7158B220846D0200FC164B /* Valkyrja.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158B120846D0200FC164B /* Valkyrja.swift */; };
-		DB7158B6208476C400FC164B /* Valkyrja+Realname.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158B5208476C400FC164B /* Valkyrja+Realname.swift */; };
 		DB7158B920847B4500FC164B /* V_WhiteComet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158B820847B4500FC164B /* V_WhiteComet.swift */; };
 		DBAC2E8820875EC300A9A3F5 /* V_WhiteComet_Evasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */; };
 		DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */; };
+		DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1105A208CC1A30059A017 /* Attackable.swift */; };
 		DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB792084842E00601085 /* Measurable.swift */; };
 		DBB3FB7C20848F9600601085 /* MeasureableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB7B20848F9600601085 /* MeasureableTests.swift */; };
 		DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB7E2084A21A00601085 /* S_JixuanyuanAqua_T.swift */; };
@@ -39,6 +39,9 @@
 		DBCE87B120859EB200704B3B /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE87B020859EB200704B3B /* Enemy.swift */; };
 		DBCE87B32085B34900704B3B /* V_WhiteComet_Ultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE87B22085B34900704B3B /* V_WhiteComet_Ultimate.swift */; };
 		DBCE87B52085B9C900704B3B /* V_WhiteComet_BasicAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE87B42085B9C900704B3B /* V_WhiteComet_BasicAttack.swift */; };
+		DBE6FFC2208B97B200EC634C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE6FFC4208B97B200EC634C /* Localizable.strings */; };
+		DBE6FFCC208BA57F00EC634C /* Localizable_V_WhiteComet.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */; };
+		DBE6FFD2208BA72800EC634C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6FFD1208BA72800EC634C /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +62,7 @@
 		DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+MainSubskill.swift"; sourceTree = "<group>"; };
 		DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+MainSkill.swift"; sourceTree = "<group>"; };
 		DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+BasicStatus.swift"; sourceTree = "<group>"; };
-		DB188D602089F2880052E77D /* Valkyrja+Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+Property.swift"; sourceTree = "<group>"; };
+		DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+Attribute.swift"; sourceTree = "<group>"; };
 		DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_LeaderSkill.swift; sourceTree = "<group>"; };
 		DB71588F208469B300FC164B /* Schicksal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Schicksal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB715892208469B300FC164B /* Schicksal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schicksal.h; sourceTree = "<group>"; };
@@ -71,10 +74,10 @@
 		DB7158AC20846AFB00FC164B /* Stigmata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stigmata.swift; sourceTree = "<group>"; };
 		DB7158AE20846B5900FC164B /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		DB7158B120846D0200FC164B /* Valkyrja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valkyrja.swift; sourceTree = "<group>"; };
-		DB7158B5208476C400FC164B /* Valkyrja+Realname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+Realname.swift"; sourceTree = "<group>"; };
 		DB7158B820847B4500FC164B /* V_WhiteComet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet.swift; sourceTree = "<group>"; };
 		DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_Evasion.swift; sourceTree = "<group>"; };
 		DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_PassiveSkill.swift; sourceTree = "<group>"; };
+		DBB1105A208CC1A30059A017 /* Attackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attackable.swift; sourceTree = "<group>"; };
 		DBB3FB792084842E00601085 /* Measurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurable.swift; sourceTree = "<group>"; };
 		DBB3FB7B20848F9600601085 /* MeasureableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureableTests.swift; sourceTree = "<group>"; };
 		DBB3FB7E2084A21A00601085 /* S_JixuanyuanAqua_T.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_JixuanyuanAqua_T.swift; sourceTree = "<group>"; };
@@ -87,6 +90,13 @@
 		DBCE87B020859EB200704B3B /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		DBCE87B22085B34900704B3B /* V_WhiteComet_Ultimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_Ultimate.swift; sourceTree = "<group>"; };
 		DBCE87B42085B9C900704B3B /* V_WhiteComet_BasicAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_BasicAttack.swift; sourceTree = "<group>"; };
+		DBE6FFC3208B97B200EC634C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBE6FFC5208B97C200EC634C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DBE6FFC6208B97C800EC634C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBE6FFCD208BA57F00EC634C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable_V_WhiteComet.strings; sourceTree = "<group>"; };
+		DBE6FFCF208BA58400EC634C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable_V_WhiteComet.strings"; sourceTree = "<group>"; };
+		DBE6FFD0208BA58500EC634C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable_V_WhiteComet.strings; sourceTree = "<group>"; };
+		DBE6FFD1208BA72800EC634C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +157,7 @@
 				DB7158AE20846B5900FC164B /* Property.swift */,
 				DB7158AA20846A5600FC164B /* Weapon.swift */,
 				DBB3FB792084842E00601085 /* Measurable.swift */,
+				DBB1105A208CC1A30059A017 /* Attackable.swift */,
 				DBB3FB7D2084A1C700601085 /* Stigmata */,
 				DB7158B720847AFE00FC164B /* Valkyrja */,
 				DB7158B020846C6400FC164B /* Supporting Files */,
@@ -169,8 +180,11 @@
 		DB7158B020846C6400FC164B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBE6FFD1208BA72800EC634C /* Settings.swift */,
 				DB715892208469B300FC164B /* Schicksal.h */,
 				DB715893208469B300FC164B /* Info.plist */,
+				DBE6FFC4208B97B200EC634C /* Localizable.strings */,
+				DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -179,11 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				DB7158B120846D0200FC164B /* Valkyrja.swift */,
-				DB7158B5208476C400FC164B /* Valkyrja+Realname.swift */,
-				DB188D602089F2880052E77D /* Valkyrja+Property.swift */,
+				DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */,
 				DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */,
-				DB188D562089F18E0052E77D /* Valkyrjia+SkillBase.swift */,
 				DB188D582089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift */,
+				DB188D562089F18E0052E77D /* Valkyrjia+SkillBase.swift */,
 				DB188D522089F1300052E77D /* Valkyrjia+Skill.swift */,
 				DB188D542089F16F0052E77D /* Valkyrjia+Subskill.swift */,
 				DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */,
@@ -280,6 +293,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = DB715885208469B200FC164B;
 			productRefGroup = DB715890208469B300FC164B /* Products */;
@@ -297,6 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE6FFCC208BA57F00EC634C /* Localizable_V_WhiteComet.strings in Resources */,
+				DBE6FFC2208B97B200EC634C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +334,8 @@
 				DB188D572089F18E0052E77D /* Valkyrjia+SkillBase.swift in Sources */,
 				DBCE87B52085B9C900704B3B /* V_WhiteComet_BasicAttack.swift in Sources */,
 				DBCE87B120859EB200704B3B /* Enemy.swift in Sources */,
-				DB188D612089F2880052E77D /* Valkyrja+Property.swift in Sources */,
+				DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */,
+				DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */,
 				DB7158B920847B4500FC164B /* V_WhiteComet.swift in Sources */,
 				DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */,
 				DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */,
@@ -332,13 +350,13 @@
 				DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */,
 				DBB3FB812084AD0D00601085 /* Album.swift in Sources */,
 				DBB3FB892084AEE200601085 /* S_JixuanyuanAqua_B.swift in Sources */,
-				DB7158B6208476C400FC164B /* Valkyrja+Realname.swift in Sources */,
 				DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */,
 				DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */,
 				DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */,
 				DB7158AD20846AFB00FC164B /* Stigmata.swift in Sources */,
 				DB188D552089F16F0052E77D /* Valkyrjia+Subskill.swift in Sources */,
 				DBB3FB8D2084B20100601085 /* S_JixuanyuanAqua.swift in Sources */,
+				DBE6FFD2208BA72800EC634C /* Settings.swift in Sources */,
 				DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */,
 				DB188D532089F1300052E77D /* Valkyrjia+Skill.swift in Sources */,
 			);
@@ -364,11 +382,35 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		DBE6FFC4208B97B200EC634C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE6FFC3208B97B200EC634C /* en */,
+				DBE6FFC5208B97C200EC634C /* zh-Hans */,
+				DBE6FFC6208B97C800EC634C /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE6FFCD208BA57F00EC634C /* en */,
+				DBE6FFCF208BA58400EC634C /* zh-Hans */,
+				DBE6FFD0208BA58500EC634C /* ja */,
+			);
+			name = Localizable_V_WhiteComet.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		DB7158A1208469B300FC164B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -432,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

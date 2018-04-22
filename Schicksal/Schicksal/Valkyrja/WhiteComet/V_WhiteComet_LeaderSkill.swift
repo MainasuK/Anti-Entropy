@@ -27,9 +27,8 @@ struct SK_WhiteComet_MeteorBless_Guider_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_MeteorBless_Guider: MainSubskill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
 }
-
 
 // MARK: - Meteor Bless
 struct SK_WhiteComet_MeteorBless_Explainable: Explainable {
@@ -48,8 +47,8 @@ struct SK_WhiteComet_MeteorBless_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_MeteorBless: MainSkill {
-    let skillType: DamageType = .buff
-//    let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorBless_Guider()]
+    let attackTag: AttackTag = .none
+    let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorBless_Guider()]
 }
 
 // MARK: - Guide
@@ -69,7 +68,7 @@ struct SK_WhiteComet_Guider_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_Guider: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .A
 }
 

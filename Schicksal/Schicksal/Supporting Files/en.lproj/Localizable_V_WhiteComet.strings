@@ -1,0 +1,63 @@
+/* 
+  Localizable_V_WhiteComet.strings
+  Schicksal
+
+  Created by Cirno MainasuK on 2018-4-22.
+  Copyright © 2018年 MainasuK. All rights reserved.
+*/
+
+"V_WhiteComet_Firstname" = "White";
+"V_WhiteComet_Lastname" = "Comet";
+"V_WhiteComet_ShortName" = "White Comet";
+"V_WhiteComet_FullName" = "White Comet";
+"V_WhiteComet_Description" = "Melee attacker with constant DPS. Good at interrupting enemy attacks. High survivability.";
+
+// MARK: Special Attack - Comet Fall
+"SK_WhiteComet_CometFall_Punt_Caption" = "Punt";
+"SK_WhiteComet_CometFall_Punt_Content" = "Deals physical damage equal to 50% of ATK.";
+
+"SK_WhiteComet_CometFall_BringDown_Caption" = "Bring Down";
+"SK_WhiteComet_CometFall_BringDown_Content" = "Deals AOE physical damage equal to 275% of ATK.";
+
+// MARK: Special Attack - Comet Explosion
+"SK_WhiteComet_CometExplosion_Caption" = "Coment Explosion";
+"SK_WhiteComet_CometExplosion_Content" = "Unleashes a crushing attack upon entering the battle, dealing (275% of ATK) physical damage. stuns enemy for 6.0 sec upon a successful interrupt.";
+
+// MARK: Special Attack - Top Helix
+"SK_WhiteComet_TopHelix_Caption" = "Top Helix";
+"SK_WhiteComet_TopHelix_Content" = "Triggers QTE and enters the battle when enemy is lifted in the air, dealing (375% of ATK+2250) physical damage.";
+
+// MARK: Special Attack - Gravity Freak
+"SK_WhiteComet_GravityFreak_Caption" = "Gravity Freak";
+"SK_WhiteComet_GravityFreak_Content" = "The second strike of combo attacks and Comet Explosion deals an additional 1125 fire damage to enemy with an unbroken Elite Shield.";
+
+// MARK: - Basic Attack - Meteor Target
+"SK_WhiteComet_MeteorTarget_1stStrike_Caption" = "1st Strike";
+"SK_WhiteComet_MeteorTarget_1stStrike_Content" = "Deals physical damage equal to 100% of ATK";
+
+"SK_WhiteComet_MeteorTarget_2ndStrike_Caption" = "2nd Strike";
+"SK_WhiteComet_MeteorTarget_2ndStrike_Content" = "Deals physical damage equal to 100% of ATK";
+
+"SK_WhiteComet_MeteorTarget_3rdStrike_Caption" = "3rd Strike";
+"SK_WhiteComet_MeteorTarget_3rdStrike_Content" = "Deals physical damage equal to 100% of ATK";
+
+"SK_WhiteComet_MeteorTarget_4thStrike_Caption" = "4th Strike";
+"SK_WhiteComet_MeteorTarget_4thStrike_Content" = "Deals physical damage equal to 150% of ATK";
+
+"SK_WhiteComet_MeteorTarget_5thStrike_Caption" = "5th Strike";
+"SK_WhiteComet_MeteorTarget_5thStrike_Content" = "Deals physical damage equal to 250% of ATK";
+
+"SK_WhiteComet_MeteorTarget_Caption" = "Meteor Target";
+"SK_WhiteComet_MeteorTarget_Content" = "Uses Gun Kata to unleash a penta-strike";
+
+// MARK: - Basic Attack - Meteor Shard
+"SK_WhiteComet_MeteorShard_Caption" = "Meteor Shard";
+"SK_WhiteComet_MeteorShard_Content" = "Increases physical damage of basic attacks by 143.";
+
+// MARK: - Basic Attack - Meteor Explosion
+"SK_WhiteComet_MeteorExplosion_Caption" = "Meteor Explosion";
+"SK_WhiteComet_MeteorExplosion_Content" = "Deals an additional 1485 physical damage to enemy upon breaking its shield using basic or combo attacks.";
+
+// MARK: - Basic Attack - Meteor Impact
+"SK_WhiteComet_MeteorImpact_Caption" = "Meteor Impact";
+"SK_WhiteComet_MeteorImpact_Content" = "Basic attacks have a 40.0% chance of stunning enemy for 2 sec upon a successful interrupt.";

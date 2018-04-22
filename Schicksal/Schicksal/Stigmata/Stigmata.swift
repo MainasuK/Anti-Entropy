@@ -11,23 +11,23 @@ import Foundation
 public typealias StigmataTag = String
 public typealias StarRank = Int
 
-public enum StigmataPosition: String, Codable {
+public enum StigmataSlot {
     case T
     case C      // a.k.a M
     case B
 }
 
-public enum StigmataLv: Int, Codable {
+public enum Rarity: Int, Codable {
     /// 5
-    case five       = 5
+    case S1 = 5
     /// 15
-    case fifteen    = 15
+    case S2 = 15
     /// 25
-    case twentyFive = 25
+    case S3 = 25
     /// 35
-    case thirtyFive = 35
+    case S4 = 35
     /// 50
-    case fifty      = 50
+    case S5 = 50
 }
 
 struct EmptyStigmataSetSkill: Measurable {
@@ -57,11 +57,10 @@ struct EmptyStigmataSetSkill: Measurable {
 
 public protocol Stigmata: Measurable {
     var tag: StigmataTag { get }
-    var position: StigmataPosition { get }
-    var starRank: StarRank { get }
-    var lvRank: [StigmataLv] { get }
+    var slot: StigmataSlot { get }
+    var rarity: [Rarity] { get }
 
-    var currentLv: StigmataLv { get set }
+    var currentRarity: Rarity { get set }
 
     var HP: HP { get }
     var ATK: ATK { get }
@@ -71,27 +70,24 @@ public protocol Stigmata: Measurable {
 
 extension Stigmata {
 
-    private var positionName: String {
-        switch position {
-        case .T: return " (T)"
-//            return NSLocalizedString(<#T##key: String##String#>, comment: <#T##String#>)
-        case .C: return " (C)"
-        case .B: return " (B)"
-        }
-    }
-
-    public var name: String {
-//        return explanation.caption + positionName
-        return positionName
-    }
-
     var skillExplainable: String { return "" }
     public var twoSetsSkillExplainable: String { return "" }
     public var threeSetsSkillExplainable: String { return "" }
 
 }
 
-public struct StigmataSuit: Codable {
+public struct StigmataSuit {
+    var T: Stigmata?
+    var C: Stigmata?
+    var B: Stigmata?
+
+    public init() { }
+
+    public init(T: Stigmata?, C: Stigmata?, B: Stigmata?) {
+        self.T = T
+        self.C = C
+        self.B = B
+    }
 //    public var suit: [StigmataPosition: Stigmata]
 //
 //    public init(suit: [StigmataPosition: Stigmata] = [:]) {

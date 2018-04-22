@@ -28,6 +28,7 @@
 		DB92E4FA2084693E00ED4A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB92E4F92084693E00ED4A3E /* Assets.xcassets */; };
 		DB92E4FD2084693E00ED4A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB92E4FB2084693E00ED4A3E /* LaunchScreen.storyboard */; };
 		DB92E5082084693E00ED4A3E /* Anti_EntropyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB92E5072084693E00ED4A3E /* Anti_EntropyTests.swift */; };
+		DBB11059208BC6460059A017 /* Avartar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB11058208BC6460059A017 /* Avartar.swift */; };
 		DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */; };
 		DBB3FB8F2084B96800601085 /* StigmataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		DB92E5032084693E00ED4A3E /* Anti-EntropyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anti-EntropyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB92E5072084693E00ED4A3E /* Anti_EntropyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anti_EntropyTests.swift; sourceTree = "<group>"; };
 		DB92E5092084693E00ED4A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB11058208BC6460059A017 /* Avartar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avartar.swift; sourceTree = "<group>"; };
 		DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewController.swift; sourceTree = "<group>"; };
 		DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewCell.swift; sourceTree = "<group>"; };
 		E8BEC70720E4680ED48ED56C /* Pods-Anti-EntropyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anti-EntropyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anti-EntropyTests/Pods-Anti-EntropyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		DB92E4F12084693D00ED4A3E /* Anti-Entropy */ = {
 			isa = PBXGroup;
 			children = (
+				DBB11058208BC6460059A017 /* Avartar.swift */,
 				DB92E4F62084693D00ED4A3E /* Main.storyboard */,
 				DB188D642089FB180052E77D /* View */,
 				DB188D632089FAF70052E77D /* ViewModel */,
@@ -373,13 +376,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Anti-Entropy/Pods-Anti-Entropy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Default/Default.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Default.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +406,7 @@
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
 				DB06B9F72089CF3300776553 /* CalculatorDetailViewController.swift in Sources */,
+				DBB11059208BC6460059A017 /* Avartar.swift in Sources */,
 				DB7559182086159400BA2DB7 /* BasicStatusView.swift in Sources */,
 				DB188D662089FB480052E77D /* CalculatorViewModel.swift in Sources */,
 				DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */,
@@ -571,10 +581,7 @@
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "$(SRCROOT)/Anti-Entropy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-Entropy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -591,10 +598,7 @@
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "$(SRCROOT)/Anti-Entropy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-Entropy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -611,11 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "Anti-EntropyTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-EntropyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -633,11 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "Anti-EntropyTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-EntropyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

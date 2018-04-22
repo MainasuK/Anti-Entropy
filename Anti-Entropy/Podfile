@@ -8,6 +8,7 @@ target 'Anti-Entropy' do
   # Pods for Anti-Entropy
     pod 'RxSwift', '~> 4.0'
     pod 'RxCocoa', '~> 4.0'
+    pod "RxRealm"
     pod 'Default'
 
   target 'Anti-EntropyTests' do

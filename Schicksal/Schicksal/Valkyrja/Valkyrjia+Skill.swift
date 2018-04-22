@@ -11,7 +11,7 @@ import Foundation
 public typealias Skills = [Skill]
 public typealias SubSkills = [SubSkill]
 
-public enum SkillType: String, Codable {
+public enum SkillType {
     case specialAttack
     case ultimate
     case basicAttack
@@ -20,10 +20,10 @@ public enum SkillType: String, Codable {
     case leaderSkill
 }
 
-public protocol Skill: Codable {
+public protocol Skill {
     var type: SkillType { get }
     var mainSkill: MainSkill { get }
-    var subskills: SubSkills { get }
+    var subSkills: SubSkills { get }
 }
 
 extension Skill {
@@ -43,16 +43,8 @@ extension Skill {
 
 extension Skill {
 
-//    public var skillTypes: [SkillTypeBase] {
-//        let arrays = [[mainSkill] as [SkillTypeBase],
-//                      mainSkill.mainSubskills as [SkillTypeBase],
-//                      subskills as [SkillTypeBase]]
-//        return arrays.flatMap { $0 }
-//    }
-
     public var count: Int {
-        return 1
-//        return 1 + mainSkill.mainSubskills.count + subskills.count
+        return 1 + mainSkill.mainSubskills.count + subSkills.count
     }
 
 }

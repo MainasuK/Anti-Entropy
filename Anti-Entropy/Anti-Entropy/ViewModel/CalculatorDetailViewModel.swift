@@ -23,7 +23,7 @@ struct CalculatorDetailViewModel {
 extension CalculatorDetailViewModel {
 
     enum DetailSection {
-        case damageTransform([SkillTypeBase])
+        case damageTransform([SkillBase])
 
         var count: Int {
             switch self {

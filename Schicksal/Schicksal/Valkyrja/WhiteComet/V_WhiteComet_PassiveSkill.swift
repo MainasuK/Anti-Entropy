@@ -28,8 +28,8 @@ struct SK_WhiteComet_PassiveSkill_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_PassiveSkill: MainSkill {
-    let skillType: DamageType = .buff
-//    let mainSubskills: [MainSubskill] = []
+    let attackTag: AttackTag = .none
+    let mainSubskills: [MainSubskill] = []
 }
 
 // MARK: - Shield Breaker
@@ -49,7 +49,7 @@ struct SK_WhiteComet_ShieldBreaker_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_ShieldBreaker: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
@@ -70,7 +70,7 @@ struct SK_WhiteComet_CriticalMastery_Explainable: Explainable {
 }
 
 struct SK_WhiteComet_CriticalMastery: SubSkill {
-    let skillType: DamageType = .buff
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .SS
 }
 

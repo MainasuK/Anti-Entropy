@@ -23,12 +23,12 @@ public struct Album {
 
     public lazy var stigmata: [Stigmata] = [
         // Jixuanyuan Aqua
-        S_JixuanyuanAqua_T(currentLv: .twentyFive),
-        S_JixuanyuanAqua_C(currentLv: .twentyFive),
-        S_JixuanyuanAqua_B(currentLv: .twentyFive),
-        S_JixuanyuanAqua_T(currentLv: .thirtyFive),
-        S_JixuanyuanAqua_C(currentLv: .thirtyFive),
-        S_JixuanyuanAqua_B(currentLv: .thirtyFive),
+        S_JixuanyuanAqua_T(currentRarity: .S3),
+        S_JixuanyuanAqua_C(currentRarity: .S4),
+        S_JixuanyuanAqua_B(currentRarity: .S3),
+        S_JixuanyuanAqua_T(currentRarity: .S4),
+        S_JixuanyuanAqua_C(currentRarity: .S3),
+        S_JixuanyuanAqua_B(currentRarity: .S4),
     ]
     
 }
