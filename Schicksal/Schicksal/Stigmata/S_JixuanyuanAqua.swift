@@ -19,6 +19,10 @@ struct S_JixuanyuanAqua_Explainable: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 // MARK: - T
@@ -33,6 +37,10 @@ struct S_JixuanyuanAqua_T_Skill_Explainable_25: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 struct S_JixuanyuanAqua_T_Skill_Explainable_35: Explainable {
@@ -46,6 +54,10 @@ struct S_JixuanyuanAqua_T_Skill_Explainable_35: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 // MARK: - C
@@ -60,6 +72,10 @@ struct S_JixuanyuanAqua_C_Skill_Explainable_25: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 struct S_JixuanyuanAqua_C_Skill_Explainable_35: Explainable {
@@ -73,6 +89,10 @@ struct S_JixuanyuanAqua_C_Skill_Explainable_35: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 // MARK: - B
@@ -87,6 +107,10 @@ struct S_JixuanyuanAqua_B_Skill_Explainable_25: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 struct S_JixuanyuanAqua_B_Skill_Explainable_35: Explainable {
@@ -100,6 +124,10 @@ struct S_JixuanyuanAqua_B_Skill_Explainable_35: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 // MARK: - Set Skill
@@ -114,6 +142,10 @@ struct S_JixuanyuanAqua_2Sets_Skill_Explainable: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }
 
 struct S_JixuanyuanAqua_3Sets_Skill_Explainable: Explainable {
@@ -127,4 +159,8 @@ struct S_JixuanyuanAqua_3Sets_Skill_Explainable: Explainable {
 
     var caption_JP: String = ""
     var content_JP: String = ""
+
+    public var caption: String { return "" }
+    public var content: String { return "" }
+
 }

@@ -8,68 +8,36 @@
 
 import Foundation
 
-//public let SKS_WhiteComet_PassiveSkill: Skill = .passiveSkill(SK_WhiteComet_PassiveSkill(), [SK_WhiteComet_ShieldBreaker(),
-//                                                                                             SK_WhiteComet_CriticalMastery()])
-
-// MARK: - Passive Skill
-struct SK_WhiteComet_PassiveSkill_Explainable: Explainable {
-    let caption_EN: String = "Passive Skill"
-    let content_EN: String = """
-        Character receives boost from passive skills automatically.
-        """
-
-    let caption_CN: String = ""
-    let content_CN: String = ""
-
-    let caption_JP: String = "パッシブ"
-    let content_JP: String = """
-        パッシブスキルは自動で発動される
-        """
+struct SKS_WhiteComet_PassiveSkill: Skill {
+    public let type: SkillType = .passiveSkill
+    public let mainSkill: MainSkill = SK_WhiteComet_PassiveSkill()
+    public let subSkills: SubSkills = [SK_WhiteComet_ShieldBreaker(),
+                                       SK_WhiteComet_CriticalMastery()]
 }
 
+// MARK: - Passive Skill
 struct SK_WhiteComet_PassiveSkill: MainSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
+    let caption: String = "SK_WhiteComet_PassiveSkill_Caption"
+    let content: String = "SK_WhiteComet_PassiveSkill_Content"
     let attackTag: AttackTag = .none
     let mainSubskills: [MainSubskill] = []
 }
 
 // MARK: - Shield Breaker
-struct SK_WhiteComet_ShieldBreaker_Explainable: Explainable {
-    let caption_EN: String = "Shield Breaker"
-    let content_EN: String = """
-        Increases damage done to Shields by 50%
-        """
-
-    let caption_CN: String = ""
-    let content_CN: String = ""
-
-    let caption_JP: String = "彗星の盾崩し"
-    let content_JP: String = """
-        シールドへのダメージ+50%
-        """
-}
-
 struct SK_WhiteComet_ShieldBreaker: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
+    let caption: String = "SK_WhiteComet_ShieldBreaker_Caption"
+    let content: String = "SK_WhiteComet_ShieldBreaker_Content"
     let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
 // MARK: - Critical Mastery
-struct SK_WhiteComet_CriticalMastery_Explainable: Explainable {
-    let caption_EN: String = "Critical Mastery"
-    let content_EN: String = """
-        Increases Critical Damage by 40% when HP is ablove 80%
-        """
-
-    let caption_CN: String = ""
-    let content_CN: String = ""
-
-    let caption_JP: String = "彗星爆撃"
-    let content_JP: String = """
-        現在のHPが80%を超えている時、会心ダメージ+40%
-        """
-}
-
 struct SK_WhiteComet_CriticalMastery: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
+    let caption: String = "SK_WhiteComet_CriticalMastery_Caption"
+    let content: String = "SK_WhiteComet_CriticalMastery_Content"
     let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .SS
 }

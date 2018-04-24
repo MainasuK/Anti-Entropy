@@ -5,3 +5,31 @@
   Created by Cirno MainasuK on 2018-4-22.
   Copyright © 2018年 MainasuK. All rights reserved.
 */
+
+"HP" = "HP";
+"SP" = "SP";
+"ATK" = "ATK";
+"DEF" = "DEF";
+"CRT" = "CRT";
+
+"LV" = "LV";
+
+"Special Attack" = "特殊攻撃";
+"Ultimate" = "必殺技";
+"Basic Attack" = "通常攻撃";
+"Evasion" = "回避";
+"Passive Skill" = "パッシブ";
+"Leader Skill" = "リーダースキル";
+
+"Attack_Tag_Branch" = "分岐";
+"Attack_Tag_SwitchIn" = "出場";
+"Attack_Tag_QTE" = "QTE";
+
+
+"Creature" = "Creature";
+"Psychic" = "Psychic";
+"Mecha" = "Mecha";
+
+"Kiana Kaslana" = "Kiana Kaslana";
+"Raiden Mei" = "Raiden Mei";
+"Bronya Zaychik" = "Bronya Zaychik";

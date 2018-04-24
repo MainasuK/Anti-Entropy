@@ -18,6 +18,7 @@ struct SKS_WhiteComet_SpecialAttack: Skill {
 
 // MARK: - Comet Fall - Punt
 struct SK_WhiteComet_CometFall_Punt: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_CometFall_Punt_Caption";
     let content: String = "SK_WhiteComet_CometFall_Punt_Content";
     let attackTag: AttackTag = .branch
@@ -29,6 +30,7 @@ extension SK_WhiteComet_CometFall_Punt {
 
 // MARK: - Comet Fall - Bring Down
 struct SK_WhiteComet_CometFall_BringDown: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_CometFall_BringDown_Caption";
     let content: String = "SK_WhiteComet_CometFall_BringDown_Content";
     let attackTag: AttackTag = .branch
@@ -40,6 +42,7 @@ extension SK_WhiteComet_CometFall_BringDown {
 
 // MARK: - Comet Fall
 struct SK_WhiteComet_CometFall: MainSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_CometFall_Caption";
     let content: String = "SK_WhiteComet_CometFall_Content";
     let attackTag: AttackTag = .branch
@@ -48,6 +51,7 @@ struct SK_WhiteComet_CometFall: MainSkill {
 
 // MARK: - Comet Explosion
 struct SK_WhiteComet_CometExplosion: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_CometExplosion_Caption";
     let content: String = "SK_WhiteComet_CometExplosion_Content";
     let attackTag: AttackTag = .switchIn
@@ -60,6 +64,7 @@ extension SK_WhiteComet_CometExplosion {
 
 // MARK: - Top Helix
 struct SK_WhiteComet_TopHelix: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_TopHelix_Caption";
     let content: String = "SK_WhiteComet_TopHelix_Content";
     let attackTag: AttackTag = .QTE
@@ -73,6 +78,7 @@ extension SK_WhiteComet_TopHelix {
 
 // MARK: - Gravity Freak
 struct SK_WhiteComet_GravityFreak: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_GravityFreak_Caption";
     let content: String = "SK_WhiteComet_GravityFreak_Content";
     let attackTag: AttackTag = .normal

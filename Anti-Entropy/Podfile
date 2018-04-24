@@ -10,6 +10,7 @@ target 'Anti-Entropy' do
     pod 'RxCocoa', '~> 4.0'
     pod "RxRealm"
     pod 'Default'
+    pod 'Localize-Swift', '~> 2.0'
 
   target 'Anti-EntropyTests' do
     inherit! :search_paths

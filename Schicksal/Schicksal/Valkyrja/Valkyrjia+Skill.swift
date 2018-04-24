@@ -20,7 +20,7 @@ public enum SkillType {
     case leaderSkill
 }
 
-public protocol Skill {
+public protocol Skill: Explainable {
     var type: SkillType { get }
     var mainSkill: MainSkill { get }
     var subSkills: SubSkills { get }
@@ -28,7 +28,7 @@ public protocol Skill {
 
 extension Skill {
 
-    public var text: String {
+    var caption: String {
         switch type {
         case .specialAttack: return "Special Attack"
         case .ultimate:      return "Ultimate"
@@ -37,6 +37,9 @@ extension Skill {
         case .passiveSkill:  return "Passive Skill"
         case .leaderSkill:   return "Leader Skill"
         }
+    }
+    var content: String {
+        return caption
     }
 
 }

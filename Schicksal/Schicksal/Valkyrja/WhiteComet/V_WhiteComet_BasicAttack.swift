@@ -8,13 +8,17 @@
 
 import Foundation
 
-
-//public let SKS_WhiteComet_BasicAttack: Skill = .basicAttack(SK_WhiteComet_MeteorTarget(), [SK_WhiteComet_MeteorShard(),
-//                                                                                           SK_WhiteComet_MeteorExplosion(),
-//                                                                                           SK_WhiteComet_MeteorImpact()])
+struct SKS_WhiteComet_BasicAttack: Skill {
+    public let type: SkillType = .basicAttack
+    public let mainSkill: MainSkill = SK_WhiteComet_MeteorTarget()
+    public let subSkills: SubSkills = [SK_WhiteComet_MeteorShard(),
+                                       SK_WhiteComet_MeteorExplosion(),
+                                       SK_WhiteComet_MeteorImpact()]
+}
 
 // MARK: - Meteor Target - 1st Strike
 struct SK_WhiteComet_MeteorTarget_1stStrike: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorTarget_1stStrike_Caption"
     let content: String = "SK_WhiteComet_MeteorTarget_1stStrike_Content"
     let attackTag: AttackTag = .normal
@@ -26,6 +30,7 @@ extension SK_WhiteComet_MeteorTarget_1stStrike {
 
 // MARK: - Meteor Target - 2nd Strike
 struct SK_WhiteComet_MeteorTarget_2ndStrike: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorTarget_2ndStrike_Caption"
     let content: String = "SK_WhiteComet_MeteorTarget_2ndStrike_Content"
     let attackTag: AttackTag = .normal
@@ -38,6 +43,7 @@ extension SK_WhiteComet_MeteorTarget_2ndStrike {
 
 // MARK: - Meteor Target - 3rd Strike
 struct SK_WhiteComet_MeteorTarget_3rdStrike: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorTarget_3rdStrike_Caption"
     let content: String = "SK_WhiteComet_MeteorTarget_3rdStrike_Content"
     let attackTag: AttackTag = .normal
@@ -50,6 +56,7 @@ extension SK_WhiteComet_MeteorTarget_3rdStrike {
 
 // MARK: - Meteor Target - 4th Strike
 struct SK_WhiteComet_MeteorTarget_4thStrike: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorTarget_4thStrike_Caption"
     let content: String = "SK_WhiteComet_MeteorTarget_4thStrike_Content"
     let attackTag: AttackTag = .normal
@@ -61,6 +68,7 @@ extension SK_WhiteComet_MeteorTarget_4thStrike {
 
 // MARK: - Meteor Target - 5th Strike
 struct SK_WhiteComet_MeteorTarget_5thStrike: MainSubskill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorTarget_5thStrike_Caption"
     let content: String = "SK_WhiteComet_MeteorTarget_5thStrike_Content"
     let attackTag: AttackTag = .normal
@@ -72,6 +80,7 @@ extension SK_WhiteComet_MeteorTarget_5thStrike {
 
 // MARK: - Meteor Target
 struct SK_WhiteComet_MeteorTarget: MainSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorTarget_Caption"
     let content: String = "SK_WhiteComet_MeteorTarget_Content"
     let attackTag: AttackTag = .normal
@@ -84,6 +93,7 @@ struct SK_WhiteComet_MeteorTarget: MainSkill {
 
 // MARK: - Meteor Shard
 struct SK_WhiteComet_MeteorShard: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorShard_Caption"
     let content: String = "SK_WhiteComet_MeteorShard_Content"
     let attackTag: AttackTag = .none
@@ -96,8 +106,9 @@ extension SK_WhiteComet_MeteorShard {
 
 // MARK: - Meteor Explosion
 struct SK_WhiteComet_MeteorExplosion: SubSkill {
-    let caption: String = "SK_WhiteComet_MeteorShard_Caption"
-    let content: String = "SK_WhiteComet_MeteorShard_Content"
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
+    let caption: String = "SK_WhiteComet_MeteorExplosion_Caption"
+    let content: String = "SK_WhiteComet_MeteorExplosion_Content"
     let attackTag: AttackTag = .normal
     let skillUnlockRank: SkillUnlockRank = .A
 }
@@ -108,6 +119,9 @@ extension SK_WhiteComet_MeteorExplosion {
 
 // MARK: - Meteor Impact
 struct SK_WhiteComet_MeteorImpact: SubSkill {
+    let localizeTableName: String? = "Localizable_V_WhiteComet"
+    let caption: String = "SK_WhiteComet_MeteorImpact_Caption"
+    let content: String = "SK_WhiteComet_MeteorImpact_Content"
     let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .SSS
 }

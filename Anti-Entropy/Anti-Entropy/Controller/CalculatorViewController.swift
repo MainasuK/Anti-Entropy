@@ -17,7 +17,7 @@ class CalculatorViewController: UIViewController {
     var viewModel = CalculatorViewModel()
 
     // All buff damage - 1 sections (0)
-    var damage = [Measurable]()
+//    var damage = [Measurable]()
 
     // TODO: ViewModel
     // All skill - 6 sections (1 - 6)

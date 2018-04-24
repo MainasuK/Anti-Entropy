@@ -15,13 +15,16 @@ public struct V_WhiteComet: Valkyrja {
     public let fullName: String    = "V_WhiteComet_FullName"
     public let description: String = "V_WhiteComet_Description"
 
-    public let localizeTableName: String? = "Localizable_V_WhiteComet";
+    public let localizeTableName: String? = "Localizable_V_WhiteComet"
 
     public let initialRank: ValkyrjaRank = .none
 
     public let skills: Skills = [SKS_WhiteComet_SpecialAttack(),
-
-    ]
+                                 SKS_WhiteComet_Ultimate(),
+                                 SKS_WhiteComet_BasicAttack(),
+                                 SKS_WhiteComet_Evasion(),
+                                 SKS_WhiteComet_PassiveSkill(),
+                                 SKS_WhiteComet_LeaderSkill()]
 
     public var level: LV
     public var rank: ValkyrjaRank

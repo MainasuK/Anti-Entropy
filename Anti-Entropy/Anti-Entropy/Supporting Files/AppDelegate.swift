@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import Localize_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let availableLanguages = Localize.availableLanguages()
+        Localize.setCurrentLanguage(availableLanguages.first ?? "en")
+
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(ubiquitousKeyValueStoreDidChange(_:)),

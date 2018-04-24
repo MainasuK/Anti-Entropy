@@ -41,55 +41,43 @@ class CalculatorTableViewCell: UITableViewCell {
 extension CalculatorTableViewCell {
 
     func configure(with skill: Skill, of basicStatus: BasicStatus, at indexPath: IndexPath) {
-//        switch skill {
-//        case let .specialAttack(main, sub):
-//            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
-//        case let .ultimate(main, sub):
-//            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
-//        case let .basicAttack(main, sub):
-//            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
-//        case let .evasion(main, sub):
-//            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
-//        case let .passiveSkill(main, sub):
-//            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
-//        case let .leaderSkill(main, sub):
-//            self.configure(with: main, sub: sub, of: basicStatus, at: indexPath.row)
-//        }
+        self.configure(with: skill.mainSkill, sub: skill.subSkills, of: basicStatus, at: indexPath.row)
     }
 
     private func configure(with main: MainSkill, sub: SubSkills, of basicStatus: BasicStatus, at row: Int) {
-//        let mainSubskillRange = 1..<(1 + main.mainSubskills.count)
-//        let subSkillRange     = mainSubskillRange.upperBound..<(mainSubskillRange.upperBound + sub.count)
+        let mainSubskillRange = 1..<(1 + main.mainSubskills.count)
+        let subSkillRange     = mainSubskillRange.upperBound..<(mainSubskillRange.upperBound + sub.count)
 //        let buff              = skills.map { $0.skillTypes }
 //                                      .flatMap { $0 }
 //                                      .filter { $0.skillType == .buff }
 //                                      .filter { valkyrjaRank.rawValue >= $0.skillUnlockRank.rawValue }
-//
-//        switch row {
-//        case 0:
-//            label.text         = main.caption
-//            typeLabel.text     = main.skillType.text
-//            subtitleLabel.text = main.content
+
+        switch row {
+        case 0:
+            label.text         = main.localized.caption
+            typeLabel.text     = main.attackTag.localized.caption
+            subtitleLabel.text = main.localized.content
 //            let hasNoBuffSkill = !main.mainSubskills.filter { $0.skillType != .buff && $0.skillType != .debuff }.isEmpty
 //            detailLabel.text   = (hasNoBuffSkill) ?
 //                                 "\(main.mainSubskills.map { basicStatus.DMG(for: [$0], with: [:], with: buff) }.reduce(0, +))" : "--"
-//        case _ where mainSubskillRange ~= row:
-//            let mainSubskill   = main.mainSubskills[row - 1]
-//            label.text         = main.explanation.caption + " - " + mainSubskill.explanation.caption
-//            typeLabel.text     = mainSubskill.skillType.text
-//            subtitleLabel.text = mainSubskill.explanation.content
+        case _ where mainSubskillRange ~= row:
+            let mainSubskill   = main.mainSubskills[row - 1]
+            label.text         = main.localized.caption + " - " + mainSubskill.localized.caption
+            typeLabel.text     = mainSubskill.attackTag.localized.caption
+            subtitleLabel.text = mainSubskill.localized.content
 //            detailLabel.text   = (mainSubskill.skillType == .buff || mainSubskill.skillType == .debuff) ?
 //                                 "--" : "\(basicStatus.DMG(for: [mainSubskill], with: [:], with: buff))"
-//        case _ where subSkillRange ~= row:
-//            let subskill       = sub[row - mainSubskillRange.upperBound]
-//            label.text         = subskill.explanation.caption
-//            typeLabel.text     = [subskill.skillType.text, subskill.skillUnlockRank.text].compactMap { $0 }.joined(separator: "·")
-//            subtitleLabel.text = subskill.explanation.content
+        case _ where subSkillRange ~= row:
+            let subskill       = sub[row - mainSubskillRange.upperBound]
+            label.text         = subskill.localized.caption
+            typeLabel.text     = [subskill.attackTag.localized.caption, subskill.skillUnlockRank.text]
+                .compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "·")
+            subtitleLabel.text = subskill.localized.content
 //            detailLabel.text   = (subskill.skillType == .buff || subskill.skillType == .debuff) ?
 //                                 "--" : "\(basicStatus.DMG(for: [subskill], with: [:], with: buff))"
-//        default:
-//            assertionFailure()
-//        }
+        default:
+            assertionFailure()
+        }
     }
 
 }

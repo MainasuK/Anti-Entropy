@@ -25,10 +25,10 @@ public protocol Explainable {
 }
 
 extension Explainable {
-    var caption: String { return "" }
-    var content: String { return "" }
-    var localizeTableName: String? { return nil }
-    var bundleIdentifier: String { return frameworkBundleIdentifier }
+    public var caption: String { return "" }
+    public var content: String { return "" }
+    public var localizeTableName: String? { return nil }
+    public var bundleIdentifier: String { return frameworkBundleIdentifier }
 }
 
 public struct AbilityState: OptionSet {
@@ -75,7 +75,7 @@ public struct AbilityState: OptionSet {
     static let buff: AbilityState   = [.endure, .moveSpeedUp, .attackSpeedUp, .powerUp, .shielded, .critUp, .immune, .maxMoveSpeed, .undamagable, .invisible]
 }
 
-public enum AttackTag {
+public enum AttackTag: Explainable {
     case none
     case normal             // 普通攻击
     case branch             // 分支
@@ -92,13 +92,18 @@ public enum AttackTag {
 
 extension AttackTag {
 
-    public var text: String? {
+    public var caption: String {
         switch self {
-        case .branch:       return "Combo Skill"
-        case .switchIn:     return "Switch Skill"
-        case .QTE:          return "QTE"
-        default:            return nil
+        case .branch:       return "Attack_Tag_Branch"
+        case .switchIn:     return "Attack_Tag_SwitchIn"
+        case .QTE:          return "Attack_Tag_QTE"
+        default:
+            return ""
         }
+    }
+
+    public var content: String {
+        return caption
     }
 
 }

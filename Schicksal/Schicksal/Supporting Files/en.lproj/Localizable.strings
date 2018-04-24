@@ -21,6 +21,10 @@
 "Passive Skill" = "Passive Skill";
 "Leader Skill" = "Leader Skill";
 
+"Attack_Tag_Branch" = "Combo";
+"Attack_Tag_SwitchIn" = "Switch";
+"Attack_Tag_QTE" = "QTE";
+
 "Creature" = "Creature";
 "Psychic" = "Psychic";
 "Mecha" = "Mecha";

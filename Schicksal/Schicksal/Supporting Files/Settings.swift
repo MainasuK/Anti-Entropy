@@ -8,4 +8,4 @@
 
 import Foundation
 
-let frameworkBundleIdentifier = "com.mainasuk.Schicksal"
+public let frameworkBundleIdentifier = "com.mainasuk.Schicksal"

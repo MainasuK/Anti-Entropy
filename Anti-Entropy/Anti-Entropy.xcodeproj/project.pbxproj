@@ -14,6 +14,7 @@
 		DB188D662089FB480052E77D /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D652089FB480052E77D /* CalculatorViewModel.swift */; };
 		DB188D682089FB990052E77D /* CalculatorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D672089FB990052E77D /* CalculatorDetailViewModel.swift */; };
 		DB188D6A208A17FD0052E77D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D69208A17FD0052E77D /* String.swift */; };
+		DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA03B208F0C9E001D4A88 /* Explainable.swift */; };
 		DB1C72AD208886F4006696C7 /* BasicStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */; };
 		DB1C72AF20888AE6006696C7 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AE20888AE6006696C7 /* RxSwift.swift */; };
 		DB5E6C722086E88600631BDD /* CalculatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */; };
@@ -68,6 +69,11 @@
 		DB188D652089FB480052E77D /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		DB188D672089FB990052E77D /* CalculatorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorDetailViewModel.swift; sourceTree = "<group>"; };
 		DB188D69208A17FD0052E77D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		DB1AA03B208F0C9E001D4A88 /* Explainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explainable.swift; sourceTree = "<group>"; };
+		DB1AA043208F17D4001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DB1AA044208F17D4001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DB1AA045208F17DD001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		DB1AA046208F17DD001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStatusViewModel.swift; sourceTree = "<group>"; };
 		DB1C72AE20888AE6006696C7 /* RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
 		DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewCell.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				DB75591920861B8900BA2DB7 /* UIView.swift */,
 				DB1C72AE20888AE6006696C7 /* RxSwift.swift */,
 				DB188D69208A17FD0052E77D /* String.swift */,
+				DB1AA03B208F0C9E001D4A88 /* Explainable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -376,6 +383,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Anti-Entropy/Pods-Anti-Entropy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Default/Default.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -385,6 +393,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Default.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -404,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
+				DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
 				DB06B9F72089CF3300776553 /* CalculatorDetailViewController.swift in Sources */,
 				DBB11059208BC6460059A017 /* Avartar.swift in Sources */,
@@ -443,6 +453,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB92E4F72084693D00ED4A3E /* Base */,
+				DB1AA043208F17D4001D4A88 /* zh-Hans */,
+				DB1AA045208F17DD001D4A88 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -451,6 +463,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB92E4FC2084693E00ED4A3E /* Base */,
+				DB1AA044208F17D4001D4A88 /* zh-Hans */,
+				DB1AA046208F17DD001D4A88 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -462,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -522,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -581,7 +597,10 @@
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "$(SRCROOT)/Anti-Entropy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-Entropy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -598,7 +617,10 @@
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "$(SRCROOT)/Anti-Entropy/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-Entropy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -615,7 +637,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "Anti-EntropyTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-EntropyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -633,7 +659,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z68BDSMP42;
 				INFOPLIST_FILE = "Anti-EntropyTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mainasuk.Anti-EntropyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

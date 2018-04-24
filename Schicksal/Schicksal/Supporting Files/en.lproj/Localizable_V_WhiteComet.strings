@@ -6,6 +6,8 @@
   Copyright © 2018年 MainasuK. All rights reserved.
 */
 
+// Property
+
 "V_WhiteComet_Firstname" = "White";
 "V_WhiteComet_Lastname" = "Comet";
 "V_WhiteComet_ShortName" = "White Comet";
@@ -30,6 +32,25 @@
 // MARK: Special Attack - Gravity Freak
 "SK_WhiteComet_GravityFreak_Caption" = "Gravity Freak";
 "SK_WhiteComet_GravityFreak_Content" = "The second strike of combo attacks and Comet Explosion deals an additional 1125 fire damage to enemy with an unbroken Elite Shield.";
+
+// MARK: Ultimate - Valkyrie Burst
+"SK_WhiteComet_ValkyrieBurst_Burst_Caption" = "Valkyrie Burst";
+"SK_WhiteComet_ValkyrieBurst_Burst_Content" = "Consumes SP continuously to increase own Attack Speed and Ignore Interrupt.";
+
+"SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Caption" = "Continuous Burst";
+"SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Content" = "Consumes 20 SP to activate and 10 SP per second until SP is depleted.";
+
+"SK_WhiteComet_ValkyrieBurst_Caption" = "Valkyrie Burst";
+"SK_WhiteComet_ValkyrieBurst_Content" = "Enters the goddess state using Valkyrie's energy burst.";
+
+"SK_WhiteComet_ValkyrieImpact_Caption" = "Valkyrie Impact";
+"SK_WhiteComet_ValkyrieImpact_Content" = "Stuns surrounding enemies for 5 sec when Burst occurs, dealing 2610 pysical damage.";
+
+"SK_WhiteComet_ValkyrieBarrier_Caption" = "Valkyrie Barrier";
+"SK_WhiteComet_ValkyrieBarrier_Content" = "Grants the whole team protection during Burst, increasing Ignore Interrupt and increasing DEF by 100%";
+
+"SK_WhiteComet_ValkyrieCharge_Caption" = "Valkyrie Charge";
+"SK_WhiteComet_ValkyrieCharge_Content" = "Receives an Energy Charge every 12.0 sec. The next attack stuns enemy for 3.0 sec.";
 
 // MARK: - Basic Attack - Meteor Target
 "SK_WhiteComet_MeteorTarget_1stStrike_Caption" = "1st Strike";
@@ -61,3 +82,41 @@
 // MARK: - Basic Attack - Meteor Impact
 "SK_WhiteComet_MeteorImpact_Caption" = "Meteor Impact";
 "SK_WhiteComet_MeteorImpact_Content" = "Basic attacks have a 40.0% chance of stunning enemy for 2 sec upon a successful interrupt.";
+
+// MARK: - Evasion - Time Shift
+"SK_WhiteComet_TimeShift_TimeFracture_Caption" = "Time Fracture";
+"SK_WhiteComet_TimeShift_TimeFracture_Content" = "Triggers Time Fracture upon an Ultimate Evasion, slowing all enemies for 3 sec. Cooldown: 15 sec.";
+
+"SK_WhiteComet_TimeShift_Caption" = "Time Shift";
+"SK_WhiteComet_TimeShift_Content" = "Rolls quickly to evade enemy attacks.";
+
+// MARK: - Evasion - Time Blink
+"SK_WhiteComet_TimeBlink_Caption" = "Time Blink";
+"SK_WhiteComet_TimeBlink_Caption" = "Decreases cooldown of Time Fracture by 4.0 sec.";
+
+// MARK: - Evasion - Power Flow
+"SK_WhiteComet_PowerFlow_Caption" = "Power Flow";
+"SK_WhiteComet_PowerFlow_Content" = "Recovers an additional 5 EP for the whole team when Time Fracture is triggered by a successful evasion.";
+
+// MARK: - Passive Skill - Passive Skill
+"SK_WhiteComet_PassiveSkill_Caption" = "Passive Skill";
+"SK_WhiteComet_PassiveSkill_Content" = "Character receives boost from passive skills automatically.";
+
+// MARK: - Passive Skill - Shield Breaker
+"SK_WhiteComet_ShieldBreaker_Caption" = "Shield Breaker";
+"SK_WhiteComet_ShieldBreaker_Content" = "Increases damage done to Shields by 50%";
+
+// MARK: - Passive Skill - Critical Mastery
+"SK_WhiteComet_CriticalMastery_Caption" = "Critical Mastery";
+"SK_WhiteComet_CriticalMastery_Content" = "Increases Critical Damage by 40% when HP is ablove 80%";
+
+// MARK: - Leader Skill - Meteor Bless
+"SK_WhiteComet_MeteorBless_Guider_Caption" = "Guider";
+"SK_WhiteComet_MeteorBless_Guider_Content" = "Increases maximum HP by 10% during team battles";
+
+"SK_WhiteComet_MeteorBless_Caption" = "Meteor Bless";
+"SK_WhiteComet_MeteorBless_Content" = "Team receives bonus if leader";
+
+// MARK: - Leader Skill - Guide
+"SK_WhiteComet_Guide_Caption" = "Guider";
+"SK_WhiteComet_Guide_Content" = "Increases maximum HP by 18% during team battles";

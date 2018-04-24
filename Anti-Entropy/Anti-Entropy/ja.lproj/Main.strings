@@ -1,0 +1,24 @@
+
+/* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "3n6-Lc-SX0"; */
+"3n6-Lc-SX0.title" = "Calculator";
+
+/* Class = "UILabel"; text = "Lv.25"; ObjectID = "9kw-s1-Lcm"; */
+"9kw-s1-Lcm.text" = "Lv.25";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "A5i-Tc-jOY"; */
+"A5i-Tc-jOY.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Stigmata Album"; ObjectID = "C9H-EB-lEi"; */
+"C9H-EB-lEi.title" = "Stigmata Album";
+
+/* Class = "UITabBarItem"; title = "Stigmata Album"; ObjectID = "F1U-a3-rjg"; */
+"F1U-a3-rjg.title" = "Stigmata Album";
+
+/* Class = "UINavigationItem"; title = "Calculator"; ObjectID = "GTk-9b-kBR"; */
+"GTk-9b-kBR.title" = "Calculator";
+
+/* Class = "UILabel"; text = "Jixuanyuan Aqua (T)"; ObjectID = "Je4-Hy-5NP"; */
+"Je4-Hy-5NP.text" = "Jixuanyuan Aqua (T)";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "NIp-88-5Vn"; */
+"NIp-88-5Vn.text" = "Detail";

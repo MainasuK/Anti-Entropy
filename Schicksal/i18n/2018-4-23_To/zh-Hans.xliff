@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Schicksal/Supporting Files/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3" build-num="9E145"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Schicksal/Supporting Files/en.lproj/Localizable_V_WhiteComet.strings" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3" build-num="9E145"/>
+    </header>
+    <body>
+      <trans-unit id="SK_WhiteComet_CometExplosion_Caption">
+        <source>Coment Explosion</source>
+        <note>MARK: Special Attack - Comet Explosion</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CometExplosion_Content">
+        <source>Unleashes a crushing attack upon entering the battle, dealing (275% of ATK) physical damage. stuns enemy for 6.0 sec upon a successful interrupt.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CometFall_BringDown_Caption">
+        <source>Bring Down</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CometFall_BringDown_Content">
+        <source>Deals AOE physical damage equal to 275% of ATK.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CometFall_Punt_Caption">
+        <source>Punt</source>
+        <note>MARK: Special Attack - Comet Fall</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CometFall_Punt_Content">
+        <source>Deals physical damage equal to 50% of ATK.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CriticalMastery_Caption">
+        <source>Critical Mastery</source>
+        <note>MARK: - Passive Skill - Critical Mastery</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_CriticalMastery_Content">
+        <source>Increases Critical Damage by 40% when HP is ablove 80%</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_GravityFreak_Caption">
+        <source>Gravity Freak</source>
+        <note>MARK: Special Attack - Gravity Freak</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_GravityFreak_Content">
+        <source>The second strike of combo attacks and Comet Explosion deals an additional 1125 fire damage to enemy with an unbroken Elite Shield.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_Guide_Caption">
+        <source>Guider</source>
+        <note>MARK: - Leader Skill - Guide</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_Guide_Content">
+        <source>Increases maximum HP by 18% during team battles</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorBless_Caption">
+        <source>Meteor Bless</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorBless_Content">
+        <source>Team receives bonus if leader</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorBless_Guider_Caption">
+        <source>Guider</source>
+        <note>MARK: - Leader Skill - Meteor Bless</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorBless_Guider_Content">
+        <source>Increases maximum HP by 10% during team battles</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorExplosion_Caption">
+        <source>Meteor Explosion</source>
+        <note>MARK: - Basic Attack - Meteor Explosion</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorExplosion_Content">
+        <source>Deals an additional 1485 physical damage to enemy upon breaking its shield using basic or combo attacks.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorImpact_Caption">
+        <source>Meteor Impact</source>
+        <note>MARK: - Basic Attack - Meteor Impact</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorImpact_Content">
+        <source>Basic attacks have a 40.0% chance of stunning enemy for 2 sec upon a successful interrupt.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorShard_Caption">
+        <source>Meteor Shard</source>
+        <note>MARK: - Basic Attack - Meteor Shard</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorShard_Content">
+        <source>Increases physical damage of basic attacks by 143.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_1stStrike_Caption">
+        <source>1st Strike</source>
+        <note>MARK: - Basic Attack - Meteor Target</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_1stStrike_Content">
+        <source>Deals physical damage equal to 100% of ATK</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_2ndStrike_Caption">
+        <source>2nd Strike</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_2ndStrike_Content">
+        <source>Deals physical damage equal to 100% of ATK</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_3rdStrike_Caption">
+        <source>3rd Strike</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_3rdStrike_Content">
+        <source>Deals physical damage equal to 100% of ATK</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_4thStrike_Caption">
+        <source>4th Strike</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_4thStrike_Content">
+        <source>Deals physical damage equal to 150% of ATK</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_5thStrike_Caption">
+        <source>5th Strike</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_5thStrike_Content">
+        <source>Deals physical damage equal to 250% of ATK</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_Caption">
+        <source>Meteor Target</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_MeteorTarget_Content">
+        <source>Uses Gun Kata to unleash a penta-strike</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_PassiveSkill_Caption">
+        <source>Passive Skill</source>
+        <note>MARK: - Passive Skill - Passive Skill</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_PassiveSkill_Content">
+        <source>Character receives boost from passive skills automatically.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_PowerFlow_Caption">
+        <source>Power Flow</source>
+        <note>MARK: - Evasion - Power Flow</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_PowerFlow_Content">
+        <source>Recovers an additional 5 EP for the whole team when Time Fracture is triggered by a successful evasion.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ShieldBreaker_Caption">
+        <source>Shield Breaker</source>
+        <note>MARK: - Passive Skill - Shield Breaker</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ShieldBreaker_Content">
+        <source>Increases damage done to Shields by 50%</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_TimeShift_Caption">
+        <source>Time Shift</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_TimeShift_Content">
+        <source>Rolls quickly to evade enemy attacks.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_TimeShift_TimeFracture_Caption">
+        <source>Time Fracture</source>
+        <note>MARK: - Evasion - Time Shift</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_TimeShift_TimeFracture_Content">
+        <source>Triggers Time Fracture upon an Ultimate Evasion, slowing all enemies for 3 sec. Cooldown: 15 sec.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_TopHelix_Caption">
+        <source>Top Helix</source>
+        <note>MARK: Special Attack - Top Helix</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_TopHelix_Content">
+        <source>Triggers QTE and enters the battle when enemy is lifted in the air, dealing (375% of ATK+2250) physical damage.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBarrier_Caption">
+        <source>Valkyrie Barrier</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBarrier_Content">
+        <source>Grants the whole team protection during Burst, increasing Ignore Interrupt and increasing DEF by 100%</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBurst_Burst_Caption">
+        <source>Valkyrie Burst</source>
+        <note>MARK: Ultimate - Valkyrie Burst</note>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBurst_Burst_Content">
+        <source>Consumes SP continuously to increase own Attack Speed and Ignore Interrupt.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBurst_Caption">
+        <source>Valkyrie Burst</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBurst_Content">
+        <source>Enters the goddess state using Valkyrie's energy burst.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Caption">
+        <source>Continuous Burst</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Content">
+        <source>Consumes 20 SP to activate and 10 SP per second until SP is depleted.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieCharge_Caption">
+        <source>Valkyrie Charge</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieCharge_Content">
+        <source>Receives an Energy Charge every 12.0 sec. The next attack stuns enemy for 3.0 sec.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieImpact_Caption">
+        <source>Valkyrie Impact</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SK_WhiteComet_ValkyrieImpact_Content">
+        <source>Stuns surrounding enemies for 5 sec when Burst occurs, dealing 2610 pysical damage.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="V_WhiteComet_Description">
+        <source>Melee attacker with constant DPS. Good at interrupting enemy attacks. High survivability.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="V_WhiteComet_Firstname">
+        <source>White</source>
+        <note>Property</note>
+      </trans-unit>
+      <trans-unit id="V_WhiteComet_FullName">
+        <source>White Comet</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="V_WhiteComet_Lastname">
+        <source>Comet</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="V_WhiteComet_ShortName">
+        <source>White Comet</source>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Schicksal/Supporting Files/en.lproj/Localizable.strings" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3" build-num="9E145"/>
+    </header>
+    <body>
+      <trans-unit id="ATK">
+        <source>ATK</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Basic Attack">
+        <source>Basic Attack</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Bronya Zaychik">
+        <source>Bronya Zaychik</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="CRT">
+        <source>CRT</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Creature">
+        <source>Creature</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="DEF">
+        <source>DEF</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Evasion">
+        <source>Evasion</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="HP">
+        <source>HP</source>
+        <note>Property</note>
+      </trans-unit>
+      <trans-unit id="Kiana Kaslana">
+        <source>Kiana Kaslana</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="LV">
+        <source>LV</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Leader Skill">
+        <source>Leader Skill</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Mecha">
+        <source>Mecha</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Passive Skill">
+        <source>Passive Skill</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Psychic">
+        <source>Psychic</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Raiden Mei">
+        <source>Raiden Mei</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SP">
+        <source>SP</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Special Attack">
+        <source>Special Attack</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Ultimate">
+        <source>Ultimate</source>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SchicksalTests/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.3" build-num="9E145"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

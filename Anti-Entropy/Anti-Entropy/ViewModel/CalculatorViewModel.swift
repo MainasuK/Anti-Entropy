@@ -60,7 +60,7 @@ extension CalculatorViewModel {
 extension CalculatorViewModel {
 
     func titleForHeader(in section: Int) -> String? {
-        return leader.value.skills[section].text
+        return leader.value.skills[section].localized.caption
     }
 
     func configure(_ cell: CalculatorTableViewCell, at indexPath: IndexPath) {

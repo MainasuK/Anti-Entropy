@@ -15,6 +15,7 @@
 		DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */; };
 		DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */; };
 		DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */; };
+		DB1AA03F208F1149001D4A88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1AA03D208F1149001D4A88 /* InfoPlist.strings */; };
 		DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */; };
 		DB715899208469B300FC164B /* Schicksal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB71588F208469B300FC164B /* Schicksal.framework */; };
 		DB71589E208469B300FC164B /* SchicksalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71589D208469B300FC164B /* SchicksalTests.swift */; };
@@ -63,6 +64,7 @@
 		DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+MainSkill.swift"; sourceTree = "<group>"; };
 		DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+BasicStatus.swift"; sourceTree = "<group>"; };
 		DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+Attribute.swift"; sourceTree = "<group>"; };
+		DB1AA03E208F1149001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_LeaderSkill.swift; sourceTree = "<group>"; };
 		DB71588F208469B300FC164B /* Schicksal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Schicksal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB715892208469B300FC164B /* Schicksal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schicksal.h; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				DB71589F208469B300FC164B /* Info.plist */,
+				DB1AA03D208F1149001D4A88 /* InfoPlist.strings */,
 				DB71589D208469B300FC164B /* SchicksalTests.swift */,
 				DBB3FB7B20848F9600601085 /* MeasureableTests.swift */,
 				DBB3FB902084BC9300601085 /* ValkyrjaTests.swift */,
@@ -321,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1AA03F208F1149001D4A88 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +387,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DB1AA03D208F1149001D4A88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB1AA03E208F1149001D4A88 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DBE6FFC4208B97B200EC634C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

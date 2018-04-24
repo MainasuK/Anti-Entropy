@@ -6,6 +6,8 @@
   Copyright © 2018年 MainasuK. All rights reserved.
 */
 
+// Property
+
 "V_WhiteComet_Firstname" = "White";
 "V_WhiteComet_Lastname" = "Comet";
 "V_WhiteComet_ShortName" = "White Comet";
@@ -33,6 +35,25 @@
 // MARK: Special Attack - Gravity Freak
 "SK_WhiteComet_GravityFreak_Caption" = "重力の異想";
 "SK_WhiteComet_GravityFreak_Content" = "エリートシールドが破壊されていない敵に分岐攻撃の2発目と彗星炸裂を使用すると、さらに1,125の炎ダメージを与える";
+
+// MARK: Ultimate - Valkyrie Burst
+"SK_WhiteComet_ValkyrieBurst_Burst_Caption" = "爆発";
+"SK_WhiteComet_ValkyrieBurst_Burst_Content" = "EPを継続的に消費し続け、自身の攻撃速度と中断耐性アップ";
+
+"SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Caption" = "継続爆発";
+"SK_WhiteComet_ValkyrieBurst_ContinuousBurst_Content" = "20EPで発動、EPがなくなるまで毎秒10EPを消費し続ける";
+
+"SK_WhiteComet_ValkyrieBurst_Caption" = "戦乙女の爆発";
+"SK_WhiteComet_ValkyrieBurst_Content" = "戦乙女の力を開放し、神化状態になる";
+
+"SK_WhiteComet_ValkyrieImpact_Caption" = "戦乙女衝撃";
+"SK_WhiteComet_ValkyrieImpact_Content" = "爆発時、周囲の敵に2,610の物理ダメージを与え、スタン状態にする、継続時間5秒";
+
+"SK_WhiteComet_ValkyrieBarrier_Caption" = "戦乙女の持久力";
+"SK_WhiteComet_ValkyrieBarrier_Content" = "爆発中チーム全員に守護効果を付与する。中断耐性がアップし、防御力+100%";
+
+"SK_WhiteComet_ValkyrieCharge_Caption" = "戦乙女チャージ";
+"SK_WhiteComet_ValkyrieCharge_Content" = "12秒毎にチャージを1回し、次の攻撃で敵を3秒間スタン状態にする";
 
 // MARK: - Basic Attack - Meteor Target
 "SK_WhiteComet_MeteorTarget_1stStrike_Caption" = "1連";
@@ -67,3 +88,41 @@
 // MARK: - Basic Attack - Meteor Impact
 "SK_WhiteComet_MeteorImpact_Caption" = "彗星ハートブレイク";
 "SK_WhiteComet_MeteorImpact_Content" = "通常攻撃で中断成功時に40%の確率で敵をスタン状態にする、継続時間2秒";
+
+// MARK: - Evasion - Time Shift
+"SK_WhiteComet_TimeShift_TimeFracture_Caption" = "時空断裂";
+"SK_WhiteComet_TimeShift_TimeFracture_Content" = "極限回避で全時空断裂発動、すべての敵の動き減速、継続時間3秒、クールタイム15秒";
+
+"SK_WhiteComet_TimeShift_Caption" = "時空回避";
+"SK_WhiteComet_TimeShift_Content" = "敵の攻撃を素早く回避する";
+
+// MARK: - Evasion - Time Blink
+"SK_WhiteComet_TimeBlink_Caption" = "時空の輝き";
+"SK_WhiteComet_TimeBlink_Caption" = "時空断裂のクールタイム-4秒";
+
+// MARK: - Evasion - Power Flow
+"SK_WhiteComet_PowerFlow_Caption" = "パワーフロー";
+"SK_WhiteComet_PowerFlow_Content" = "回避で全時空断裂を発動時、チーム全員のEPを5回復する";
+
+// MARK: - Passive Skill - Passive Skill
+"SK_WhiteComet_PassiveSkill_Caption" = "パッシブ";
+"SK_WhiteComet_PassiveSkill_Content" = "パッシブスキルは自動で発動される";
+
+// MARK: - Passive Skill - Shield Breaker
+"SK_WhiteComet_ShieldBreaker_Caption" = "彗星の盾崩し";
+"SK_WhiteComet_ShieldBreaker_Content" = "シールドへのダメージ+50%";
+
+// MARK: - Passive Skill - Critical Mastery
+"SK_WhiteComet_CriticalMastery_Caption" = "彗星爆撃";
+"SK_WhiteComet_CriticalMastery_Content" = "現在のHPが80%を超えている時、会心ダメージ+40%";
+
+// MARK: - Leader Skill - Meteor Bless
+"SK_WhiteComet_MeteorBless_Guider_Caption" = "導く者";
+"SK_WhiteComet_MeteorBless_Guider_Content" = "戦闘中チーム全員のHP上限+10%";
+
+"SK_WhiteComet_MeteorBless_Caption" = "流星の加護";
+"SK_WhiteComet_MeteorBless_Content" = "リーダー枠に設定されている時、効果発動";
+
+"SK_WhiteComet_Guide_Caption" = "導く者";
+"SK_WhiteComet_Guide_Content" = "戦闘中チーム全員のHP上限+18%";
+
