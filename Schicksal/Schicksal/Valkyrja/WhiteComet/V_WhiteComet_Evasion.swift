@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SKS_WhiteComet_Evasion: Skill {
+public struct SKS_WhiteComet_Evasion: Skill {
     public let type: SkillType = .evasion
     public let mainSkill: MainSkill = SK_WhiteComet_TimeShift()
     public let subSkills: SubSkills = [SK_WhiteComet_TimeBlink(),

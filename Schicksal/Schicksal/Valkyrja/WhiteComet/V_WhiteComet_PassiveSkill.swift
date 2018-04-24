@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SKS_WhiteComet_PassiveSkill: Skill {
+public struct SKS_WhiteComet_PassiveSkill: Skill {
     public let type: SkillType = .passiveSkill
     public let mainSkill: MainSkill = SK_WhiteComet_PassiveSkill()
     public let subSkills: SubSkills = [SK_WhiteComet_ShieldBreaker(),

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol SkillBase: Measurable, Explainable {
+public protocol SkillBase: Measurable, Attackable, Explainable {
     var attackTag: AttackTag { get }
     var skillUnlockRank: SkillUnlockRank { get }
 }

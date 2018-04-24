@@ -28,7 +28,7 @@ public protocol Skill: Explainable {
 
 extension Skill {
 
-    var caption: String {
+    public var caption: String {
         switch type {
         case .specialAttack: return "Special Attack"
         case .ultimate:      return "Ultimate"
@@ -38,13 +38,18 @@ extension Skill {
         case .leaderSkill:   return "Leader Skill"
         }
     }
-    var content: String {
+    
+    public var content: String {
         return caption
     }
 
 }
 
 extension Skill {
+
+    public var measurables: [Measurable] {
+        return ([[mainSkill], mainSkill.mainSubskills, subSkills] as [[Measurable]]).flatMap { $0 }
+    }
 
     public var count: Int {
         return 1 + mainSkill.mainSubskills.count + subSkills.count

@@ -44,18 +44,15 @@ extension Valkyrja {
     public var bundleIdentifier: String { return frameworkBundleIdentifier }
 }
 
-//extension Valkyrja {
-//    public var meashables: [Measurable] {
-//        var arr = [Measurable]()
-//        weapon.flatMap { arr.append($0) }
-//        arr.append(contentsOf: Array(stigmataSuit.suit.values))
-//        return arr
-//    }
-//
+extension Valkyrja {
+    public var measurables: [Measurable] {
+        return skills.map { $0.measurables }.flatMap { $0 }
+    }
+
 //    public var critRate: Percentage {
 //        return Percentage(basicStatus.CRT) / (75.0 + Percentage(basicStatus.LV) * 5.0)
 //    }
-//}
+}
 
 // MARK: - Measurable
 //extension Valkyrja {

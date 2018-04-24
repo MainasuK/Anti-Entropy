@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SKS_WhiteComet_BasicAttack: Skill {
+public struct SKS_WhiteComet_BasicAttack: Skill {
     public let type: SkillType = .basicAttack
     public let mainSkill: MainSkill = SK_WhiteComet_MeteorTarget()
     public let subSkills: SubSkills = [SK_WhiteComet_MeteorShard(),

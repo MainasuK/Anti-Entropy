@@ -13,31 +13,36 @@ public typealias Increment = Double
 
 public enum AddtionType {
     case allDamageUP
+    case physicalDamageUP
+    case elementDamageUP
+    case thunderDamageUP
+    case fireDamageUP
+    case iceDamageUP
+
+    case allDamageTakenUP
+    case physicaldamageTakenUP
+    case elementDamageTakenUP
+    case thunderDamageTakenUP
+    case fireDamageTakenUP
+    case iceDamageTakenUP
 }
 
 public typealias Addition = [AddtionType: Double]
 
 public struct Determination {
-    public let attackable: Attackable
-    public let attackTag: AttackTag
-    public let abilityState: AbilityState
+    public var attackTag: AttackTag = .none
+    public var abilityState: AbilityState = []
 
-    public init(attackable: Attackable,
-                attackTag: AttackTag,
-                abilityState: AbilityState) {
-        self.attackable = attackable
-        self.attackTag = attackTag
-        self.abilityState = abilityState
-    }
+    public init() { }
 }
 
 public protocol Measurable {
-    func measure() -> ((Determination) -> Addition)
+    func determine(_ determination: Determination) -> Addition
 }
 
 extension Measurable {
-    public func measure() -> ((Determination) -> Addition) {
-        return { _ in return [:] }
+    public func determine(_ determination: Determination) -> Addition {
+        return [:]
     }
 }
 //    var damageUP: Percentage { get }

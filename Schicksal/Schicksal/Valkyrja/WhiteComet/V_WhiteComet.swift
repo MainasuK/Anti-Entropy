@@ -29,7 +29,7 @@ public struct V_WhiteComet: Valkyrja {
     public var level: LV
     public var rank: ValkyrjaRank
 
-    public init(level: LV, rank: ValkyrjaRank) {
+    public init(level: LV = 80, rank: ValkyrjaRank = .SSS) {
         self.level = level
         self.rank = rank
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SKS_WhiteComet_LeaderSkill: Skill {
+public struct SKS_WhiteComet_LeaderSkill: Skill {
     public let type: SkillType = .leaderSkill
     public let mainSkill: MainSkill = SK_WhiteComet_MeteorBless()
     public let subSkills: SubSkills = [SK_WhiteComet_Guider()]

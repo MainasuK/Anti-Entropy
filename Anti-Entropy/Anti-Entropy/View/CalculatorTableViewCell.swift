@@ -23,9 +23,7 @@ class CalculatorTableViewCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
 
     // TODO: use [valkyrja] & [Stigma] & [Weapon] instead
-    let skills: Skills = []
-//    let skills = [SKS_WhiteComet_SpecialAttack, SKS_WhiteComet_Ultimate, SKS_WhiteComet_BasicAttack,
-//                  SKS_WhiteComet_Evasion, SKS_WhiteComet_PassiveSkill, SKS_WhiteComet_LeaderSkill]
+    let measurables = V_WhiteComet().measurables
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,6 +55,7 @@ extension CalculatorTableViewCell {
             label.text         = main.localized.caption
             typeLabel.text     = main.attackTag.localized.caption
             subtitleLabel.text = main.localized.content
+            detailLabel.text   = "\(main.attack(with: basicStatus, with: measurables, under: Determination()))"
 //            let hasNoBuffSkill = !main.mainSubskills.filter { $0.skillType != .buff && $0.skillType != .debuff }.isEmpty
 //            detailLabel.text   = (hasNoBuffSkill) ?
 //                                 "\(main.mainSubskills.map { basicStatus.DMG(for: [$0], with: [:], with: buff) }.reduce(0, +))" : "--"
@@ -65,6 +64,8 @@ extension CalculatorTableViewCell {
             label.text         = main.localized.caption + " - " + mainSubskill.localized.caption
             typeLabel.text     = mainSubskill.attackTag.localized.caption
             subtitleLabel.text = mainSubskill.localized.content
+            detailLabel.text   = "\(main.attack(with: basicStatus, with: [], under: Determination()))"
+
 //            detailLabel.text   = (mainSubskill.skillType == .buff || mainSubskill.skillType == .debuff) ?
 //                                 "--" : "\(basicStatus.DMG(for: [mainSubskill], with: [:], with: buff))"
         case _ where subSkillRange ~= row:
@@ -73,6 +74,8 @@ extension CalculatorTableViewCell {
             typeLabel.text     = [subskill.attackTag.localized.caption, subskill.skillUnlockRank.text]
                 .compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "·")
             subtitleLabel.text = subskill.localized.content
+            detailLabel.text   = "\(main.attack(with: basicStatus, with: [], under: Determination()))"
+
 //            detailLabel.text   = (subskill.skillType == .buff || subskill.skillType == .debuff) ?
 //                                 "--" : "\(basicStatus.DMG(for: [subskill], with: [:], with: buff))"
         default:
