@@ -8,6 +8,10 @@
 
 import Foundation
 
+@objc public enum WeaponCode: Int {
+    case USP45
+}
+
 public enum WeaponType: String {
     case pistol
     case katana

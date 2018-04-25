@@ -8,7 +8,14 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import Schicksal
+import RealmSwift
+import RxRealm
+import RxSwiftExt
+
+fileprivate let measurables = V_WhiteComet().measurables
+
 
 struct TestWeapon: Weapon {
     let ATK = 40
@@ -18,14 +25,16 @@ struct TestWeapon: Weapon {
 struct CalculatorViewModel {
 
     private let disposeBag = DisposeBag()
+    private let realm = try! Realm()
 
-    var basicStatusViewModel = BasicStatusViewModel()
+    let currentIntelligence = Variable<BattleIntelligence>(BattleIntelligence())
 
-    var leader: Variable<Valkyrja>
-    var member: Variable<(Valkyrja?, Valkyrja?)>
-    var supporter: Variable<Valkyrja?>
+    let basicStatusViewModel: BasicStatusViewModel
 
-    var skills: Skills = []
+    private let leader = Variable<Valkyrja?>(nil)
+    private let member = Variable<[Valkyrja]>([])
+
+//    var supporter = Variable<Valkyrja?>(nil)
 //    var skills = [SKS_WhiteComet_SpecialAttack,
 //                  SKS_WhiteComet_Ultimate,
 //                  SKS_WhiteComet_BasicAttack,
@@ -34,13 +43,35 @@ struct CalculatorViewModel {
 //                  SKS_WhiteComet_LeaderSkill]
 
     init() {
-        let whiteComet = V_WhiteComet(level: 80, rank: .SSS)
+        currentIntelligence.asObservable()
+            .map { $0.leader }
+            .unwrap()
+            .map { ValkyrjaModel.clone(from: $0) }
+            .bind(to: leader)
+            .disposed(by: disposeBag)
 
-        leader = Variable<Valkyrja>(whiteComet)
-        member = Variable<(Valkyrja?, Valkyrja?)>((nil, nil))
-        supporter = Variable<Valkyrja?>(nil)
+        currentIntelligence.asObservable()
+            .map { $0.member.toArray() }
+            .map { $0.map { ValkyrjaModel.clone(from: $0) } }
+            .bind(to: member)
+            .disposed(by: disposeBag)
 
 
+
+        // Set default value if not exists
+        if let battleIntelligence = realm.object(ofType: BattleIntelligence.self, forPrimaryKey: 0) {
+            Observable.from(object: battleIntelligence)
+                .bind(to: currentIntelligence)
+                .disposed(by: disposeBag)
+        } else {
+            let defaultIntelligence = BattleIntelligence()
+            Observable<BattleIntelligence>.just(defaultIntelligence)
+                .observeOn(MainScheduler.instance)
+                .subscribe(realm.rx.add(update: false))
+                .disposed(by: disposeBag)
+        }
+
+        basicStatusViewModel = BasicStatusViewModel(with: currentIntelligence.value.leader!)
     }
 
 }
@@ -48,11 +79,11 @@ struct CalculatorViewModel {
 extension CalculatorViewModel {
 
     func numberOfSections() -> Int {
-        return leader.value.skills.count
+        return leader.value?.skills.count ?? 0
     }
 
     func numberOfRows(in section: Int) -> Int {
-        return leader.value.skills[section].count
+        return leader.value?.skills[section].count ?? 0
     }
 
 }
@@ -60,11 +91,11 @@ extension CalculatorViewModel {
 extension CalculatorViewModel {
 
     func titleForHeader(in section: Int) -> String? {
-        return leader.value.skills[section].localized.caption
+        return leader.value?.skills[section].localized.caption
     }
 
     func configure(_ cell: CalculatorTableViewCell, at indexPath: IndexPath) {
-        let skill = leader.value.skills[indexPath.section]
+        guard let skill = leader.value?.skills[indexPath.section] else { return }
         cell.configure(with: skill, of: basicStatusViewModel.basicStatus.value, at: indexPath)
     }
 
@@ -74,6 +105,10 @@ extension CalculatorViewModel {
 
     func createCalculatorDetailViewModel() -> CalculatorDetailViewModel {
         return CalculatorDetailViewModel()
+    }
+
+    func didSelect(_ tableView: UITableView, at indexPath: IndexPath) {
+        
     }
 
 }

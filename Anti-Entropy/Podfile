@@ -8,6 +8,7 @@ target 'Anti-Entropy' do
   # Pods for Anti-Entropy
     pod 'RxSwift', '~> 4.0'
     pod 'RxCocoa', '~> 4.0'
+    pod "RxSwiftExt"
     pod "RxRealm"
     pod 'Default'
     pod 'Localize-Swift', '~> 2.0'

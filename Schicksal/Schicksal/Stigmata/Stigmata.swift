@@ -76,6 +76,16 @@ extension Stigmata {
 
 }
 
+@objc public enum StigmataCode: Int {
+    case none
+    case jixuanyuanAqua_T_L
+    case jixuanyuanAqua_T_H
+    case jixuanyuanAqua_C_L
+    case jixuanyuanAqua_C_H
+    case jixuanyuanAqua_B_L
+    case jixuanyuanAqua_B_H
+}
+
 public struct StigmataSuit {
     var T: Stigmata?
     var C: Stigmata?

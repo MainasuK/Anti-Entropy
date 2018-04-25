@@ -66,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEr-vF-OIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2383" y="179"/>
+            <point key="canvasLocation" x="2390" y="1629"/>
         </scene>
         <!--Calculator-->
         <scene sceneID="Yb7-Qp-JBE">
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbT-YK-PHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.8000000000002" y="923.64532019704438"/>
+            <point key="canvasLocation" x="2390" y="921"/>
         </scene>
         <!--Calculator Detail View Controller-->
         <scene sceneID="Vq7-ag-MAv">
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2w-7O-fph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="923.64532019704438"/>
+            <point key="canvasLocation" x="3370" y="924"/>
         </scene>
         <!--Stigmata Album-->
         <scene sceneID="6Ua-f9-dAc">
@@ -214,7 +214,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0Z-Ec-Xbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="179"/>
+            <point key="canvasLocation" x="1450" y="1629"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rTc-ex-Mmd">
@@ -230,13 +230,13 @@
                         <color key="selectedImageTintColor" red="0.87058824300000004" green="0.086274512110000007" blue="0.20784313979999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QbI-fM-73g" kind="relationship" relationship="viewControllers" id="PAJ-Hg-7Z1"/>
                         <segue destination="QRI-BH-8sg" kind="relationship" relationship="viewControllers" id="ihF-ts-99Z"/>
+                        <segue destination="QbI-fM-73g" kind="relationship" relationship="viewControllers" id="PAJ-Hg-7Z1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNe-qN-2zO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="449" y="553"/>
+            <point key="canvasLocation" x="258" y="1275"/>
         </scene>
         <!--Calculator-->
         <scene sceneID="RPU-JG-8he">
@@ -259,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqd-PK-KwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="926"/>
+            <point key="canvasLocation" x="1441" y="924"/>
         </scene>
     </scenes>
 </document>

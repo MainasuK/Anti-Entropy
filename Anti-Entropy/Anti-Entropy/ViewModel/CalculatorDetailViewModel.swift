@@ -56,11 +56,11 @@ extension CalculatorDetailViewModel {
     //    }
 
     func configure(_ cell: CalculatorTableViewCell, at indexPath: IndexPath) {
-        switch sections[indexPath.section] {
-        case .damageTransform(let skillbases):
-            cell.configure(with: skillbases, at: indexPath.row)
-        default: return
-        }
+//        switch sections[indexPath.section] {
+//        case .damageTransform(let skillbases):
+//            cell.configure(with: skillbases, at: indexPath.row)
+//        default: return
+//        }
     }
 
 }

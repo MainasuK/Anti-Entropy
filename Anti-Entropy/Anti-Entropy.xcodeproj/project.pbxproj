@@ -15,6 +15,7 @@
 		DB188D682089FB990052E77D /* CalculatorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D672089FB990052E77D /* CalculatorDetailViewModel.swift */; };
 		DB188D6A208A17FD0052E77D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D69208A17FD0052E77D /* String.swift */; };
 		DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA03B208F0C9E001D4A88 /* Explainable.swift */; };
+		DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA047209083D7001D4A88 /* ValkyrjaModel.swift */; };
 		DB1C72AD208886F4006696C7 /* BasicStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */; };
 		DB1C72AF20888AE6006696C7 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AE20888AE6006696C7 /* RxSwift.swift */; };
 		DB5E6C722086E88600631BDD /* CalculatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */; };
@@ -74,6 +75,7 @@
 		DB1AA044208F17D4001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DB1AA045208F17DD001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		DB1AA046208F17DD001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DB1AA047209083D7001D4A88 /* ValkyrjaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValkyrjaModel.swift; sourceTree = "<group>"; };
 		DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStatusViewModel.swift; sourceTree = "<group>"; };
 		DB1C72AE20888AE6006696C7 /* RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
 		DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				DB1C72AE20888AE6006696C7 /* RxSwift.swift */,
 				DB188D69208A17FD0052E77D /* String.swift */,
 				DB1AA03B208F0C9E001D4A88 /* Explainable.swift */,
+				DB1AA047209083D7001D4A88 /* ValkyrjaModel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -399,6 +403,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,6 +420,7 @@
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
 				DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
+				DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */,
 				DB06B9F72089CF3300776553 /* CalculatorDetailViewController.swift in Sources */,
 				DBB11059208BC6460059A017 /* Avartar.swift in Sources */,
 				DB7559182086159400BA2DB7 /* BasicStatusView.swift in Sources */,

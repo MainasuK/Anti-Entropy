@@ -59,7 +59,7 @@ struct SK_WhiteComet_CometExplosion: SubSkill {
 }
 
 extension SK_WhiteComet_CometExplosion {
-    var meleePhysicalDamageTransform: Percentage { return 2.75 }
+    var meleePhysicalDamageTransform: Percentage { return 2.750 }
 }
 
 // MARK: - Top Helix
@@ -73,7 +73,7 @@ struct SK_WhiteComet_TopHelix: SubSkill {
 
 extension SK_WhiteComet_TopHelix {
     var meleePhysicalDamageTransform: Percentage { return 3.75 }
-    var physicalDamagePlus: Increment { return 2250.0 }
+    var skillPhysicalDamagePlus: Increment { return 2250.0 }
 }
 
 // MARK: - Gravity Freak
@@ -86,5 +86,15 @@ struct SK_WhiteComet_GravityFreak: SubSkill {
 }
 
 extension SK_WhiteComet_GravityFreak {
-    var fireDamagePlus: Increment { return 1125.0 }
+    func determine(_ determination: Determination) -> Addition {
+        guard determination.attackable is SK_WhiteComet_CometFall_BringDown ||
+              determination.attackable is SK_WhiteComet_CometExplosion else {
+            return [:]
+        }
+        guard determination.abilityState.contains(.shielded) else {
+            return [:]
+        }
+        
+        return [.fireDamageAffix: 1125.0]
+    }
 }

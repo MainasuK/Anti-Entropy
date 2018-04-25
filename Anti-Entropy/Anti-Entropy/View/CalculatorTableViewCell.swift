@@ -15,6 +15,12 @@ let valkyrjaRank: SkillUnlockRank = .none
 
 class CalculatorTableViewCell: UITableViewCell {
 
+    enum CalculatorTableViewCellType {
+        case mainSkill
+        case mainSubskill
+        case subskill
+    }
+
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var label: UILabel!
@@ -24,6 +30,10 @@ class CalculatorTableViewCell: UITableViewCell {
 
     // TODO: use [valkyrja] & [Stigma] & [Weapon] instead
     let measurables = V_WhiteComet().measurables
+    let determination: Determination = {
+        let abilityState: AbilityState = .shielded
+        return Determination(attackable: nil, attackTag: .none, abilityState: abilityState)
+    }()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +47,14 @@ class CalculatorTableViewCell: UITableViewCell {
 }
 
 extension CalculatorTableViewCell {
+
+    func configure(with attackable: Attackable, for type: CalculatorTableViewCellType) {
+
+    }
+
+    private func configure(with mainSkill: MainSkill) {
+
+    }
 
     func configure(with skill: Skill, of basicStatus: BasicStatus, at indexPath: IndexPath) {
         self.configure(with: skill.mainSkill, sub: skill.subSkills, of: basicStatus, at: indexPath.row)
@@ -55,7 +73,12 @@ extension CalculatorTableViewCell {
             label.text         = main.localized.caption
             typeLabel.text     = main.attackTag.localized.caption
             subtitleLabel.text = main.localized.content
-            detailLabel.text   = "\(main.attack(with: basicStatus, with: measurables, under: Determination()))"
+            detailLabel.text   = {
+                let damage = main.mainSubskills
+                    .map { $0.attack(with: basicStatus, with: measurables, under: determination) }
+                    .reduce(0.0, +)
+                return (damage > 0.0) ? "\(damage)" : "--"
+            }()
 //            let hasNoBuffSkill = !main.mainSubskills.filter { $0.skillType != .buff && $0.skillType != .debuff }.isEmpty
 //            detailLabel.text   = (hasNoBuffSkill) ?
 //                                 "\(main.mainSubskills.map { basicStatus.DMG(for: [$0], with: [:], with: buff) }.reduce(0, +))" : "--"
@@ -64,7 +87,10 @@ extension CalculatorTableViewCell {
             label.text         = main.localized.caption + " - " + mainSubskill.localized.caption
             typeLabel.text     = mainSubskill.attackTag.localized.caption
             subtitleLabel.text = mainSubskill.localized.content
-            detailLabel.text   = "\(main.attack(with: basicStatus, with: [], under: Determination()))"
+            detailLabel.text   = {
+                let damage = mainSubskill.attack(with: basicStatus, with: measurables, under: determination)
+                return (damage > 0.0) ? "\(damage)" : "--"
+            }()
 
 //            detailLabel.text   = (mainSubskill.skillType == .buff || mainSubskill.skillType == .debuff) ?
 //                                 "--" : "\(basicStatus.DMG(for: [mainSubskill], with: [:], with: buff))"
@@ -74,7 +100,10 @@ extension CalculatorTableViewCell {
             typeLabel.text     = [subskill.attackTag.localized.caption, subskill.skillUnlockRank.text]
                 .compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "·")
             subtitleLabel.text = subskill.localized.content
-            detailLabel.text   = "\(main.attack(with: basicStatus, with: [], under: Determination()))"
+            detailLabel.text   = {
+                let damage = subskill.attack(with: basicStatus, with: measurables, under: determination)
+                return (damage > 0.0) ? "\(damage)" : "--"
+            }()
 
 //            detailLabel.text   = (subskill.skillType == .buff || subskill.skillType == .debuff) ?
 //                                 "--" : "\(basicStatus.DMG(for: [subskill], with: [:], with: buff))"
@@ -84,12 +113,3 @@ extension CalculatorTableViewCell {
     }
 
 }
-
-extension CalculatorTableViewCell {
-
-    func configure(with skillTypeBase: [SkillBase], at row: Int) {
-        
-    }
-
-}
-

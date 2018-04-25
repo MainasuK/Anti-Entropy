@@ -12,6 +12,18 @@ public typealias Percentage = Double
 public typealias Increment = Double
 
 public enum AddtionType {
+    case physicalDamagePlus
+    case elementDamagePlus
+    case thunderDamagePlus
+    case fireDamagePlus
+    case iceDamagePlus
+
+    case physicalDamageAffix
+    case elementDamageAffix
+    case thunderDamageAffix
+    case fireDamageAffix
+    case iceDamageAffix
+
     case allDamageUP
     case physicalDamageUP
     case elementDamageUP
@@ -30,10 +42,15 @@ public enum AddtionType {
 public typealias Addition = [AddtionType: Double]
 
 public struct Determination {
+    public var attackable: Attackable?
     public var attackTag: AttackTag = .none
     public var abilityState: AbilityState = []
 
-    public init() { }
+    public init(attackable: Attackable? = nil, attackTag: AttackTag = .none, abilityState: AbilityState = []) {
+        self.attackable = attackable
+        self.attackTag = attackTag
+        self.abilityState = abilityState
+    }
 }
 
 public protocol Measurable {

@@ -10,7 +10,7 @@ import Foundation
 
 public typealias ValkyrjaRank = SkillUnlockRank
 
-public enum SkillUnlockRank: Int, Codable {
+@objc public enum SkillUnlockRank: Int, Codable {
     case none = 0
     case A    = 1
     case S    = 2

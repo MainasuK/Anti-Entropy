@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import RealmSwift
+import RxRealm
 import Schicksal
 
 class CalculatorViewController: UIViewController {
@@ -84,9 +86,10 @@ extension CalculatorViewController {
 extension CalculatorViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalculatorDetailViewController") as! CalculatorDetailViewController
-        detailViewController.viewModel = viewModel.createCalculatorDetailViewModel()
-        navigationController?.pushViewController(detailViewController, animated: true)
+        viewModel.didSelect(tableView, at: indexPath)
+//        let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalculatorDetailViewController") as! CalculatorDetailViewController
+//        detailViewController.viewModel = viewModel.createCalculatorDetailViewModel()
+//        navigationController?.pushViewController(detailViewController, animated: true)
     }
 
 }
@@ -152,10 +155,9 @@ extension CalculatorViewController {
 
     private func setupViewModel() {
         viewModel.basicStatusViewModel.bind(to: basicStatusView)
-        viewModel.basicStatusViewModel.basicStatus.asObservable()
+        Observable.propertyChanges(object: viewModel.currentIntelligence.value.leader!)
             .subscribe(onNext: { [weak self] _ in
-                guard let `self` = self else { return }
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
 

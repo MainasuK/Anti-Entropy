@@ -9,6 +9,8 @@
 import Foundation
 
 public struct V_WhiteComet: Valkyrja {
+    public let code: ValkyrjaCode  = .whiteComet
+    
     public let firstname: String   = "V_WhiteComet_Firstname"
     public let lastname: String    = "V_WhiteComet_Lastname"
     public let shortName: String   = "V_WhiteComet_ShortName"
@@ -26,11 +28,11 @@ public struct V_WhiteComet: Valkyrja {
                                  SKS_WhiteComet_PassiveSkill(),
                                  SKS_WhiteComet_LeaderSkill()]
 
-    public var level: LV
+    public var basicStatus: BasicStatus
     public var rank: ValkyrjaRank
 
-    public init(level: LV = 80, rank: ValkyrjaRank = .SSS) {
-        self.level = level
+    public init(basicStatus: BasicStatus = BasicStatus(), rank: ValkyrjaRank = .SSS) {
+        self.basicStatus = basicStatus
         self.rank = rank
     }
 

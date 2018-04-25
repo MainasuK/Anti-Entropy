@@ -63,3 +63,4 @@ extension CalculatorDetailViewController: UITableViewDataSource {
     }
 
 }
+

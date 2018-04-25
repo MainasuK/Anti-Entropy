@@ -11,6 +11,8 @@ import RxSwift
 import RxCocoa
 import Default
 import Schicksal
+import RealmSwift
+import RxRealm
 
 private let df_basicStatusKey = "df_basicStatusKey"
 
@@ -37,8 +39,9 @@ struct BasicStatusViewModel {
             .forEach { $0.disposed(by: disposeBag) }
     }
 
-    init() {
-        let defaultBasicStatus = UserDefaults.standard.df.fetch(forKey: df_basicStatusKey, type: BasicStatus.self) ?? BasicStatus()
+    init(with intelligence: ValkyrjaIntelligence) {
+        let defaultBasicStatus = ValkyrjaModel.clone(from: intelligence).basicStatus
+
         basicStatus = Variable(defaultBasicStatus)
 
         lv  = Variable("\(defaultBasicStatus.LV)")
@@ -54,8 +57,21 @@ struct BasicStatusViewModel {
         
         Observable
             .combineLatest(observables) { BasicStatus(HP: $0[0], SP: $0[1], ATK: $0[2], DEF: $0[3], CRT: $0[4], LV: $0[5]) }
-            .do(onNext: { UserDefaults.standard.df.store($0, forKey: df_basicStatusKey) })
+            .observeOn(MainScheduler.instance)
             .bind(to: basicStatus)
+            .disposed(by: disposeBag)
+
+        basicStatus.asDriver()
+            .drive(onNext: { basicStatus in
+                try! Realm().write {
+                    intelligence.HP  = basicStatus.HP
+                    intelligence.SP  = basicStatus.SP
+                    intelligence.ATK = basicStatus.ATK
+                    intelligence.DEF = basicStatus.DEF
+                    intelligence.CRT = basicStatus.CRT
+                    intelligence.LV  = basicStatus.LV
+                }
+            })
             .disposed(by: disposeBag)
     }
 
