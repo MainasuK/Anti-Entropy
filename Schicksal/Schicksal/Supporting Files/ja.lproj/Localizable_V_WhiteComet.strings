@@ -65,11 +65,8 @@
 "SK_WhiteComet_MeteorTarget_3rdStrike_Caption" = "3連";
 "SK_WhiteComet_MeteorTarget_3rdStrike_Content" = "攻撃力の100%物理ダメージを与える";
 
-"SK_WhiteComet_MeteorTarget_3rdStrike_Caption" = "3連";
-"SK_WhiteComet_MeteorTarget_3rdStrike_Content" = "攻撃力の100%物理ダメージを与える";
-
 "SK_WhiteComet_MeteorTarget_4thStrike_Caption" = "4連";
-"SK_WhiteComet_MeteorTarget_4thStrike_Content" = "攻撃力の150%物理ダメージを与える";
+"SK_WhiteComet_MeteorTarget_4thStrike_Content" = "攻撃力の2*150%物理ダメージを与える";
 
 "SK_WhiteComet_MeteorTarget_5thStrike_Caption" = "5連";
 "SK_WhiteComet_MeteorTarget_5thStrike_Content" = "攻撃力の250%物理ダメージを与える";

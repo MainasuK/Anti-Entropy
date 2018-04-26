@@ -63,7 +63,7 @@ struct SK_WhiteComet_MeteorTarget_4thStrike: MainSubskill {
 }
 
 extension SK_WhiteComet_MeteorTarget_4thStrike {
-    var meleePhysicalDamageTransform: Percentage { return 1.50 }
+    var meleePhysicalDamageTransform: Percentage { return 2 * 1.50 }
 }
 
 // MARK: - Meteor Target - 5th Strike
@@ -101,7 +101,12 @@ struct SK_WhiteComet_MeteorShard: SubSkill {
 }
 
 extension SK_WhiteComet_MeteorShard {
-    var physicalDamagePlus: Increment { return 143.0 }
+    func determine(_ determination: Determination) -> Addition {
+        switch determination.attackTag {
+        case .normal, .branch, .charge: return [.physicalDamagePlus: 143.0]
+        default:                        return [:]
+        }
+    }
 }
 
 // MARK: - Meteor Explosion
@@ -109,12 +114,8 @@ struct SK_WhiteComet_MeteorExplosion: SubSkill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorExplosion_Caption"
     let content: String = "SK_WhiteComet_MeteorExplosion_Content"
-    let attackTag: AttackTag = .normal
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .A
-}
-
-extension SK_WhiteComet_MeteorExplosion {
-    var physicalDamagePlus: Increment { return 1485.0 }
 }
 
 // MARK: - Meteor Impact

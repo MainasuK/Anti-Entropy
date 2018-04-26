@@ -1,0 +1,50 @@
+/* 
+  Localizable_V_ValkyrieChariot.strings
+  Schicksal
+
+  Created by Cirno MainasuK on 2018-4-26.
+  Copyright © 2018年 MainasuK. All rights reserved.
+*/
+
+// Property
+
+"V_ValkyrieChariot_Firstname" = "Valkyrie";
+"V_ValkyrieChariot_Lastname" = "Chariot";
+"V_ValkyrieChariot_ShortName" = "Valkyrie Chariot";
+"V_ValkyrieChariot_FullName" = "Valkyrie Chariot";
+"V_ValkyrieChariot_Description" = "Excels at constant ranged DPS. Possesses powerful support and control abilities. Low cost ultimate skill with long duration.";
+
+
+// MARK: Special Attack - Gravity Shatter
+"SK_ValkyrieChariot_GravityShatter_SmashGround_Caption" = "Smash Ground";
+"SK_ValkyrieChariot_GravityShatter_SmashGround_Content" = "Deals physical damage equal to 150% of ATK";
+
+"SK_ValkyrieChariot_GravityShatter_Caption" = "Gravity Shatter";
+"SK_ValkyrieChariot_GravityShatter_Content" = "Smashes the ground upon entering the battle";
+
+// MARK: Special Attack - Air Smash
+"SK_ValkyrieChariot_AirSmash_Caption" = "Air Smash";
+"SK_ValkyrieChariot_AirSmash_Content" = "Gravity Shatter deals (300% of ATK) additional physical damage to enemies knocked airborne.";
+
+// MARK: Special Attack - High Gravity
+"SK_ValkyrieChariot_HighGravity_Caption" = "High Gravity";
+"SK_ValkyrieChariot_HighGravity_Content" = "Enters battle and triggers QTE when enemy is stunned, dealing 100% of ATK+4158 physical damage. Lifts enemy into the air and casts Time Lock effects on them for 3 sec.";
+
+// MARK: Ultimate
+// MARK: Ultimate
+// MARK: Ultimate
+// MARK: Ultimate
+// MARK: Ultimate
+
+// MARK: Basic Attack
+// MARK: Basic Attack
+// MARK: Basic Attack
+// MARK: Basic Attack
+
+// MARK: Evasion
+// MARK: Evasion
+// MARK: Evasion
+// MARK: Evasion
+
+// MARK: Passive Skill
+// MARK: Leader Skill

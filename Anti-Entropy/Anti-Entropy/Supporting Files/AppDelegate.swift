@@ -19,7 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let availableLanguages = Localize.availableLanguages()
-        Localize.setCurrentLanguage(availableLanguages.first ?? "en")
+        let preferredLocalizations = Bundle.main.preferredLocalizations
+
+        var toLocal: String?
+        for local in preferredLocalizations where availableLanguages.contains(local) {
+            toLocal = local
+            break
+        }
+
+        Localize.setCurrentLanguage(toLocal ?? "en")
+
 
 
         NotificationCenter.default.addObserver(self,

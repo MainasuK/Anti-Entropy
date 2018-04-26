@@ -14,68 +14,97 @@ public typealias FormularType = (Attackable, [Addition]) -> FormularResult
 public typealias FormularResult = (ATK) -> AttactResult
 
 struct Formular {
-    static let meleePhysicalDamage: FormularType = { (attackable: Attackable, additions: [Addition]) in
-        let transform = attackable.meleePhysicalDamageTransform
-        let magnifications: [Percentage] = [
-            additions.reduce(1.0, { $0 + $1[.allDamageUP, default: 0.0] }),
-            additions.reduce(1.0, { $0 + $1[.physicalDamageUP, default: 0.0] }),
-            additions.reduce(1.0, { $0 + $1[.allDamageTakenUP, default: 0.0] }) ,
-            additions.reduce(1.0, { $0 + $1[.physicaldamageTakenUP, default: 0.0] })
-        ]
+    static let damage: FormularType = { (attackable: Attackable, additions: [Addition]) in
 
-        let pluses: [DMG] = [
-            additions.reduce(0.0, { $0 + $1[.physicalDamagePlus, default: 0.0] }),
-            additions.reduce(0.0, { $0 + $1[.elementDamagePlus, default: 0.0] }),
-            additions.reduce(0.0, { $0 + $1[.thunderDamagePlus, default: 0.0] }),
-            additions.reduce(0.0, { $0 + $1[.fireDamagePlus, default: 0.0] }),
-            additions.reduce(0.0, { $0 + $1[.iceDamagePlus, default: 0.0] }),
-        ]
+        // UP
+        let allDamageUP                   = additions.reduce(0.0, { $0 + $1[.allDamageUP, default: 0.0] })
+        let meleePhysicalDamageUP         = additions.reduce(0.0, { $0 + $1[.meleePhysicalDamageUP, default: 0.0] })
+        let rangedPhysicalDamageUP        = additions.reduce(0.0, { $0 + $1[.rangedPhysicalDamageUP, default: 0.0] })
+        let physicalDamageUP              = additions.reduce(0.0, { $0 + $1[.physicalDamageUP, default: 0.0] })
+        let thunderDamageUP               = additions.reduce(0.0, { $0 + $1[.thunderDamageUP, default: 0.0] })
+        let fireDamageUP                  = additions.reduce(0.0, { $0 + $1[.fireDamageUP, default: 0.0] })
+        let iceDamageUP                   = additions.reduce(0.0, { $0 + $1[.iceDamageUP, default: 0.0] })
+        let elementDamageUP               = additions.reduce(0.0, { $0 + $1[.elementDamageUP, default: 0.0] })
 
-        let affix: [DMG] = [
-            additions.reduce(0.0, { $0 + $1[.physicalDamageAffix, default: 0.0] }),
-            additions.reduce(0.0, { $0 + $1[.elementDamageAffix, default: 0.0] }),
-            max(additions.reduce(0.0, { $0 + $1[.thunderDamageAffix, default: 0.0] }),
-                additions.reduce(0.0, { $0 + $1[.fireDamageAffix, default: 0.0] }),
-                additions.reduce(0.0, { $0 + $1[.iceDamageAffix, default: 0.0] }))
-        ]
+        // Taken UP
+        let allDamageTakenUP              = additions.reduce(0.0, { $0 + $1[.allDamageTakenUP, default: 0.0] })
+        let meleePhysicalDamageTakenUP    = additions.reduce(0.0, { $0 + $1[.meleePhysicalDamageTakenUP, default: 0.0] })
+        let rangedPhysicalDamageTakenPlus = additions.reduce(0.0, { $0 + $1[.allDamageTakenUP, default: 0.0] })
+        let physicaldamageTakenUP         = additions.reduce(0.0, { $0 + $1[.physicaldamageTakenUP, default: 0.0] })
+        let thunderDamageTakenUP          = additions.reduce(0.0, { $0 + $1[.thunderDamageTakenUP, default: 0.0] })
+        let fireDamageTakenUP             = additions.reduce(0.0, { $0 + $1[.fireDamageTakenUP, default: 0.0] })
+        let iceDamageTakenUP              = additions.reduce(0.0, { $0 + $1[.iceDamageTakenUP, default: 0.0] })
+        let elementDamageTakenUP          = additions.reduce(0.0, { $0 + $1[.elementDamageTakenUP, default: 0.0] })
+
+        // Plus
+        let meleePhysicalDamagePlus       = additions.reduce(0.0, { $0 + $1[.meleePhysicalDamagePlus, default: 0.0] })
+        let rangedPhysicalDamagePlus      = additions.reduce(0.0, { $0 + $1[.rangedPhysicalDamagePlus, default: 0.0] })
+        let physicalDamagePlus            = additions.reduce(0.0, { $0 + $1[.physicalDamagePlus, default: 0.0] })
+        let thunderDamagePlus             = additions.reduce(0.0, { $0 + $1[.thunderDamagePlus, default: 0.0] })
+        let fireDamagePlus                = additions.reduce(0.0, { $0 + $1[.fireDamagePlus, default: 0.0] })
+        let iceDamagePlus                 = additions.reduce(0.0, { $0 + $1[.iceDamagePlus, default: 0.0] })
+        let elementDamagePlus             = additions.reduce(0.0, { $0 + $1[.elementDamagePlus, default: 0.0] })
+
+        // Affix
+        let physicalDamageAffix           = additions.reduce(0.0, { $0 + $1[.physicalDamageAffix, default: 0.0] })
+        let elementDamageAffix            = additions.reduce(0.0, { $0 + $1[.elementDamageAffix, default: 0.0] }) +
+                                        max(additions.reduce(0.0, { $0 + $1[.thunderDamageAffix, default: 0.0] }),
+                                            additions.reduce(0.0, { $0 + $1[.fireDamageAffix, default: 0.0] }),
+                                            additions.reduce(0.0, { $0 + $1[.iceDamageAffix, default: 0.0] }))
+
+        let meleePhysicalDamageMagnification: Percentage = [
+            1.0 + allDamageUP,
+            1.0 + meleePhysicalDamageUP + physicalDamageUP,
+            1.0 + allDamageTakenUP,
+            1.0 + meleePhysicalDamageTakenUP + physicaldamageTakenUP
+        ].reduce(1.0, *)
+
+        let rangedPhysicalDamageMagnification: Percentage = [
+            1.0 + allDamageUP,
+            1.0 + rangedPhysicalDamageUP + physicalDamageUP,
+            1.0 + allDamageTakenUP,
+            1.0 + rangedPhysicalDamageTakenPlus + physicaldamageTakenUP
+        ].reduce(1.0, *)
+
+        let thunderDamageMagnification: Percentage = [
+            1.0 + allDamageUP,
+            1.0 + thunderDamageUP + elementDamageUP,
+            1.0 + allDamageTakenUP,
+            1.0 + thunderDamageTakenUP + elementDamageTakenUP
+        ].reduce(1.0, *)
+
+        let fireDamageMagnification: Percentage = [
+            1.0 + allDamageUP,
+            1.0 + fireDamageUP + elementDamageUP,
+            1.0 + allDamageTakenUP,
+            1.0 + fireDamageTakenUP + elementDamageTakenUP
+            ].reduce(1.0, *)
+
+        let iceDamageMagnification: Percentage = [
+            1.0 + allDamageUP,
+            1.0 + iceDamageUP + elementDamageUP,
+            1.0 + allDamageTakenUP,
+            1.0 + iceDamageTakenUP + elementDamageTakenUP
+            ].reduce(1.0, *)
 
         return { (atk: ATK) in
-            let direct = Double(atk) * transform * magnifications.reduce(1.0, *) + pluses.reduce(0.0, +)
-            let indirect = affix.reduce(0.0, +)
+            let physical =
+                Double(atk) * attackable.meleePhysicalDamageTransform * meleePhysicalDamageMagnification +
+                Double(atk) * attackable.rangedPhysicalDamageTransform * rangedPhysicalDamageMagnification +
+                physicalDamagePlus
+
+            let element =
+                Double(atk) * attackable.thunderDamageTransform * thunderDamageMagnification +
+                Double(atk) * attackable.fireDamageTransform * fireDamageMagnification +
+                Double(atk) * attackable.iceDamageTransform * iceDamageMagnification
+
+            let direct = physical + element
+
+            let indirect = physicalDamageAffix + elementDamageAffix
             return (direct, indirect)
         }
     }
-//    static var meleePhysicalDamageFormula: Formular = { additions in
-//
-//    }
-//    static var rangedPhysicalDamageFormula: Formular = { additions in
-//
-//        return { ATK in
-//            let direct = Double(ATK)
-//            return (direct, 0.0)
-//        }
-//    }
-//    static var thunderDamageFormula: Formular = { additions in
-//
-//        return { ATK in
-//            let direct = Double(ATK)
-//            return (direct, 0.0)
-//        }
-//    }
-//    static var fireDamageFormula: Formular = { additions in
-//
-//        return { ATK in
-//            let direct = Double(ATK)
-//            return (direct, 0.0)
-//        }
-//    }
-//    static var iceDamageFormula: Formular = { additions in
-//
-//        return { ATK in
-//            let direct = Double(ATK)
-//            return (direct, 0.0)
-//        }
-//    }
+
 }
 
 public protocol Attackable {
@@ -86,8 +115,6 @@ public protocol Attackable {
     var thunderDamageTransform: Percentage { get }
     var fireDamageTransform: Percentage { get }
     var iceDamageTransform: Percentage { get }
-
-    var skillPhysicalDamagePlus: Increment { get }
 
     func attack(with basicStatus: BasicStatus, with measurables: [Measurable], under determination: Determination) -> DMG
     func attackResult(with basicStatus: BasicStatus, with measurables: [Measurable], under determination: Determination) -> AttactResult
@@ -116,7 +143,7 @@ extension Attackable {
         let ATK = basicStatus.ATK
         let additions = measurables.map { $0.determine(determination) }
 
-        let meleePhysicalDamage = Formular.meleePhysicalDamage(self, additions)(ATK)
+        let meleePhysicalDamage = Formular.damage(self, additions)(ATK)
 
         //        let rangedPhysicalDamage = Self.rangedPhysicalDamageFormula(with: addtions)
         //

@@ -16,6 +16,7 @@
 		DB188D6A208A17FD0052E77D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D69208A17FD0052E77D /* String.swift */; };
 		DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA03B208F0C9E001D4A88 /* Explainable.swift */; };
 		DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA047209083D7001D4A88 /* ValkyrjaModel.swift */; };
+		DB1AA04A20909B10001D4A88 /* ConsolePrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA04920909B10001D4A88 /* ConsolePrint.swift */; };
 		DB1C72AD208886F4006696C7 /* BasicStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */; };
 		DB1C72AF20888AE6006696C7 /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AE20888AE6006696C7 /* RxSwift.swift */; };
 		DB5E6C722086E88600631BDD /* CalculatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */; };
@@ -30,7 +31,7 @@
 		DB92E4FA2084693E00ED4A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB92E4F92084693E00ED4A3E /* Assets.xcassets */; };
 		DB92E4FD2084693E00ED4A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB92E4FB2084693E00ED4A3E /* LaunchScreen.storyboard */; };
 		DB92E5082084693E00ED4A3E /* Anti_EntropyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB92E5072084693E00ED4A3E /* Anti_EntropyTests.swift */; };
-		DBB11059208BC6460059A017 /* Avartar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB11058208BC6460059A017 /* Avartar.swift */; };
+		DBB11059208BC6460059A017 /* Intelligence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB11058208BC6460059A017 /* Intelligence.swift */; };
 		DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */; };
 		DBB3FB8F2084B96800601085 /* StigmataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		DB1AA045208F17DD001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		DB1AA046208F17DD001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DB1AA047209083D7001D4A88 /* ValkyrjaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValkyrjaModel.swift; sourceTree = "<group>"; };
+		DB1AA04920909B10001D4A88 /* ConsolePrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsolePrint.swift; sourceTree = "<group>"; };
 		DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStatusViewModel.swift; sourceTree = "<group>"; };
 		DB1C72AE20888AE6006696C7 /* RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
 		DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		DB92E5032084693E00ED4A3E /* Anti-EntropyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anti-EntropyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB92E5072084693E00ED4A3E /* Anti_EntropyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anti_EntropyTests.swift; sourceTree = "<group>"; };
 		DB92E5092084693E00ED4A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBB11058208BC6460059A017 /* Avartar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avartar.swift; sourceTree = "<group>"; };
+		DBB11058208BC6460059A017 /* Intelligence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intelligence.swift; sourceTree = "<group>"; };
 		DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewController.swift; sourceTree = "<group>"; };
 		DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewCell.swift; sourceTree = "<group>"; };
 		E8BEC70720E4680ED48ED56C /* Pods-Anti-EntropyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anti-EntropyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anti-EntropyTests/Pods-Anti-EntropyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DB1AA04B20909B15001D4A88 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DBB11058208BC6460059A017 /* Intelligence.swift */,
+				DB1AA04920909B10001D4A88 /* ConsolePrint.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		DB7158A920846A1400FC164B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,11 +230,11 @@
 		DB92E4F12084693D00ED4A3E /* Anti-Entropy */ = {
 			isa = PBXGroup;
 			children = (
-				DBB11058208BC6460059A017 /* Avartar.swift */,
 				DB92E4F62084693D00ED4A3E /* Main.storyboard */,
 				DB188D642089FB180052E77D /* View */,
 				DB188D632089FAF70052E77D /* ViewModel */,
 				DB188D622089FADA0052E77D /* Controller */,
+				DB1AA04B20909B15001D4A88 /* Utility */,
 				DB75591B20861B8E00BA2DB7 /* Extension */,
 				DB7158A920846A1400FC164B /* Supporting Files */,
 			);
@@ -417,12 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1AA04A20909B10001D4A88 /* ConsolePrint.swift in Sources */,
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
 				DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
 				DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */,
 				DB06B9F72089CF3300776553 /* CalculatorDetailViewController.swift in Sources */,
-				DBB11059208BC6460059A017 /* Avartar.swift in Sources */,
+				DBB11059208BC6460059A017 /* Intelligence.swift in Sources */,
 				DB7559182086159400BA2DB7 /* BasicStatusView.swift in Sources */,
 				DB188D662089FB480052E77D /* CalculatorViewModel.swift in Sources */,
 				DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */,

@@ -63,7 +63,7 @@
 "SK_WhiteComet_MeteorTarget_3rdStrike_Content" = "Deals physical damage equal to 100% of ATK";
 
 "SK_WhiteComet_MeteorTarget_4thStrike_Caption" = "4th Strike";
-"SK_WhiteComet_MeteorTarget_4thStrike_Content" = "Deals physical damage equal to 150% of ATK";
+"SK_WhiteComet_MeteorTarget_4thStrike_Content" = "Deals physical damage equal to 150% of ATK * 2";
 
 "SK_WhiteComet_MeteorTarget_5thStrike_Caption" = "5th Strike";
 "SK_WhiteComet_MeteorTarget_5thStrike_Content" = "Deals physical damage equal to 250% of ATK";

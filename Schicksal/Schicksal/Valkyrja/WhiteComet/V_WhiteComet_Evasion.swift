@@ -20,7 +20,7 @@ struct SK_WhiteComet_TimeShift_TimeFracture: MainSubskill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_TimeShift_TimeFracture_Caption"
     let content: String = "SK_WhiteComet_TimeShift_TimeFracture_Content"
-    let attackTag: AttackTag = .none
+    let attackTag: AttackTag = .evade
 }
 
 // MARK: - Time Shift
@@ -28,7 +28,7 @@ struct SK_WhiteComet_TimeShift: MainSkill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_TimeShift_Caption"
     let content: String = "SK_WhiteComet_TimeShift_Content"
-    let attackTag: AttackTag = .none
+    let attackTag: AttackTag = .evade
     let mainSubskills: [MainSubskill] = [SK_WhiteComet_TimeShift_TimeFracture()]
 }
 
@@ -37,7 +37,7 @@ struct SK_WhiteComet_TimeBlink: SubSkill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_TimeBlink_Caption"
     let content: String = "SK_WhiteComet_TimeBlink_Caption"
-    let attackTag: AttackTag = .none
+    let attackTag: AttackTag = .evade
     let skillUnlockRank: SkillUnlockRank = .A
 }
 
@@ -46,6 +46,6 @@ struct SK_WhiteComet_PowerFlow: SubSkill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_PowerFlow_Caption"
     let content: String = "SK_WhiteComet_PowerFlow_Content"
-    let attackTag: AttackTag = .none
+    let attackTag: AttackTag = .evade
     let skillUnlockRank: SkillUnlockRank = .none
 }

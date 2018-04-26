@@ -38,7 +38,8 @@ struct SK_WhiteComet_ValkyrieBurst: MainSkill {
     let caption: String = "SK_WhiteComet_ValkyrieBurst_Caption"
     let content: String = "SK_WhiteComet_ValkyrieBurst_Content"
     let attackTag: AttackTag = .none
-    let mainSubskills: [MainSubskill] = [SK_WhiteComet_ValkyrieBurst_Burst(), SK_WhiteComet_ValkyrieBurst_ContinuousBurst()]
+    let mainSubskills: [MainSubskill] = [SK_WhiteComet_ValkyrieBurst_Burst(),
+                                         SK_WhiteComet_ValkyrieBurst_ContinuousBurst()]
 }
 
 // MARK: - Valkyrie Impact
@@ -46,12 +47,18 @@ struct SK_WhiteComet_ValkyrieImpact: SubSkill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_ValkyrieImpact_Caption"
     let content: String = "SK_WhiteComet_ValkyrieImpact_Content"
-    let attackTag: AttackTag = .normal
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
 extension SK_WhiteComet_ValkyrieImpact {
-    var physicalDamagePlus: Increment { return 2610.0 }
+    func determine(_ determination: Determination) -> Addition {
+        guard determination.attackable is SK_WhiteComet_ValkyrieImpact else {
+            return [:]
+        }
+
+        return [.physicalDamageAffix: 2610.0]
+    }
 }
 
 // MARK: - Valkyrie Barrier

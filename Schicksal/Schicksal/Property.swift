@@ -70,6 +70,8 @@ public struct AbilityState: OptionSet {
     public static let chaos                    = AbilityState(rawValue: 1 << 29)       //
     public static let invisible                = AbilityState(rawValue: 1 << 30)       // 隐身
 
+    public static let airborne                 = AbilityState(rawValue: 1 << 31)       // 浮空
+
     public static let none: AbilityState   = []
     public static let debuff: AbilityState = [.bleed, .stun, .paralyze, .burn, .poisoned, .frozen, .moveSpeedDown, .attackSpeedDown, .weak, .fragile, . targetLocked, .tied, .chaos]
     public static let buff: AbilityState   = [.endure, .moveSpeedUp, .attackSpeedUp, .powerUp, .shielded, .critUp, .immune, .maxMoveSpeed, .undamagable, .invisible]

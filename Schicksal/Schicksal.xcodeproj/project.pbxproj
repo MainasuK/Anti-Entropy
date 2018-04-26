@@ -15,6 +15,11 @@
 		DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */; };
 		DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */; };
 		DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */; };
+		DB1AA04E2091A587001D4A88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1AA04C2091A587001D4A88 /* InfoPlist.strings */; };
+		DB1AA0512091A587001D4A88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1AA04F2091A587001D4A88 /* InfoPlist.strings */; };
+		DB1AA0552091B594001D4A88 /* V_ValkyrieChariot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA0542091B594001D4A88 /* V_ValkyrieChariot.swift */; };
+		DB1AA0572091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1AA0592091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings */; };
+		DB1AA05F2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */; };
 		DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */; };
 		DB715899208469B300FC164B /* Schicksal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB71588F208469B300FC164B /* Schicksal.framework */; };
 		DB71589E208469B300FC164B /* SchicksalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71589D208469B300FC164B /* SchicksalTests.swift */; };
@@ -63,6 +68,13 @@
 		DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrjia+MainSkill.swift"; sourceTree = "<group>"; };
 		DB188D5E2089F25D0052E77D /* Valkyrja+BasicStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+BasicStatus.swift"; sourceTree = "<group>"; };
 		DB188D602089F2880052E77D /* Valkyrja+Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Valkyrja+Attribute.swift"; sourceTree = "<group>"; };
+		DB1AA04D2091A587001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		DB1AA0502091A587001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		DB1AA0542091B594001D4A88 /* V_ValkyrieChariot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot.swift; sourceTree = "<group>"; };
+		DB1AA0582091B5D0001D4A88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable_V_ValkyrieChariot.strings; sourceTree = "<group>"; };
+		DB1AA05A2091B5D2001D4A88 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable_V_ValkyrieChariot.strings"; sourceTree = "<group>"; };
+		DB1AA05B2091B5D5001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable_V_ValkyrieChariot.strings; sourceTree = "<group>"; };
+		DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_SpecialAttack.swift; sourceTree = "<group>"; };
 		DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_LeaderSkill.swift; sourceTree = "<group>"; };
 		DB71588F208469B300FC164B /* Schicksal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Schicksal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB715892208469B300FC164B /* Schicksal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schicksal.h; sourceTree = "<group>"; };
@@ -132,6 +144,15 @@
 			path = WhiteComet;
 			sourceTree = "<group>";
 		};
+		DB1AA0562091B59C001D4A88 /* ValkyrieChariot */ = {
+			isa = PBXGroup;
+			children = (
+				DB1AA0542091B594001D4A88 /* V_ValkyrieChariot.swift */,
+				DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */,
+			);
+			path = ValkyrieChariot;
+			sourceTree = "<group>";
+		};
 		DB715885208469B200FC164B = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				DB71589F208469B300FC164B /* Info.plist */,
+				DB1AA04F2091A587001D4A88 /* InfoPlist.strings */,
 				DB71589D208469B300FC164B /* SchicksalTests.swift */,
 				DBB3FB7B20848F9600601085 /* MeasureableTests.swift */,
 				DBB3FB902084BC9300601085 /* ValkyrjaTests.swift */,
@@ -183,8 +205,10 @@
 				DBE6FFD1208BA72800EC634C /* Settings.swift */,
 				DB715892208469B300FC164B /* Schicksal.h */,
 				DB715893208469B300FC164B /* Info.plist */,
+				DB1AA04C2091A587001D4A88 /* InfoPlist.strings */,
 				DBE6FFC4208B97B200EC634C /* Localizable.strings */,
 				DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */,
+				DB1AA0592091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +226,7 @@
 				DB188D5C2089F21E0052E77D /* Valkyrjia+MainSkill.swift */,
 				DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */,
 				DB06B9F5208997EF00776553 /* WhiteComet */,
+				DB1AA0562091B59C001D4A88 /* ValkyrieChariot */,
 			);
 			path = Valkyrja;
 			sourceTree = "<group>";
@@ -312,7 +337,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1AA0572091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings in Resources */,
 				DBE6FFCC208BA57F00EC634C /* Localizable_V_WhiteComet.strings in Resources */,
+				DB1AA04E2091A587001D4A88 /* InfoPlist.strings in Resources */,
 				DBE6FFC2208B97B200EC634C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1AA0512091A587001D4A88 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +361,7 @@
 			files = (
 				DB188D572089F18E0052E77D /* Valkyrjia+SkillBase.swift in Sources */,
 				DBCE87B52085B9C900704B3B /* V_WhiteComet_BasicAttack.swift in Sources */,
+				DB1AA05F2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift in Sources */,
 				DBCE87B120859EB200704B3B /* Enemy.swift in Sources */,
 				DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */,
 				DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */,
@@ -349,6 +378,7 @@
 				DB188D592089F1BA0052E77D /* Valkyrjia+SkillUnlockRank.swift in Sources */,
 				DB188D5F2089F25D0052E77D /* Valkyrja+BasicStatus.swift in Sources */,
 				DBB3FB812084AD0D00601085 /* Album.swift in Sources */,
+				DB1AA0552091B594001D4A88 /* V_ValkyrieChariot.swift in Sources */,
 				DBB3FB892084AEE200601085 /* S_JixuanyuanAqua_B.swift in Sources */,
 				DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */,
 				DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */,
@@ -383,6 +413,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DB1AA04C2091A587001D4A88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB1AA04D2091A587001D4A88 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB1AA04F2091A587001D4A88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB1AA0502091A587001D4A88 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB1AA0592091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB1AA0582091B5D0001D4A88 /* en */,
+				DB1AA05A2091B5D2001D4A88 /* zh-Hans */,
+				DB1AA05B2091B5D5001D4A88 /* ja */,
+			);
+			name = Localizable_V_ValkyrieChariot.strings;
+			sourceTree = "<group>";
+		};
 		DBE6FFC4208B97B200EC634C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

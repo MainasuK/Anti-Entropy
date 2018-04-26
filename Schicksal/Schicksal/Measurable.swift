@@ -12,12 +12,16 @@ public typealias Percentage = Double
 public typealias Increment = Double
 
 public enum AddtionType {
+    case meleePhysicalDamagePlus
+    case rangedPhysicalDamagePlus
     case physicalDamagePlus
     case elementDamagePlus
     case thunderDamagePlus
     case fireDamagePlus
     case iceDamagePlus
 
+    case meleePhysicalDamageAffix
+    case rangedPhysicalDamageAffix
     case physicalDamageAffix
     case elementDamageAffix
     case thunderDamageAffix
@@ -25,13 +29,17 @@ public enum AddtionType {
     case iceDamageAffix
 
     case allDamageUP
+    case meleePhysicalDamageUP
+    case rangedPhysicalDamageUP
     case physicalDamageUP
-    case elementDamageUP
     case thunderDamageUP
     case fireDamageUP
     case iceDamageUP
+    case elementDamageUP
 
     case allDamageTakenUP
+    case meleePhysicalDamageTakenUP
+    case rangedPhysicalDamageTakenPlus
     case physicaldamageTakenUP
     case elementDamageTakenUP
     case thunderDamageTakenUP
@@ -41,10 +49,39 @@ public enum AddtionType {
 
 public typealias Addition = [AddtionType: Double]
 
+public struct ActorHitType: OptionSet {
+    public let rawValue: Int
+
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+
+    public static let melee = ActorHitType(rawValue: 1 << 0)
+    public static let ranged = ActorHitType(rawValue: 1 << 1)
+    public static let ailment = ActorHitType(rawValue: 1 << 2)
+}
+
 public struct Determination {
     public var attackable: Attackable?
     public var attackTag: AttackTag = .none
     public var abilityState: AbilityState = []
+
+    public var actorHitType: ActorHitType {
+        guard let attackable = attackable else {
+            return []
+        }
+
+        if attackable.meleePhysicalDamageTransform > 0.0, attackable.rangedPhysicalDamageTransform > 0.0 {
+            return [.melee, .ranged]
+        }
+        if attackable.meleePhysicalDamageTransform > 0.0 {
+            return .melee
+        }
+        if attackable.rangedPhysicalDamageTransform > 0.0 {
+            return .ranged
+        }
+        return .ailment
+    }
 
     public init(attackable: Attackable? = nil, attackTag: AttackTag = .none, abilityState: AbilityState = []) {
         self.attackable = attackable

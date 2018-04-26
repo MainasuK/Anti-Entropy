@@ -73,7 +73,13 @@ struct SK_WhiteComet_TopHelix: SubSkill {
 
 extension SK_WhiteComet_TopHelix {
     var meleePhysicalDamageTransform: Percentage { return 3.75 }
-    var skillPhysicalDamagePlus: Increment { return 2250.0 }
+    func determine(_ determination: Determination) -> Addition {
+        guard determination.attackable is SK_WhiteComet_TopHelix else {
+            return [:]
+        }
+
+        return [.meleePhysicalDamagePlus: 2250.0]
+    }
 }
 
 // MARK: - Gravity Freak
@@ -81,7 +87,7 @@ struct SK_WhiteComet_GravityFreak: SubSkill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_GravityFreak_Caption";
     let content: String = "SK_WhiteComet_GravityFreak_Content";
-    let attackTag: AttackTag = .normal
+    let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .S
 }
 

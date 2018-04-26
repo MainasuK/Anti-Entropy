@@ -1,5 +1,5 @@
 //
-//  Avartar.swift
+//  Intelligence.swift
 //  Anti-Entropy
 //
 //  Created by Cirno MainasuK on 2018-4-22.
@@ -15,7 +15,6 @@ class BattleIntelligence: Object {
     @objc dynamic var id = 0
     @objc dynamic var leader: ValkyrjaIntelligence? = ValkyrjaIntelligence()
     let member = List<ValkyrjaIntelligence>()
-//    @objc dynamic var supporter: ValkyrjaIntelligence? = nil
 
     override static func primaryKey() -> String? {
         return "id"

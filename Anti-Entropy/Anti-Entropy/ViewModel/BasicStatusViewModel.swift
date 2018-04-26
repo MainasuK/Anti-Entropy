@@ -9,12 +9,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Default
 import Schicksal
 import RealmSwift
 import RxRealm
 
-private let df_basicStatusKey = "df_basicStatusKey"
 
 struct BasicStatusViewModel {
 

@@ -155,11 +155,10 @@ extension CalculatorViewController {
 
     private func setupViewModel() {
         viewModel.basicStatusViewModel.bind(to: basicStatusView)
-        Observable.propertyChanges(object: viewModel.currentIntelligence.value.leader!)
+        viewModel.basicStatusViewModel.basicStatus.asObservable()
             .subscribe(onNext: { [weak self] _ in
                 self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
-
     }
 }
