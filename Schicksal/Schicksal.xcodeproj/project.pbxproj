@@ -44,6 +44,8 @@
 		DBCE87B120859EB200704B3B /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE87B020859EB200704B3B /* Enemy.swift */; };
 		DBCE87B32085B34900704B3B /* V_WhiteComet_Ultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE87B22085B34900704B3B /* V_WhiteComet_Ultimate.swift */; };
 		DBCE87B52085B9C900704B3B /* V_WhiteComet_BasicAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCE87B42085B9C900704B3B /* V_WhiteComet_BasicAttack.swift */; };
+		DBDAE6152091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAE6142091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift */; };
+		DBDAE617209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDAE616209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift */; };
 		DBE6FFC2208B97B200EC634C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE6FFC4208B97B200EC634C /* Localizable.strings */; };
 		DBE6FFCC208BA57F00EC634C /* Localizable_V_WhiteComet.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */; };
 		DBE6FFD2208BA72800EC634C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6FFD1208BA72800EC634C /* Settings.swift */; };
@@ -102,6 +104,8 @@
 		DBCE87B020859EB200704B3B /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		DBCE87B22085B34900704B3B /* V_WhiteComet_Ultimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_Ultimate.swift; sourceTree = "<group>"; };
 		DBCE87B42085B9C900704B3B /* V_WhiteComet_BasicAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_BasicAttack.swift; sourceTree = "<group>"; };
+		DBDAE6142091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_Ultimate.swift; sourceTree = "<group>"; };
+		DBDAE616209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_BasicAttack.swift; sourceTree = "<group>"; };
 		DBE6FFC3208B97B200EC634C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DBE6FFC5208B97C200EC634C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DBE6FFC6208B97C800EC634C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			children = (
 				DB1AA0542091B594001D4A88 /* V_ValkyrieChariot.swift */,
 				DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */,
+				DBDAE6142091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift */,
+				DBDAE616209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift */,
 			);
 			path = ValkyrieChariot;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				DB1AA05F2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift in Sources */,
 				DBCE87B120859EB200704B3B /* Enemy.swift in Sources */,
 				DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */,
+				DBDAE617209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift in Sources */,
 				DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */,
 				DB7158B920847B4500FC164B /* V_WhiteComet.swift in Sources */,
 				DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */,
@@ -380,6 +387,7 @@
 				DBB3FB812084AD0D00601085 /* Album.swift in Sources */,
 				DB1AA0552091B594001D4A88 /* V_ValkyrieChariot.swift in Sources */,
 				DBB3FB892084AEE200601085 /* S_JixuanyuanAqua_B.swift in Sources */,
+				DBDAE6152091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift in Sources */,
 				DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */,
 				DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */,
 				DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */,

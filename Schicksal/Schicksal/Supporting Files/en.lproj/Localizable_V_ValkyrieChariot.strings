@@ -30,16 +30,46 @@
 "SK_ValkyrieChariot_HighGravity_Caption" = "High Gravity";
 "SK_ValkyrieChariot_HighGravity_Content" = "Enters battle and triggers QTE when enemy is stunned, dealing 100% of ATK+4158 physical damage. Lifts enemy into the air and casts Time Lock effects on them for 3 sec.";
 
-// MARK: Ultimate
-// MARK: Ultimate
-// MARK: Ultimate
-// MARK: Ultimate
-// MARK: Ultimate
+// MARK: Ultimate - Void Explosion
+"SK_ValkyrieChariot_VoidExplosion_BlackHole_Caption" = "Black Hole";
+"SK_ValkyrieChariot_VoidExplosion_BlackHole_Content" = "Lasts for 10 sec, during which time the caster is invincible.";
 
-// MARK: Basic Attack
-// MARK: Basic Attack
-// MARK: Basic Attack
-// MARK: Basic Attack
+"SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse_Caption" = "Gravitational Collapse";
+"SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse_Content" = "Reduces physical ATK of affected enemies by 50%.";
+
+"SK_ValkyrieChariot_VoidExplosion_Caption" = "Void Explosion";
+"SK_ValkyrieChariot_VoidExplosion_Content" = "Summons a black hole that draws in surrounding enemies.";
+
+// MARK: Ultimate - Particle Beam
+"SK_ValkyrieChariot_ParticleBeam_Caption" = "Particle Beam";
+"SK_ValkyrieChariot_ParticleBeam_Content" = "Bleeds enemies drawn by Void Explosion, dealing 449 physical damage every 0.5 sec.";
+
+// MARK: Ultimate - Particle Fusion
+"SK_ValkyrieChariot_ParticleFusion_Caption" = "Particle Fusion";
+"SK_ValkyrieChariot_ParticleFusion_Content" = "Explodes at the end of Void Explosion. 100% chance of stunning enemies for 6 sec.";
+
+// MARK: Ultimate - Gravity Tearing
+"SK_ValkyrieChariot_GravityTreaing_Caption" = "Gravity Tearing";
+"SK_ValkyrieChariot_GravityTreaing_Content" = "Increases ranged physical damage done by 30% to enemies drawn by Void Explosion.";
+
+// MARK: Basic Attack - Particle Cannon
+"SK_ValkyrieChariot_ParticleCannon_ArmSwitch_Caption" = "Arm Switch";
+"SK_ValkyrieChariot_ParticleCannon_ArmSwitch_Content" = "Changes the way of charging based on the weapon equipped.";
+
+"SK_ValkyrieChariot_ParticleCannon_Caption" = "Particle Cannon";
+"SK_ValkyrieChariot_ParticleCannon_Content" = "A charged attack using a  cannon. The more the combo hits, the higher the damage.";
+
+// MARK: Basic Attack - Reaction
+"SK_ValkyrieChariot_Reaction_Caption" = "Reaction";
+"SK_ValkyrieChariot_Reaction_Content" = "Blocks attack once and interrupts weak enemies during charging. Cooldown: 6 sec. Blocks 80% of incoming damage.";
+
+// MARK: Basic Attack - Atomic Radiate
+"SK_ValkyrieChariot_AtomicRadiate_Caption" = "Atomic Radiate";
+"SK_ValkyrieChariot_AtomicRadiate_Content" = "Attacking without charging inflicts an AOE igniting effect, dealing 33 fire damage every 0.5 sec to ignited enemies for 10 sec.";
+
+// MARK: Basic Attack - Chain Reaction
+"SK_ValkyrieChariot_ChainReaction_Caption" = "Chain Reaction";
+"SK_ValkyrieChariot_ChainReaction_Content" = "Increases damage of basic and charged attacks done to ignited enemies by 25%.";
 
 // MARK: Evasion
 // MARK: Evasion

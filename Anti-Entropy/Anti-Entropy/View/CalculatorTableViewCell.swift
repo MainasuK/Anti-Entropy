@@ -29,7 +29,7 @@ class CalculatorTableViewCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
 
     // TODO: use [valkyrja] & [Stigma] & [Weapon] instead
-    let measurables = V_WhiteComet().measurables
+    var measurables = V_WhiteComet().measurables
     let determination: Determination = {
         let abilityState: AbilityState = .shielded
         return Determination(attackable: nil, attackTag: .none, abilityState: abilityState)

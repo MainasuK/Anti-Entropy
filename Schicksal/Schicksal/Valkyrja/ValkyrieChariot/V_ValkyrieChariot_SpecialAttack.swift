@@ -65,7 +65,7 @@ struct SK_ValkyrieChariot_HighGravity: SubSkill {
 }
 
 extension SK_ValkyrieChariot_HighGravity {
-    var meleePhysicalDamageTransform: Percentage { return 100.0 }
+    var meleePhysicalDamageTransform: Percentage { return 1.0 }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_ValkyrieChariot_HighGravity else { return [:] }
         return [.meleePhysicalDamagePlus: 4158.0]

@@ -96,6 +96,7 @@ extension CalculatorViewModel {
 
     func configure(_ cell: CalculatorTableViewCell, at indexPath: IndexPath) {
         guard let skill = leader.value?.skills[indexPath.section] else { return }
+        cell.measurables = leader.value?.measurables ?? V_WhiteComet().measurables
         cell.configure(with: skill, of: basicStatusViewModel.basicStatus.value, at: indexPath)
     }
 

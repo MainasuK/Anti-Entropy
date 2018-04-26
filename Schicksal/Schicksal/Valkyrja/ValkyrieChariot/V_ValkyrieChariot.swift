@@ -21,7 +21,9 @@ public struct V_ValkyrieChariot: Valkyrja {
 
     public let initialRank: ValkyrjaRank = .none
 
-    public let skills: Skills = [SKS_ValkyrieChariot_SpecialAttack()]
+    public let skills: Skills = [SKS_ValkyrieChariot_SpecialAttack(),
+                                 SKS_ValkyrieChariot_Ultimate(),
+                                 SKS_ValkyrieChariot_BasicAttack()]
 
     public var basicStatus: BasicStatus
     public var rank: ValkyrjaRank

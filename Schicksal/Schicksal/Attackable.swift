@@ -91,6 +91,8 @@ struct Formular {
             let physical =
                 Double(atk) * attackable.meleePhysicalDamageTransform * meleePhysicalDamageMagnification +
                 Double(atk) * attackable.rangedPhysicalDamageTransform * rangedPhysicalDamageMagnification +
+                meleePhysicalDamagePlus +
+                rangedPhysicalDamageTakenPlus +
                 physicalDamagePlus
 
             let element =
@@ -127,8 +129,6 @@ extension Attackable {
     var thunderDamageTransform: Percentage { return 0.0 }
     var fireDamageTransform: Percentage { return 0.0 }
     var iceDamageTransform: Percentage { return 0.0 }
-
-    var skillPhysicalDamagePlus: Increment { return 0.0 }
 }
 
 extension Attackable {
@@ -154,8 +154,7 @@ extension Attackable {
         //        let dmg = meleePhysicalDamage + rangedPhysicalDamage
 
         //        return dmg
-        return (meleePhysicalDamage.0 + skillPhysicalDamagePlus,
-                meleePhysicalDamage.1)
+        return (meleePhysicalDamage.0, meleePhysicalDamage.1)
     }
 
     func effectiveMeasurables(in measurables: [Measurable], under determination: Determination) -> [Measurable] {
