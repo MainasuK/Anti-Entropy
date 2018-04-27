@@ -57,7 +57,7 @@
 "SK_ValkyrieChariot_ParticleCannon_ArmSwitch_Content" = "Changes the way of charging based on the weapon equipped.";
 
 "SK_ValkyrieChariot_ParticleCannon_Caption" = "Particle Cannon";
-"SK_ValkyrieChariot_ParticleCannon_Content" = "A charged attack using a  cannon. The more the combo hits, the higher the damage.";
+"SK_ValkyrieChariot_ParticleCannon_Content" = "A charged attack using a cannon. The more the combo hits, the higher the damage.";
 
 // MARK: Basic Attack - Reaction
 "SK_ValkyrieChariot_Reaction_Caption" = "Reaction";

@@ -32,6 +32,11 @@
 		DB8DD6022092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD6012092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift */; };
 		DB8DD60420930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD60320930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift */; };
 		DB8DD6062093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD6052093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift */; };
+		DB8DD60820932A120069BD89 /* V_CrimsonImpulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD60720932A120069BD89 /* V_CrimsonImpulse.swift */; };
+		DB8DD60C20932A5C0069BD89 /* Localizable_V_CrimsonImpulse.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB8DD60A20932A5C0069BD89 /* Localizable_V_CrimsonImpulse.strings */; };
+		DB8DD61120932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD61020932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift */; };
+		DB8DD613209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD612209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift */; };
+		DB8DD615209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD614209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift */; };
 		DBAC2E8820875EC300A9A3F5 /* V_WhiteComet_Evasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */; };
 		DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */; };
 		DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1105A208CC1A30059A017 /* Attackable.swift */; };
@@ -95,6 +100,13 @@
 		DB8DD6012092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_Evasion.swift; sourceTree = "<group>"; };
 		DB8DD60320930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_PassiveSkill.swift; sourceTree = "<group>"; };
 		DB8DD6052093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_LeaderSkill.swift; sourceTree = "<group>"; };
+		DB8DD60720932A120069BD89 /* V_CrimsonImpulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_CrimsonImpulse.swift; sourceTree = "<group>"; };
+		DB8DD60D20932AD70069BD89 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable_V_CrimsonImpulse.strings"; sourceTree = "<group>"; };
+		DB8DD60E20932AD80069BD89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable_V_CrimsonImpulse.strings; sourceTree = "<group>"; };
+		DB8DD60F20932AFD0069BD89 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable_V_CrimsonImpulse.strings; sourceTree = "<group>"; };
+		DB8DD61020932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "V_ CrimsonImpulse_SpecialAttack.swift"; sourceTree = "<group>"; };
+		DB8DD612209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "V_ CrimsonImpulse_Ultimate.swift"; sourceTree = "<group>"; };
+		DB8DD614209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "V_ CrimsonImpulse_BasicAttack.swift"; sourceTree = "<group>"; };
 		DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_Evasion.swift; sourceTree = "<group>"; };
 		DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_PassiveSkill.swift; sourceTree = "<group>"; };
 		DBB1105A208CC1A30059A017 /* Attackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attackable.swift; sourceTree = "<group>"; };
@@ -194,10 +206,10 @@
 				DB7158AA20846A5600FC164B /* Weapon.swift */,
 				DBB3FB792084842E00601085 /* Measurable.swift */,
 				DBB1105A208CC1A30059A017 /* Attackable.swift */,
+				DBCE87B020859EB200704B3B /* Enemy.swift */,
 				DBB3FB7D2084A1C700601085 /* Stigmata */,
 				DB7158B720847AFE00FC164B /* Valkyrja */,
 				DB7158B020846C6400FC164B /* Supporting Files */,
-				DBCE87B020859EB200704B3B /* Enemy.swift */,
 			);
 			path = Schicksal;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 				DBE6FFC4208B97B200EC634C /* Localizable.strings */,
 				DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */,
 				DB1AA0592091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings */,
+				DB8DD60A20932A5C0069BD89 /* Localizable_V_CrimsonImpulse.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,8 +255,20 @@
 				DB188D5A2089F2010052E77D /* Valkyrjia+MainSubskill.swift */,
 				DB06B9F5208997EF00776553 /* WhiteComet */,
 				DB1AA0562091B59C001D4A88 /* ValkyrieChariot */,
+				DB8DD60920932A170069BD89 /* CrimsonImpulse */,
 			);
 			path = Valkyrja;
+			sourceTree = "<group>";
+		};
+		DB8DD60920932A170069BD89 /* CrimsonImpulse */ = {
+			isa = PBXGroup;
+			children = (
+				DB8DD60720932A120069BD89 /* V_CrimsonImpulse.swift */,
+				DB8DD61020932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift */,
+				DB8DD612209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift */,
+				DB8DD614209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift */,
+			);
+			path = CrimsonImpulse;
 			sourceTree = "<group>";
 		};
 		DBB3FB7D2084A1C700601085 /* Stigmata */ = {
@@ -352,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8DD60C20932A5C0069BD89 /* Localizable_V_CrimsonImpulse.strings in Resources */,
 				DB1AA0572091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings in Resources */,
 				DBE6FFCC208BA57F00EC634C /* Localizable_V_WhiteComet.strings in Resources */,
 				DB1AA04E2091A587001D4A88 /* InfoPlist.strings in Resources */,
@@ -386,6 +412,7 @@
 				DB8DD60420930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift in Sources */,
 				DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */,
 				DB8DD6022092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift in Sources */,
+				DB8DD60820932A120069BD89 /* V_CrimsonImpulse.swift in Sources */,
 				DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */,
 				DB7158AF20846B5900FC164B /* Property.swift in Sources */,
 				DBCE87B32085B34900704B3B /* V_WhiteComet_Ultimate.swift in Sources */,
@@ -399,7 +426,10 @@
 				DBB3FB812084AD0D00601085 /* Album.swift in Sources */,
 				DB1AA0552091B594001D4A88 /* V_ValkyrieChariot.swift in Sources */,
 				DBB3FB892084AEE200601085 /* S_JixuanyuanAqua_B.swift in Sources */,
+				DB8DD61120932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift in Sources */,
+				DB8DD615209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift in Sources */,
 				DBDAE6152091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift in Sources */,
+				DB8DD613209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift in Sources */,
 				DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */,
 				DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */,
 				DB188D5D2089F21E0052E77D /* Valkyrjia+MainSkill.swift in Sources */,
@@ -457,6 +487,16 @@
 				DB1AA05B2091B5D5001D4A88 /* ja */,
 			);
 			name = Localizable_V_ValkyrieChariot.strings;
+			sourceTree = "<group>";
+		};
+		DB8DD60A20932A5C0069BD89 /* Localizable_V_CrimsonImpulse.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB8DD60D20932AD70069BD89 /* zh-Hans */,
+				DB8DD60E20932AD80069BD89 /* en */,
+				DB8DD60F20932AFD0069BD89 /* ja */,
+			);
+			name = Localizable_V_CrimsonImpulse.strings;
 			sourceTree = "<group>";
 		};
 		DBE6FFC4208B97B200EC634C /* Localizable.strings */ = {

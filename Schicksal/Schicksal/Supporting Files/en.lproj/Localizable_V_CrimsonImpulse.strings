@@ -1,0 +1,88 @@
+/* 
+  Localizable_V_CrimsonImpulse.strings
+  Schicksal
+
+  Created by Cirno MainasuK on 2018-4-27.
+  Copyright © 2018年 MainasuK. All rights reserved.
+*/
+
+// Property
+
+"V_CrimsonImpulse_Firstname" = "Crimson";
+"V_CrimsonImpulse_Lastname" = "CrimsonImpulse";
+"V_CrimsonImpulse_ShortName" = "Crimson Impulse";
+"V_CrimsonImpulse_FullName" = "Crimson Impulse";
+"V_CrimsonImpulse_Description" = "Melee, slash attack. Displacement skills. Stable AOE damge within a small radius.";
+
+// MARK: Special Attack - Sakura Rise
+"SK_CrimsonImpulse_SakuraRise_WhirlingSlash_Caption" = "Whirling Slash";
+"SK_CrimsonImpulse_SakuraRise_WhirlingSlash_Content" = "Deals physical damage equal to 7*60% of ATK.";
+
+"SK_CrimsonImpulse_SakuraRise_Caption" = "Sakura Rise";
+"SK_CrimsonImpulse_SakuraRise_Content" = "Attacks and sends surrounding enemies floating with a whirling slash";
+
+// MARK: Special Attack - Laido Whirlwind
+"SK_CrimsonImpulse_LaidoWhirlwind_Caption" = "Laido Whirlwind";
+"SK_CrimsonImpulse_LaidoWhirlwind_Content" = "Triggers Instant Dash upon entering the battle. Triggers QTE and enters the battle when enemy is lift into the air. Unleashes whirlwind, dealing physical damage equal to 225%+400% of ATK.";
+
+// MARK: Special Attack - Airnorne Whirlwind
+"SK_CrimsonImpulse_AirborneWhirlwind_Caption" = "Airborne Whirlwind";
+"SK_CrimsonImpulse_AirborneWhirlwind_Content" = "Triggers a combo attack by tapping and holding the attack button during any basic attack.";
+
+// MARK: Special Attack - Double Whirlwind
+"SK_CrimsonImpulse_DoubleWhirlwind_Caption" = "Double Whirlwind";
+"SK_CrimsonImpulse_DoubleWhirlwind_Content" = "Attacks one additional time by tapping the Attack button during combo attacks, dealing damage equal to 100% of the combo attack's first strike.";
+
+// MARK: Ultimate - Amaterasu
+"SK_CrimsonImpulse_Amaterasu_Amaterasu_Caption" = "Amaterasu";
+"SK_CrimsonImpulse_Amaterasu_Amaterasu_Content" = "Deals physical damage up to 1150% of ATK. SP Cost: 50";
+
+"SK_CrimsonImpulse_Amaterasu_Caption" = "Amaterasu";
+"SK_CrimsonImpulse_Amaterasu_Content" = "Executes targets in the front using Valkyrie's energy burst.";
+
+// MARK: Ultimate - Soul Power
+"SK_CrimsonImpulse_SoulPower_Caption" = "Soul Power";
+"SK_CrimsonImpulse_SoulPower_Content" = "Each strike of Amaterasu deals an additional 79.0 fire damage. Can be triggered up to 17 times.";
+
+// MARK: Ultimate - Spirt Blade
+"SK_CrimsonImpulse_SpiritBlade_Caption" = "Sprit Blade";
+"SK_CrimsonImpulse_SpiritBlade_Content" = "Increases maximum SP by 15. Enters the Valkyrie state by increasing SP cost of Amaterasu by 20, boosting all attack for 3.0 sec. Can be closed.";
+
+// MARK: Ultimate - Sakura no Haku
+"SK_CrimsonImpulse_SakuraNoHaku_Caption" = "Sakura no Haku";
+"SK_CrimsonImpulse_SakuraNoHaku_Content" = "Enhances Blade in the Valkyrie state, each strike dealing additional physical damage equal to 20% of ATK.";
+
+// MARK: Basic Attack - Gotamashiki
+"SK_CrimsonImpulse_Gotamashiki_1stStrike_Caption" = "1st Strike";
+"SK_CrimsonImpulse_Gotamashiki_1stStrike_Content" = "deals physical damge equal to 100% of ATK.";
+
+"SK_CrimsonImpulse_Gotamashiki_2ndStrike_Caption" = "2nd Strike";
+"SK_CrimsonImpulse_Gotamashiki_2ndStrike_Content" = "deals physical damge equal to 120% of ATK.";
+
+"SK_CrimsonImpulse_Gotamashiki_3rdStrike_Caption" = "3rd Strike";
+"SK_CrimsonImpulse_Gotamashiki_3rdStrike_Content" = "deals physical damge equal to 75% of ATK.";
+
+"SK_CrimsonImpulse_Gotamashiki_4thStrike_Caption" = "4th Strike";
+"SK_CrimsonImpulse_Gotamashiki_4thStrike_Content" = "deals physical damge equal to 80% of ATK.";
+
+"SK_CrimsonImpulse_Gotamashiki_5thStrike_Caption" = "5th Strike";
+"SK_CrimsonImpulse_Gotamashiki_5thStrike_Content" = "deals AOE physical damge equal to 250% of ATK.";
+
+"SK_CrimsonImpulse_Gotamashiki_Caption" = "Gotamashiki";
+"SK_CrimsonImpulse_Gotamashiki_Content" = "Attacks with a swift penta-slash.";
+
+// MARK: Basic Attack - Relentless Slash
+"SK_CrimsonImpulse_RelentlessSlash_Caption" = "Relentless Slash";
+"SK_CrimsonImpulse_RelentlessSlash_Content" = "Increases attack Speed by 15.0% upon generating a 20-hit or more combo.";
+
+// MARK: Basic Attack - Blood Sakura
+"SK_CrimsonImpulse_RelentlessSlash_Caption" = "Blood Sakura";
+"SK_CrimsonImpulse_RelentlessSlash_Content" = "Basic attacks have a 20.0% chance of bleeding enemies, dealing 32.0 physical damage every 0.5 sec for 5.0 sec.";
+
+// MARK: Basic Attack - Night Sakura
+"SK_CrimsonImpulse_NightSakura_Caption" = "Night Sakura";
+"SK_CrimsonImpulse_NightSakura_Content" = "The last strike of basic attacks deals on additional 20% physcial damge of ATK for 6.0 sec.";
+
+// MARK: Evasion
+// MARK: Passive Skill
+// MARK: Leader Skill

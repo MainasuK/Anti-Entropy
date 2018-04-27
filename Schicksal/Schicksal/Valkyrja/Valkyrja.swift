@@ -11,6 +11,7 @@ import Foundation
 @objc public enum ValkyrjaCode: Int {
     case whiteComet
     case valkyrieChariot
+    case crimsonImpulse
 }
 
 public struct ValkyrjaModel {
@@ -18,6 +19,7 @@ public struct ValkyrjaModel {
         switch code {
         case .whiteComet:       return V_WhiteComet(basicStatus: basicStatus, rank: rank)
         case .valkyrieChariot:  return V_ValkyrieChariot(basicStatus: basicStatus, rank: rank)
+        case .crimsonImpulse:   return V_CrimsonImpulse(basicStatus: basicStatus, rank: rank)
         }
     }
 }

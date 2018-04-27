@@ -22,7 +22,7 @@ class BattleIntelligence: Object {
 }
 
 class ValkyrjaIntelligence: Object {
-    @objc dynamic var valkyrjaCode: ValkyrjaCode = .valkyrieChariot
+    @objc dynamic var valkyrjaCode: ValkyrjaCode = .crimsonImpulse
 
     @objc dynamic var HP: HP   = 100
     @objc dynamic var SP: SP   = 100

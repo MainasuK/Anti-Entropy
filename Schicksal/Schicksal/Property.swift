@@ -32,9 +32,9 @@ extension Explainable {
 }
 
 public struct AbilityState: OptionSet {
-    public let rawValue: Int
+    public let rawValue: Int64
 
-    public init(rawValue: Int) {
+    public init(rawValue: Int64) {
         self.rawValue = rawValue
     }
 
@@ -71,6 +71,9 @@ public struct AbilityState: OptionSet {
     public static let invisible                = AbilityState(rawValue: 1 << 30)       // 隐身
 
     public static let airborne                 = AbilityState(rawValue: 1 << 31)       // 浮空
+    public static let valkyrieState            = AbilityState(rawValue: 1 << 32)       // 爆发
+    public static let combo                    = AbilityState(rawValue: 1 << 33)       // 爆发
+
 
     public static let none: AbilityState   = []
     public static let debuff: AbilityState = [.bleed, .stun, .paralyze, .burn, .poisoned, .frozen, .moveSpeedDown, .attackSpeedDown, .weak, .fragile, . targetLocked, .tied, .chaos]
