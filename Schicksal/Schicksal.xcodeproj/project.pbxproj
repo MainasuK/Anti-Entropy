@@ -29,6 +29,9 @@
 		DB7158AF20846B5900FC164B /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158AE20846B5900FC164B /* Property.swift */; };
 		DB7158B220846D0200FC164B /* Valkyrja.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158B120846D0200FC164B /* Valkyrja.swift */; };
 		DB7158B920847B4500FC164B /* V_WhiteComet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7158B820847B4500FC164B /* V_WhiteComet.swift */; };
+		DB8DD6022092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD6012092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift */; };
+		DB8DD60420930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD60320930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift */; };
+		DB8DD6062093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DD6052093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift */; };
 		DBAC2E8820875EC300A9A3F5 /* V_WhiteComet_Evasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */; };
 		DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */; };
 		DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1105A208CC1A30059A017 /* Attackable.swift */; };
@@ -89,6 +92,9 @@
 		DB7158AE20846B5900FC164B /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		DB7158B120846D0200FC164B /* Valkyrja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valkyrja.swift; sourceTree = "<group>"; };
 		DB7158B820847B4500FC164B /* V_WhiteComet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet.swift; sourceTree = "<group>"; };
+		DB8DD6012092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_Evasion.swift; sourceTree = "<group>"; };
+		DB8DD60320930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_PassiveSkill.swift; sourceTree = "<group>"; };
+		DB8DD6052093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_LeaderSkill.swift; sourceTree = "<group>"; };
 		DBAC2E8720875EC300A9A3F5 /* V_WhiteComet_Evasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_Evasion.swift; sourceTree = "<group>"; };
 		DBAC2E89208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_PassiveSkill.swift; sourceTree = "<group>"; };
 		DBB1105A208CC1A30059A017 /* Attackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attackable.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 				DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */,
 				DBDAE6142091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift */,
 				DBDAE616209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift */,
+				DB8DD6012092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift */,
+				DB8DD60320930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift */,
+				DB8DD6052093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift */,
 			);
 			path = ValkyrieChariot;
 			sourceTree = "<group>";
@@ -367,13 +376,16 @@
 			files = (
 				DB188D572089F18E0052E77D /* Valkyrjia+SkillBase.swift in Sources */,
 				DBCE87B52085B9C900704B3B /* V_WhiteComet_BasicAttack.swift in Sources */,
+				DB8DD6062093135D0069BD89 /* V_ValkyrieChariot_LeaderSkill.swift in Sources */,
 				DB1AA05F2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift in Sources */,
 				DBCE87B120859EB200704B3B /* Enemy.swift in Sources */,
 				DBB1105B208CC1A30059A017 /* Attackable.swift in Sources */,
 				DBDAE617209201E10057F522 /* V_ValkyrieChariot_BasicAttack.swift in Sources */,
 				DB188D612089F2880052E77D /* Valkyrja+Attribute.swift in Sources */,
 				DB7158B920847B4500FC164B /* V_WhiteComet.swift in Sources */,
+				DB8DD60420930F7A0069BD89 /* V_ValkyrieChariot_PassiveSkill.swift in Sources */,
 				DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */,
+				DB8DD6022092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift in Sources */,
 				DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */,
 				DB7158AF20846B5900FC164B /* Property.swift in Sources */,
 				DBCE87B32085B34900704B3B /* V_WhiteComet_Ultimate.swift in Sources */,

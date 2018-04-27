@@ -16,7 +16,7 @@ public struct SKS_ValkyrieChariot_Ultimate: Skill {
                                        SK_ValkyrieChariot_GravityTreaing()]
 }
 
-
+// MARK: - Void Explosion - Black Hole
 struct SK_ValkyrieChariot_VoidExplosion_BlackHole: MainSubskill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_VoidExplosion_BlackHole_Caption";
@@ -24,6 +24,7 @@ struct SK_ValkyrieChariot_VoidExplosion_BlackHole: MainSubskill {
     let attackTag: AttackTag = .ultra
 }
 
+// MARK: Void Explosion Gravitational Collapse
 struct SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse: MainSubskill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse_Caption";
@@ -31,6 +32,11 @@ struct SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse: MainSubskill {
     let attackTag: AttackTag = .ultra
 }
 
+extension SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse {
+    var scope: Scope { return .all }
+}
+
+// MARK: - Void Explosion
 struct SK_ValkyrieChariot_VoidExplosion: MainSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_VoidExplosion_Caption";
@@ -40,6 +46,7 @@ struct SK_ValkyrieChariot_VoidExplosion: MainSkill {
                                          SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse()]
 }
 
+// MARK: - Particle Beam
 struct SK_ValkyrieChariot_ParticleBeam: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_ParticleBeam_Caption";
@@ -48,6 +55,7 @@ struct SK_ValkyrieChariot_ParticleBeam: SubSkill {
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
+// MARK: Particle Fusion
 struct SK_ValkyrieChariot_ParticleFusion: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_ParticleFusion_Caption";
@@ -56,10 +64,18 @@ struct SK_ValkyrieChariot_ParticleFusion: SubSkill {
     let skillUnlockRank: SkillUnlockRank = .S
 }
 
+// MARK: Gravity Treaing
 struct SK_ValkyrieChariot_GravityTreaing: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_GravityTreaing_Caption";
     let content: String = "SK_ValkyrieChariot_GravityTreaing_Content";
     let attackTag: AttackTag = .none
     let skillUnlockRank: SkillUnlockRank = .SSS
+}
+
+extension SK_ValkyrieChariot_GravityTreaing {
+    var scope: Scope { return .others }
+    func determine(_ determination: Determination) -> Addition {
+        return [.rangedPhysicalDamageUP: 0.30]
+    }
 }

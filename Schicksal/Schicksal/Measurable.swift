@@ -45,6 +45,8 @@ public enum AddtionType {
     case thunderDamageTakenUP
     case fireDamageTakenUP
     case iceDamageTakenUP
+
+    case criticalDamageUP
 }
 
 public typealias Addition = [AddtionType: Double]
@@ -56,8 +58,8 @@ public struct ActorHitType: OptionSet {
         self.rawValue = rawValue
     }
 
-    public static let melee = ActorHitType(rawValue: 1 << 0)
-    public static let ranged = ActorHitType(rawValue: 1 << 1)
+    public static let melee   = ActorHitType(rawValue: 1 << 0)
+    public static let ranged  = ActorHitType(rawValue: 1 << 1)
     public static let ailment = ActorHitType(rawValue: 1 << 2)
 }
 
@@ -90,11 +92,19 @@ public struct Determination {
     }
 }
 
+public enum Scope {
+    case oneself
+    case others
+    case all
+}
+
 public protocol Measurable {
+    var scope: Scope { get }
     func determine(_ determination: Determination) -> Addition
 }
 
 extension Measurable {
+    public var scope: Scope { return .oneself }
     public func determine(_ determination: Determination) -> Addition {
         return [:]
     }
@@ -201,11 +211,11 @@ extension Measurable {
 }
 
 extension Percentage {
-    var propertyUP: Percentage {
+    public var propertyUP: Percentage {
         return self * (1 + 0.3)
     }
 
-    var propertyDown: Percentage {
+    public var propertyDown: Percentage {
         return self * (1 - 0.3)
     }
 }

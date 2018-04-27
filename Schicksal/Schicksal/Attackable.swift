@@ -123,22 +123,22 @@ public protocol Attackable {
 }
 
 extension Attackable {
-    var meleePhysicalDamageTransform: Percentage { return 0.0 }
-    var rangedPhysicalDamageTransform: Percentage { return 0.0 }
+    public var meleePhysicalDamageTransform: Percentage { return 0.0 }
+    public var rangedPhysicalDamageTransform: Percentage { return 0.0 }
 
-    var thunderDamageTransform: Percentage { return 0.0 }
-    var fireDamageTransform: Percentage { return 0.0 }
-    var iceDamageTransform: Percentage { return 0.0 }
+    public var thunderDamageTransform: Percentage { return 0.0 }
+    public var fireDamageTransform: Percentage { return 0.0 }
+    public var iceDamageTransform: Percentage { return 0.0 }
 }
 
 extension Attackable {
 
-    func attack(with basicStatus: BasicStatus, with measurables: [Measurable], under determination: Determination) -> DMG {
+    public func attack(with basicStatus: BasicStatus, with measurables: [Measurable], under determination: Determination) -> DMG {
         let result = attackResult(with: basicStatus, with: measurables, under: determination)
         return result.0 + result.1
     }
 
-    func attackResult(with basicStatus: BasicStatus, with measurables: [Measurable], under determination: Determination) -> AttactResult {
+    public func attackResult(with basicStatus: BasicStatus, with measurables: [Measurable], under determination: Determination) -> AttactResult {
         let determination = configure(determination: determination)
         let ATK = basicStatus.ATK
         let additions = measurables.map { $0.determine(determination) }

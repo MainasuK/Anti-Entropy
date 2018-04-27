@@ -16,10 +16,12 @@ import RxSwiftExt
 
 fileprivate let measurables = V_WhiteComet().measurables
 
-
 struct TestWeapon: Weapon {
-    let ATK = 40
-    let CRT = 4
+
+    let type: WeaponType = .cannon
+
+    let ATK: ATK = 40
+    let CRT: CRT = 4
 }
 
 struct CalculatorViewModel {
@@ -96,7 +98,9 @@ extension CalculatorViewModel {
 
     func configure(_ cell: CalculatorTableViewCell, at indexPath: IndexPath) {
         guard let skill = leader.value?.skills[indexPath.section] else { return }
-        cell.measurables = leader.value?.measurables ?? V_WhiteComet().measurables
+        let measurables = leader.value?.measurables ?? V_WhiteComet().measurables
+        let filterdMeasurables = measurables.filter { $0.scope == .oneself }
+        cell.measurables = filterdMeasurables       // TODO:
         cell.configure(with: skill, of: basicStatusViewModel.basicStatus.value, at: indexPath)
     }
 

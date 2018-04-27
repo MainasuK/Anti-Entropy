@@ -71,10 +71,43 @@
 "SK_ValkyrieChariot_ChainReaction_Caption" = "Chain Reaction";
 "SK_ValkyrieChariot_ChainReaction_Content" = "Increases damage of basic and charged attacks done to ignited enemies by 25%.";
 
-// MARK: Evasion
-// MARK: Evasion
-// MARK: Evasion
-// MARK: Evasion
+// MARK: Evasion - Dimension Shift
+"SK_ValkyrieChariot_DimensionShift_TimeFracture_Caption" = "Time Fracture";
+"SK_ValkyrieChariot_DimensionShift_TimeFracture_Content" = "Tiggers Time Fracture upon an Ultimate Evasion, slowing all enemies for 5 sec. Cooldown: 15 sec.";
 
-// MARK: Passive Skill
-// MARK: Leader Skill
+"SK_ValkyrieChariot_DimensionShift_Caption" = "Dimension Shift";
+"SK_ValkyrieChariot_DimensionShift_Content" = "Enters Dimension Shift for a short period of time to evade attacks.";
+
+// MARK: Evasion - Time Lock
+"SK_ValkyrieChariot_TimeLock_Caption" = "Time Lock";
+"SK_ValkyrieChariot_TimeLock_Content" = "Increases the charging speed by 100% during Time Fracture.";
+
+// MARK: Evasion - Quantum Lock
+"SK_ValkyrieChariot_QuantumLock_Caption" = "Quantum Lock";
+"SK_ValkyrieChariot_QuantumLock_Content" = "Increases physical damage of cannonballs and missiles by 25% during Time Fracture and the 1 sec after it.";
+
+// MARK: Evasion - Particle Rebuild
+"SK_ValkyrieChariot_ParticleRebuild_Caption" = "Particle Rebuild";
+"SK_ValkyrieChariot_ParticleRebuild_Content" = "Decreases cooldown of Time Fracture by 8.0 sec.";
+
+// MARK: Passive Skill - Passive Skill
+"SK_ValkyrieChariot_PassiveSkill_Caption" = "Passive Skill";
+"SK_ValkyrieChariot_PassiveSkill_Content" = "Character recives boost from passive skills automatically.";
+
+// MARK: Passive Skill - Agravity Wall
+"SK_ValkyrieChariot_AgravityWall_Caption" = "Agravity Wall";
+"SK_ValkyrieChariot_AgravityWall_Content" = "Increases physical damage done to stunned and paralyzed enemies by 100%";
+
+// MARK: Passive Skill - Particle Charge
+"SK_ValkyrieChariot_ParticleCharge_Caption" = "Particle Charge";
+"SK_ValkyrieChariot_ParticleCharge_Content" = "Increases Critical Damage of cannon-type weapons' basic and charged attacks by 100%.";
+
+// MARK: Leader Skill - RiotArmor
+"SK_ValkyrieChariot_RiotArmor_RiotArmor_Caption" = "Riot Armor";
+"SK_ValkyrieChariot_RiotArmor_RiotArmor_Content" = "Reduces ranged physical damage taken by whole team by 15%";
+
+"SK_ValkyrieChariot_RiotArmor_Caption" = "Riot Armor";
+"SK_ValkyrieChariot_RiotArmor_Content" = "Team recives bonus if leader.";
+
+"SK_ValkyrieChariot_RiotArmor2_Caption" = "Riot Armor";
+"SK_ValkyrieChariot_RiotArmor2_Content" = "Team recives bonus if leader.";

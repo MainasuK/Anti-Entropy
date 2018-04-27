@@ -52,7 +52,7 @@
 "SK_WhiteComet_ValkyrieCharge_Caption" = "Valkyrie Charge";
 "SK_WhiteComet_ValkyrieCharge_Content" = "Receives an Energy Charge every 12.0 sec. The next attack stuns enemy for 3.0 sec.";
 
-// MARK: - Basic Attack - Meteor Target
+// MARK: Basic Attack - Meteor Target
 "SK_WhiteComet_MeteorTarget_1stStrike_Caption" = "1st Strike";
 "SK_WhiteComet_MeteorTarget_1stStrike_Content" = "Deals physical damage equal to 100% of ATK";
 
@@ -71,52 +71,52 @@
 "SK_WhiteComet_MeteorTarget_Caption" = "Meteor Target";
 "SK_WhiteComet_MeteorTarget_Content" = "Uses Gun Kata to unleash a penta-strike";
 
-// MARK: - Basic Attack - Meteor Shard
+// MARK: Basic Attack - Meteor Shard
 "SK_WhiteComet_MeteorShard_Caption" = "Meteor Shard";
 "SK_WhiteComet_MeteorShard_Content" = "Increases physical damage of basic attacks by 143.";
 
-// MARK: - Basic Attack - Meteor Explosion
+// MARK: Basic Attack - Meteor Explosion
 "SK_WhiteComet_MeteorExplosion_Caption" = "Meteor Explosion";
 "SK_WhiteComet_MeteorExplosion_Content" = "Deals an additional 1485 physical damage to enemy upon breaking its shield using basic or combo attacks.";
 
-// MARK: - Basic Attack - Meteor Impact
+// MARK: Basic Attack - Meteor Impact
 "SK_WhiteComet_MeteorImpact_Caption" = "Meteor Impact";
 "SK_WhiteComet_MeteorImpact_Content" = "Basic attacks have a 40.0% chance of stunning enemy for 2 sec upon a successful interrupt.";
 
-// MARK: - Evasion - Time Shift
+// MARK: Evasion - Time Shift
 "SK_WhiteComet_TimeShift_TimeFracture_Caption" = "Time Fracture";
 "SK_WhiteComet_TimeShift_TimeFracture_Content" = "Triggers Time Fracture upon an Ultimate Evasion, slowing all enemies for 3 sec. Cooldown: 15 sec.";
 
 "SK_WhiteComet_TimeShift_Caption" = "Time Shift";
 "SK_WhiteComet_TimeShift_Content" = "Rolls quickly to evade enemy attacks.";
 
-// MARK: - Evasion - Time Blink
+// MARK: Evasion - Time Blink
 "SK_WhiteComet_TimeBlink_Caption" = "Time Blink";
 "SK_WhiteComet_TimeBlink_Caption" = "Decreases cooldown of Time Fracture by 4.0 sec.";
 
-// MARK: - Evasion - Power Flow
+// MARK: Evasion - Power Flow
 "SK_WhiteComet_PowerFlow_Caption" = "Power Flow";
 "SK_WhiteComet_PowerFlow_Content" = "Recovers an additional 5 EP for the whole team when Time Fracture is triggered by a successful evasion.";
 
-// MARK: - Passive Skill - Passive Skill
+// MARK: Passive Skill - Passive Skill
 "SK_WhiteComet_PassiveSkill_Caption" = "Passive Skill";
 "SK_WhiteComet_PassiveSkill_Content" = "Character receives boost from passive skills automatically.";
 
-// MARK: - Passive Skill - Shield Breaker
+// MARK: Passive Skill - Shield Breaker
 "SK_WhiteComet_ShieldBreaker_Caption" = "Shield Breaker";
 "SK_WhiteComet_ShieldBreaker_Content" = "Increases damage done to Shields by 50%";
 
-// MARK: - Passive Skill - Critical Mastery
+// MARK: Passive Skill - Critical Mastery
 "SK_WhiteComet_CriticalMastery_Caption" = "Critical Mastery";
 "SK_WhiteComet_CriticalMastery_Content" = "Increases Critical Damage by 40% when HP is ablove 80%";
 
-// MARK: - Leader Skill - Meteor Bless
+// MARK: Leader Skill - Meteor Bless
 "SK_WhiteComet_MeteorBless_Guider_Caption" = "Guider";
 "SK_WhiteComet_MeteorBless_Guider_Content" = "Increases maximum HP by 10% during team battles";
 
 "SK_WhiteComet_MeteorBless_Caption" = "Meteor Bless";
 "SK_WhiteComet_MeteorBless_Content" = "Team receives bonus if leader";
 
-// MARK: - Leader Skill - Guide
+// MARK: Leader Skill - Guide
 "SK_WhiteComet_Guide_Caption" = "Guider";
 "SK_WhiteComet_Guide_Content" = "Increases maximum HP by 18% during team battles";

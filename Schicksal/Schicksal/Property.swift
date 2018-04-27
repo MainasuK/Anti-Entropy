@@ -90,6 +90,7 @@ public enum AttackTag: Explainable {
     case defend             // 防御
     case assassin           // 刺杀
     case mpTeamSkill        // 团队
+    case leader             // 队长
 }
 
 extension AttackTag {

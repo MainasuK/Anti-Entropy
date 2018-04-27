@@ -16,7 +16,7 @@ public struct SKS_ValkyrieChariot_BasicAttack: Skill {
                                        SK_ValkyrieChariot_ChainReaction()]
 }
 
-
+// MARK: Particle Cannon - Arm Switch
 struct SK_ValkyrieChariot_ParticleCannon_ArmSwitch: MainSubskill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_ParticleCannon_ArmSwitch_Caption";
@@ -24,6 +24,7 @@ struct SK_ValkyrieChariot_ParticleCannon_ArmSwitch: MainSubskill {
     let attackTag: AttackTag = .charge
 }
 
+// MARK: Particle Cannon
 struct SK_ValkyrieChariot_ParticleCannon: MainSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_ParticleCannon_Caption";
@@ -32,6 +33,7 @@ struct SK_ValkyrieChariot_ParticleCannon: MainSkill {
     let mainSubskills: [MainSubskill] = [SK_ValkyrieChariot_ParticleCannon_ArmSwitch()]
 }
 
+// MARK: Reaction
 struct SK_ValkyrieChariot_Reaction: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_Reaction_Caption";
@@ -40,6 +42,7 @@ struct SK_ValkyrieChariot_Reaction: SubSkill {
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
+// MARK: Atomic Radiate
 struct SK_ValkyrieChariot_AtomicRadiate: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_AtomicRadiate_Caption";
@@ -48,6 +51,7 @@ struct SK_ValkyrieChariot_AtomicRadiate: SubSkill {
     let skillUnlockRank: SkillUnlockRank = .none
 }
 
+// MARK: Chain Reaction
 struct SK_ValkyrieChariot_ChainReaction: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_ChainReaction_Caption";
@@ -58,7 +62,8 @@ struct SK_ValkyrieChariot_ChainReaction: SubSkill {
 
 extension SK_ValkyrieChariot_ChainReaction {
     func determine(_ determination: Determination) -> Addition {
-        guard determination.attackTag == .charge ||
+        guard determination.abilityState.contains(.burn),
+        determination.attackTag == .charge ||
         determination.attackTag == .normal ||
         determination.attackTag == .branch else {
             return [:]

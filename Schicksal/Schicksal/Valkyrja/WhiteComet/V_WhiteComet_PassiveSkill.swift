@@ -43,5 +43,7 @@ struct SK_WhiteComet_CriticalMastery: SubSkill {
 }
 
 extension SK_WhiteComet_CriticalMastery {
-    var passiveCriticalDamageUP: Percentage { return 0.40 }
+    func determine(_ determination: Determination) -> Addition {
+        return [.criticalDamageUP: 0.40]
+    }
 }

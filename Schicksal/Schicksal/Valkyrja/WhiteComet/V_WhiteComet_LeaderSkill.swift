@@ -19,11 +19,11 @@ struct SK_WhiteComet_MeteorBless_Guider: MainSubskill {
     let localizeTableName: String? = "Localizable_V_WhiteComet"
     let caption: String = "SK_WhiteComet_MeteorBless_Guider_Caption"
     let content: String = "SK_WhiteComet_MeteorBless_Guider_Content"
-    let attackTag: AttackTag = .none
+    let attackTag: AttackTag = .leader
 }
 
 extension SK_WhiteComet_MeteorBless_Guider {
-    var passiveHPUP: Percentage { return 0.180 }
+    var scope: Scope { return .all }
 }
 
 // MARK: - Meteor Bless
@@ -33,6 +33,10 @@ struct SK_WhiteComet_MeteorBless: MainSkill {
     let content: String = "SK_WhiteComet_MeteorBless_Content"
     let attackTag: AttackTag = .none
     let mainSubskills: [MainSubskill] = [SK_WhiteComet_MeteorBless_Guider()]
+}
+
+extension SK_WhiteComet_MeteorBless {
+    var scope: Scope { return .all }
 }
 
 // MARK: - Guide
@@ -45,5 +49,5 @@ struct SK_WhiteComet_Guider: SubSkill {
 }
 
 extension SK_WhiteComet_Guider {
-    var passiveHPUP: Percentage { return 0.080 }
+    var scope: Scope { return .all }
 }

@@ -15,7 +15,7 @@ public struct SKS_ValkyrieChariot_SpecialAttack: Skill {
                                        SK_ValkyrieChariot_HighGravity()]
 }
 
-// MARK: Special Attack - Gravity Shatter
+// MARK: Gravity Shatter - Smash Ground
 struct SK_ValkyrieChariot_GravityShatter_SmashGround: MainSubskill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_GravityShatter_SmashGround_Caption";
@@ -27,6 +27,7 @@ extension SK_ValkyrieChariot_GravityShatter_SmashGround {
     var meleePhysicalDamageTransform: Percentage { return 1.50 }
 }
 
+// MARK: Gravity Shatter
 struct SK_ValkyrieChariot_GravityShatter: MainSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_GravityShatter_Caption";
@@ -35,7 +36,7 @@ struct SK_ValkyrieChariot_GravityShatter: MainSkill {
     let mainSubskills: [MainSubskill] = [SK_ValkyrieChariot_GravityShatter_SmashGround()]
 }
 
-// MARK: Special Attack - Air Smash
+// MARK: Air Smash
 struct SK_ValkyrieChariot_AirSmash: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_AirSmash_Caption";
@@ -55,7 +56,7 @@ extension SK_ValkyrieChariot_AirSmash {
     }
 }
 
-// MARK: Special Attack - High Gravity
+// MARK: High Gravity
 struct SK_ValkyrieChariot_HighGravity: SubSkill {
     let localizeTableName: String? = "Localizable_V_ValkyrieChariot"
     let caption: String = "SK_ValkyrieChariot_HighGravity_Caption";

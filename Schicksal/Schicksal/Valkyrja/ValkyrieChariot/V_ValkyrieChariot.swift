@@ -23,7 +23,10 @@ public struct V_ValkyrieChariot: Valkyrja {
 
     public let skills: Skills = [SKS_ValkyrieChariot_SpecialAttack(),
                                  SKS_ValkyrieChariot_Ultimate(),
-                                 SKS_ValkyrieChariot_BasicAttack()]
+                                 SKS_ValkyrieChariot_BasicAttack(),
+                                 SKS_ValkyrieChariot_Evasion(),
+                                 SKS_ValkyrieChariot_PassiveSkill(),
+                                 SKS_ValkyrieChariot_LeaderSkill()]
 
     public var basicStatus: BasicStatus
     public var rank: ValkyrjaRank
