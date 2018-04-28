@@ -28,29 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         Localize.setCurrentLanguage(toLocal ?? "en")
-
-
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(ubiquitousKeyValueStoreDidChange(_:)),
-                                               name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
-                                               object: NSUbiquitousKeyValueStore.default)
-
-        NSUbiquitousKeyValueStore.default.synchronize()
         
         return true
-    }
-
-}
-
-extension AppDelegate {
-
-    @objc func ubiquitousKeyValueStoreDidChange(_ notification: Notification) {
-        guard let store = notification.object as? NSUbiquitousKeyValueStore else {
-            return
-        }
-
-       store.synchronize()
     }
 
 }

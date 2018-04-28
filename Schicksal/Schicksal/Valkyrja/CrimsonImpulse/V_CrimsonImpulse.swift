@@ -23,7 +23,9 @@ public struct V_CrimsonImpulse: Valkyrja {
 
     public let skills: Skills = [SKS_CrimsonImpulse_SpecialAttack(),
                                  SKS_CrimsonImpulse_Ultimate(),
-                                 SKS_CrimsonImpulse_BasicAttack()]
+                                 SKS_CrimsonImpulse_BasicAttack(),
+                                 SKS_CrimsonImpulse_Evasion(),
+                                 SKS_CrimsonImpulse_PassiveSkill()]
 
     public var basicStatus: BasicStatus
     public var rank: ValkyrjaRank

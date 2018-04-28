@@ -46,6 +46,7 @@ public enum AddtionType {
     case fireDamageTakenUP
     case iceDamageTakenUP
 
+    case criticalRateUP
     case criticalDamageUP
 }
 

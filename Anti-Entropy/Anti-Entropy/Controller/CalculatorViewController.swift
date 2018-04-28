@@ -62,6 +62,8 @@ extension CalculatorViewController {
         basicStatusView.defTextField.text = "46"
         basicStatusView.crtTextField.text = "11"
 
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(bookmarksBarButtonItemPressed(_:)))
+
         setupTopPagingScrollView()
         setupViewModel()
     }
@@ -80,6 +82,12 @@ extension CalculatorViewController {
         view.endEditing(true)
     }
 
+}
+
+extension CalculatorViewController {
+    @objc func bookmarksBarButtonItemPressed(_ sender: UIBarButtonItem) {
+
+    }
 }
 
 // MARK: - UITableViewDelegate

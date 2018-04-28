@@ -83,6 +83,40 @@
 "SK_CrimsonImpulse_NightSakura_Caption" = "Night Sakura";
 "SK_CrimsonImpulse_NightSakura_Content" = "The last strike of basic attacks deals on additional 20% physcial damge of ATK for 6.0 sec.";
 
-// MARK: Evasion
-// MARK: Passive Skill
-// MARK: Leader Skill
+// MARK: Evasion - Phantom Blade
+"SK_CrimsonImpulse_PhantomBlade_TimeFracture_Caption" = "Time Fracture";
+"SK_CrimsonImpulse_PhantomBlade_TimeFracture_Content" = "Triggers Time Fracture upon an Ultimate Evasion, slowing all enemies for 3 sec. Cooldown: 15 sec.";
+
+"SK_CrimsonImpulse_PhantomBlade_Caption" = "Phantom Blade";
+"SK_CrimsonImpulse_PhantomBlade_Content" = "Teleports quickly to evade enemy attacks.";
+
+// MARK: Evasion - Instant Dash
+"SK_CrimsonImpulse_InstantDash_Caption" = "Instand Dash";
+"SK_CrimsonImpulse_InstantDash_Content" = "Triggered by tapping the Attack button upon a successful evasion. Cooldown: 2 sec. When Time Fracture is triggered by a successful evasion, Swift Kill deals additional physical damage equal to 150.0% of ATK.";
+
+// MARK: Evasion - Innser Shade
+"SK_CrimsonImpulse_InnerShade_Caption" = "Inner Shade";
+"SK_CrimsonImpulse_InnerShade_Content" = "Increases Attack Speed by 20.0% during the Time Fracture triggered by own evasion.";
+
+// MARK: Evasion - Sharp Cutter
+"SK_CrimsonImpulse_SharpCutter_Caption" = "Sharp Cutter";
+"SK_CrimsonImpulse_SharpCutter_Content" = "Decreases cooldown of Time Fracture by 4.0 sec.";
+
+// MARK: Passive Skill - Passive Skill
+"SK_CrimsonImpulse_PassiveSkill_Caption" = "Passive Skill";
+"SK_CrimsonImpulse_PassiveSkill_Content" = "Character receives boost from passive skills automatically.";
+
+// MARK: Passive Skill - Blade Puncture
+"SK_CrimsonImpulse_BladePuncture_Caption" = "Blade Puncture";
+"SK_CrimsonImpulse_BladePuncture_Content" = "Increases Critical Rate by 20.0% and Critical Damage by 30.0% when enemy's Elite Shield is broken.";
+
+// MARK: Leader Skill - Spirit of Loyalty
+"SK_CrimsonImpulse_SpiritOfLoyalty_SpiritOfLoyalty_Caption" = "Spirit of Loyalty";
+"SK_CrimsonImpulse_SpiritOfLoyalty_SpiritOfLoyalty_Content" = "Increases whold team's physical damage by 10% upon generating a 20-hit or more combo.";
+
+"SK_CrimsonImpulse_SpiritOfLoyalty_Caption" = "Spirit of Loyalty";
+"SK_CrimsonImpulse_SpiritOfLoyalty_Content" = "Team receives bonus if leader";
+
+// MARK: Leader Skill - Spirit of Loyalty 2
+"SK_CrimsonImpulse_SpiritOfLoyalty2_Caption" = "Spirit of Loyalty";
+"SK_CrimsonImpulse_SpiritOfLoyalty2_Content" = "Increases whold team's physical damage by 18% upon generating a 20-hit or more combo.";

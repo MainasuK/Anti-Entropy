@@ -21,6 +21,9 @@
 		DB1AA0572091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB1AA0592091B5D0001D4A88 /* Localizable_V_ValkyrieChariot.strings */; };
 		DB1AA05F2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */; };
 		DB1C72AB20876948006696C7 /* V_WhiteComet_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */; };
+		DB4612C0209434AC003E7CAD /* V_ CrimsonImpulse_Evasion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4612BF209434AC003E7CAD /* V_ CrimsonImpulse_Evasion.swift */; };
+		DB4612C2209438FD003E7CAD /* V_ CrimsonImpulse_PassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4612C1209438FD003E7CAD /* V_ CrimsonImpulse_PassiveSkill.swift */; };
+		DB4612C420943BD3003E7CAD /* V_ CrimsonImpulse_LeaderSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4612C320943BD3003E7CAD /* V_ CrimsonImpulse_LeaderSkill.swift */; };
 		DB715899208469B300FC164B /* Schicksal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB71588F208469B300FC164B /* Schicksal.framework */; };
 		DB71589E208469B300FC164B /* SchicksalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71589D208469B300FC164B /* SchicksalTests.swift */; };
 		DB7158A0208469B300FC164B /* Schicksal.h in Headers */ = {isa = PBXBuildFile; fileRef = DB715892208469B300FC164B /* Schicksal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +89,9 @@
 		DB1AA05B2091B5D5001D4A88 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable_V_ValkyrieChariot.strings; sourceTree = "<group>"; };
 		DB1AA05E2091BE70001D4A88 /* V_ValkyrieChariot_SpecialAttack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_ValkyrieChariot_SpecialAttack.swift; sourceTree = "<group>"; };
 		DB1C72AA20876948006696C7 /* V_WhiteComet_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_WhiteComet_LeaderSkill.swift; sourceTree = "<group>"; };
+		DB4612BF209434AC003E7CAD /* V_ CrimsonImpulse_Evasion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "V_ CrimsonImpulse_Evasion.swift"; sourceTree = "<group>"; };
+		DB4612C1209438FD003E7CAD /* V_ CrimsonImpulse_PassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "V_ CrimsonImpulse_PassiveSkill.swift"; sourceTree = "<group>"; };
+		DB4612C320943BD3003E7CAD /* V_ CrimsonImpulse_LeaderSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "V_ CrimsonImpulse_LeaderSkill.swift"; sourceTree = "<group>"; };
 		DB71588F208469B300FC164B /* Schicksal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Schicksal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB715892208469B300FC164B /* Schicksal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Schicksal.h; sourceTree = "<group>"; };
 		DB715893208469B300FC164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +273,9 @@
 				DB8DD61020932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift */,
 				DB8DD612209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift */,
 				DB8DD614209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift */,
+				DB4612BF209434AC003E7CAD /* V_ CrimsonImpulse_Evasion.swift */,
+				DB4612C1209438FD003E7CAD /* V_ CrimsonImpulse_PassiveSkill.swift */,
+				DB4612C320943BD3003E7CAD /* V_ CrimsonImpulse_LeaderSkill.swift */,
 			);
 			path = CrimsonImpulse;
 			sourceTree = "<group>";
@@ -426,9 +435,12 @@
 				DBB3FB812084AD0D00601085 /* Album.swift in Sources */,
 				DB1AA0552091B594001D4A88 /* V_ValkyrieChariot.swift in Sources */,
 				DBB3FB892084AEE200601085 /* S_JixuanyuanAqua_B.swift in Sources */,
+				DB4612C420943BD3003E7CAD /* V_ CrimsonImpulse_LeaderSkill.swift in Sources */,
+				DB4612C2209438FD003E7CAD /* V_ CrimsonImpulse_PassiveSkill.swift in Sources */,
 				DB8DD61120932B910069BD89 /* V_ CrimsonImpulse_SpecialAttack.swift in Sources */,
 				DB8DD615209346040069BD89 /* V_ CrimsonImpulse_BasicAttack.swift in Sources */,
 				DBDAE6152091EB740057F522 /* V_ValkyrieChariot_Ultimate.swift in Sources */,
+				DB4612C0209434AC003E7CAD /* V_ CrimsonImpulse_Evasion.swift in Sources */,
 				DB8DD613209339C90069BD89 /* V_ CrimsonImpulse_Ultimate.swift in Sources */,
 				DBB3FB7A2084842E00601085 /* Measurable.swift in Sources */,
 				DBAC2E8A208763FC00A9A3F5 /* V_WhiteComet_PassiveSkill.swift in Sources */,

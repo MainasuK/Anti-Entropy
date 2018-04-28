@@ -29,12 +29,11 @@ struct CalculatorViewModel {
     private let disposeBag = DisposeBag()
     private let realm = try! Realm()
 
-    let currentIntelligence = Variable<BattleIntelligence>(BattleIntelligence())
+    let presetTeam = Variable<PresetTeam?>(nil)
 
     let basicStatusViewModel: BasicStatusViewModel
 
-    private let leader = Variable<Valkyrja?>(nil)
-    private let member = Variable<[Valkyrja]>([])
+    private let team = Variable<[Valkyrja]>([])
 
 //    var supporter = Variable<Valkyrja?>(nil)
 //    var skills = [SKS_WhiteComet_SpecialAttack,
@@ -45,35 +44,34 @@ struct CalculatorViewModel {
 //                  SKS_WhiteComet_LeaderSkill]
 
     init() {
-        currentIntelligence.asObservable()
-            .map { $0.leader }
+        presetTeam.asObservable()
             .unwrap()
-            .map { ValkyrjaModel.clone(from: $0) }
-            .bind(to: leader)
+            .map { PresetTeamModel.clone(from: $0) }
+            .bind(to: team)
             .disposed(by: disposeBag)
 
-        currentIntelligence.asObservable()
-            .map { $0.member.toArray() }
-            .map { $0.map { ValkyrjaModel.clone(from: $0) } }
-            .bind(to: member)
-            .disposed(by: disposeBag)
-
-
-
-        // Set default value if not exists
-        if let battleIntelligence = realm.object(ofType: BattleIntelligence.self, forPrimaryKey: 0) {
-            Observable.from(object: battleIntelligence)
-                .bind(to: currentIntelligence)
-                .disposed(by: disposeBag)
-        } else {
-            let defaultIntelligence = BattleIntelligence()
-            Observable<BattleIntelligence>.just(defaultIntelligence)
-                .observeOn(MainScheduler.instance)
-                .subscribe(realm.rx.add(update: false))
-                .disposed(by: disposeBag)
-        }
-
-        basicStatusViewModel = BasicStatusViewModel(with: currentIntelligence.value.leader!)
+//        team.asObservable()
+//            .map { $0.member.toArray() }
+//            .map { $0.map { ValkyrjaModel.clone(from: $0) } }
+//            .bind(to: team)
+//            .disposed(by: disposeBag)
+//
+//
+//
+//        // Set default value if not exists
+//        if let battleIntelligence = realm.object(ofType: PresetTeam.self, forPrimaryKey: 0) {
+//            Observable.from(object: battleIntelligence)
+//                .bind(to: presetTeam)
+//                .disposed(by: disposeBag)
+//        } else {
+//            let defaultIntelligence = PresetTeam()
+//            Observable<PresetTeam>.just(defaultIntelligence)
+//                .observeOn(MainScheduler.instance)
+//                .subscribe(realm.rx.add(update: false))
+//                .disposed(by: disposeBag)
+//        }
+//
+//        basicStatusViewModel = BasicStatusViewModel(with: presetTeam.value.leader!)
     }
 
 }

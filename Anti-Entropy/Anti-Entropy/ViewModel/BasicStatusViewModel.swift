@@ -18,7 +18,11 @@ struct BasicStatusViewModel {
 
     private let disposeBag = DisposeBag()
 
-    let basicStatus: Variable<BasicStatus>
+    // input
+    let intelligence = Variable<ValkyrjaIntelligence?>(nil)
+
+    // output
+    let basicStatus = Variable<BasicStatus?>(nil)
 
     private let lv:  Variable<String>
     private let hp:  Variable<String>
@@ -37,17 +41,20 @@ struct BasicStatusViewModel {
             .forEach { $0.disposed(by: disposeBag) }
     }
 
-    init(with intelligence: ValkyrjaIntelligence) {
-        let defaultBasicStatus = ValkyrjaModel.clone(from: intelligence).basicStatus
+    init() {
 
-        basicStatus = Variable(defaultBasicStatus)
+        intelligence.asObservable()
+            .unwrap()
+            .map { $0.basicStatus }
+            .bind(to: basicStatus)
+            .disposed(by: disposeBag)
 
-        lv  = Variable("\(defaultBasicStatus.LV)")
-        hp  = Variable("\(defaultBasicStatus.HP)")
-        sp  = Variable("\(defaultBasicStatus.SP)")
-        atk = Variable("\(defaultBasicStatus.ATK)")
-        def = Variable("\(defaultBasicStatus.DEF)")
-        crt = Variable("\(defaultBasicStatus.CRT)")
+        lv  = Variable("")
+        hp  = Variable("")
+        sp  = Variable("")
+        atk = Variable("")
+        def = Variable("")
+        crt = Variable("")
 
         let observables = [hp, sp, atk, def, crt, lv].map {
             $0.asObservable().map { Int($0) ?? 0 }
@@ -59,15 +66,16 @@ struct BasicStatusViewModel {
             .bind(to: basicStatus)
             .disposed(by: disposeBag)
 
-        basicStatus.asDriver()
-            .drive(onNext: { basicStatus in
+        basicStatus.asObservable()
+            .unwrap()
+            .subscribe(onNext: { basicStatus in
                 try! Realm().write {
-                    intelligence.HP  = basicStatus.HP
-                    intelligence.SP  = basicStatus.SP
-                    intelligence.ATK = basicStatus.ATK
-                    intelligence.DEF = basicStatus.DEF
-                    intelligence.CRT = basicStatus.CRT
-                    intelligence.LV  = basicStatus.LV
+                    self.intelligence.value?.HP  = basicStatus.HP
+                    self.intelligence.value?.SP  = basicStatus.SP
+                    self.intelligence.value?.ATK = basicStatus.ATK
+                    self.intelligence.value?.DEF = basicStatus.DEF
+                    self.intelligence.value?.CRT = basicStatus.CRT
+                    self.intelligence.value?.LV  = basicStatus.LV
                 }
             })
             .disposed(by: disposeBag)

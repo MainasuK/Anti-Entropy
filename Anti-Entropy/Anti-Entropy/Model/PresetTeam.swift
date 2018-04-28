@@ -1,5 +1,5 @@
 //
-//  Intelligence.swift
+//  PresetTeam.swift
 //  Anti-Entropy
 //
 //  Created by Cirno MainasuK on 2018-4-22.
@@ -11,9 +11,8 @@ import Schicksal
 import RealmSwift
 import RxRealm
 
-class BattleIntelligence: Object {
+class PresetTeam: Object {
     @objc dynamic var id = 0
-    @objc dynamic var leader: ValkyrjaIntelligence? = ValkyrjaIntelligence()
     let member = List<ValkyrjaIntelligence>()
 
     override static func primaryKey() -> String? {
@@ -22,7 +21,7 @@ class BattleIntelligence: Object {
 }
 
 class ValkyrjaIntelligence: Object {
-    @objc dynamic var valkyrjaCode: ValkyrjaCode = .crimsonImpulse
+    @objc dynamic var valkyrjaCode: ValkyrjaCode = .whiteComet
 
     @objc dynamic var HP: HP   = 100
     @objc dynamic var SP: SP   = 100
@@ -38,4 +37,10 @@ class ValkyrjaIntelligence: Object {
     @objc dynamic var stigmataCode_T: StigmataCode = .none
     @objc dynamic var stigmataCode_C: StigmataCode = .none
     @objc dynamic var stigmataCode_B: StigmataCode = .none
+}
+
+extension ValkyrjaIntelligence {
+    var basicStatus: BasicStatus {
+        return BasicStatus(HP: HP, SP: SP, ATK: ATK, DEF: DEF, CRT: CRT, LV: LV)
+    }
 }
