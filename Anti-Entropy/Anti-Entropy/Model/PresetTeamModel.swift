@@ -23,6 +23,10 @@ class PresetTeamModel {
         return Observable.array(from: battleIntelligences)
     }()
 
+    var currentTeam: PresetTeam? {
+        return realm.object(ofType: PresetTeam.self, forPrimaryKey: currentTeamID)
+    }
+
     var currentTeamID: Int {
         get { return PresetTeamSetting.read()?.currentTeamID ?? -1 }
         set { PresetTeamSetting(currentTeamID: newValue).write() }

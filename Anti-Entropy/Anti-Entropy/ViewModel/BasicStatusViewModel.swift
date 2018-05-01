@@ -24,12 +24,12 @@ struct BasicStatusViewModel {
     // output
     let basicStatus = Variable<BasicStatus?>(nil)
 
-    private let lv:  Variable<String>
-    private let hp:  Variable<String>
-    private let sp:  Variable<String>
-    private let atk: Variable<String>
-    private let def: Variable<String>
-    private let crt: Variable<String>
+    private let lv  = Variable<String>("")
+    private let hp  = Variable<String>("")
+    private let sp  = Variable<String>("")
+    private let atk = Variable<String>("")
+    private let def = Variable<String>("")
+    private let crt = Variable<String>("")
 
     func bind(to basicStatusView: BasicStatusView) {
         [basicStatusView.hpTextField.rx.textInput  <-> hp,
@@ -42,42 +42,61 @@ struct BasicStatusViewModel {
     }
 
     init() {
-
         intelligence.asObservable()
-            .unwrap()
-            .map { $0.basicStatus }
-            .bind(to: basicStatus)
-            .disposed(by: disposeBag)
-
-        lv  = Variable("")
-        hp  = Variable("")
-        sp  = Variable("")
-        atk = Variable("")
-        def = Variable("")
-        crt = Variable("")
-
-        let observables = [hp, sp, atk, def, crt, lv].map {
-            $0.asObservable().map { Int($0) ?? 0 }
-        }
-        
-        Observable
-            .combineLatest(observables) { BasicStatus(HP: $0[0], SP: $0[1], ATK: $0[2], DEF: $0[3], CRT: $0[4], LV: $0[5]) }
-            .observeOn(MainScheduler.instance)
+            .map { $0?.basicStatus }
             .bind(to: basicStatus)
             .disposed(by: disposeBag)
 
         basicStatus.asObservable()
-            .unwrap()
-            .subscribe(onNext: { basicStatus in
-                try! Realm().write {
-                    self.intelligence.value?.HP  = basicStatus.HP
-                    self.intelligence.value?.SP  = basicStatus.SP
-                    self.intelligence.value?.ATK = basicStatus.ATK
-                    self.intelligence.value?.DEF = basicStatus.DEF
-                    self.intelligence.value?.CRT = basicStatus.CRT
-                    self.intelligence.value?.LV  = basicStatus.LV
-                }
-            })
+            .map { $0?.HP ?? 0 }
+            .map { $0 == 0 ? "" : "\($0)" }
+            .distinct()
+            .bind(to: hp)
+            .disposed(by: disposeBag)
+
+        basicStatus.asObservable()
+            .map { $0?.SP ?? 0 }
+            .map { $0 == 0 ? "" : "\($0)" }
+            .distinct()
+            .bind(to: sp)
+            .disposed(by: disposeBag)
+
+        basicStatus.asObservable()
+            .map { $0?.ATK ?? 0 }
+            .map { $0 == 0 ? "" : "\($0)" }
+            .distinct()
+            .bind(to: atk)
+            .disposed(by: disposeBag)
+
+        basicStatus.asObservable()
+            .map { $0?.DEF ?? 0 }
+            .map { $0 == 0 ? "" : "\($0)" }
+            .distinct()
+            .bind(to: def)
+            .disposed(by: disposeBag)
+
+        basicStatus.asObservable()
+            .map { $0?.CRT ?? 0 }
+            .map { $0 == 0 ? "" : "\($0)" }
+            .distinct()
+            .bind(to: crt)
+            .disposed(by: disposeBag)
+
+        basicStatus.asObservable()
+            .map { $0?.LV ?? 0 }
+            .map { $0 == 0 ? "" : "\($0)" }
+            .distinct()
+            .bind(to: lv)
+            .disposed(by: disposeBag)
+
+        let observables = [hp, sp, atk, def, crt, lv].map {
+            $0.asObservable().map { Int($0) ?? 0 }
+        }
+
+        Observable
+            .combineLatest(observables) { BasicStatus(HP: $0[0], SP: $0[1], ATK: $0[2], DEF: $0[3], CRT: $0[4], LV: $0[5]) }
+            .observeOn(MainScheduler.asyncInstance)
+            .bind(to: basicStatus)
             .disposed(by: disposeBag)
     }
 

@@ -11,11 +11,27 @@ import RealmSwift
 import RxRealm
 import RxSwift
 import RxSwiftExt
+import Localize_Swift
 
 struct AppSettings {
+    
     static func setup() {
+        AppSettings.setupLanguage()
         AppSettings.setupPresetTeamRealm()
         AppSettings.setupPresetTeamSettings()
+    }
+
+    private static func setupLanguage() {
+        let availableLanguages = Localize.availableLanguages()
+        let preferredLocalizations = Bundle.main.preferredLocalizations
+
+        var toLocal: String?
+        for local in preferredLocalizations where availableLanguages.contains(local) {
+            toLocal = local
+            break
+        }
+
+        Localize.setCurrentLanguage(toLocal ?? "en")
     }
 
     private static func setupPresetTeamRealm() {
@@ -25,7 +41,7 @@ struct AppSettings {
             return
         }
 
-        let presetTeam = PresetTeam()
+        let presetTeam = PresetTeam.defaultTeam
         try! realm.write {
             realm.add(presetTeam)
         }

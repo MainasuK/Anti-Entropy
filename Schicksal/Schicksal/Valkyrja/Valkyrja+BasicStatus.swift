@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct BasicStatus: Codable {
+public struct BasicStatus: Codable, Equatable {
     public var HP: HP
     public var SP: SP
     public var ATK: ATK

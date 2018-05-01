@@ -23,6 +23,9 @@
 		DB4612CB20944DE0003E7CAD /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4612CA20944DE0003E7CAD /* AppSettings.swift */; };
 		DB4612CD20944EFC003E7CAD /* PresetTeamSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4612CC20944EFC003E7CAD /* PresetTeamSetting.swift */; };
 		DB5E6C722086E88600631BDD /* CalculatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */; };
+		DB68DE3E2098B36500AF0B56 /* BookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB68DE3D2098B36500AF0B56 /* BookmarkTableViewController.swift */; };
+		DB68DE412098B86A00AF0B56 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB68DE3F2098B86A00AF0B56 /* BookmarkTableViewCell.swift */; };
+		DB68DE422098B86A00AF0B56 /* BookmarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB68DE402098B86A00AF0B56 /* BookmarkTableViewCell.xib */; };
 		DB75590E208607A500BA2DB7 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75590D208607A500BA2DB7 /* CalculatorViewController.swift */; };
 		DB755910208608FA00BA2DB7 /* Schicksal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB75590F208608FA00BA2DB7 /* Schicksal.framework */; };
 		DB755911208608FA00BA2DB7 /* Schicksal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB75590F208608FA00BA2DB7 /* Schicksal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,6 +90,9 @@
 		DB4612CA20944DE0003E7CAD /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DB4612CC20944EFC003E7CAD /* PresetTeamSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeamSetting.swift; sourceTree = "<group>"; };
 		DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewCell.swift; sourceTree = "<group>"; };
+		DB68DE3D2098B36500AF0B56 /* BookmarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewController.swift; sourceTree = "<group>"; };
+		DB68DE3F2098B86A00AF0B56 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		DB68DE402098B86A00AF0B56 /* BookmarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkTableViewCell.xib; sourceTree = "<group>"; };
 		DB75590D208607A500BA2DB7 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		DB75590F208608FA00BA2DB7 /* Schicksal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Schicksal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7559152086156100BA2DB7 /* BasicStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicStatusView.xib; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */,
 				DB75590D208607A500BA2DB7 /* CalculatorViewController.swift */,
 				DB06B9F62089CF3300776553 /* CalculatorDetailViewController.swift */,
+				DB68DE3D2098B36500AF0B56 /* BookmarkTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +183,8 @@
 				DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */,
 				DB06B9F92089D13800776553 /* CalculatorTableViewCell.xib */,
 				DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */,
+				DB68DE3F2098B86A00AF0B56 /* BookmarkTableViewCell.swift */,
+				DB68DE402098B86A00AF0B56 /* BookmarkTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +366,7 @@
 				DB7559162086156100BA2DB7 /* BasicStatusView.xib in Resources */,
 				DB92E4FA2084693E00ED4A3E /* Assets.xcassets in Resources */,
 				DB92E4F82084693D00ED4A3E /* Main.storyboard in Resources */,
+				DB68DE422098B86A00AF0B56 /* BookmarkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +458,7 @@
 				DB1AA04A20909B10001D4A88 /* ConsolePrint.swift in Sources */,
 				DB4612CB20944DE0003E7CAD /* AppSettings.swift in Sources */,
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
+				DB68DE3E2098B36500AF0B56 /* BookmarkTableViewController.swift in Sources */,
 				DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
 				DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */,
@@ -459,6 +470,7 @@
 				DB75590E208607A500BA2DB7 /* CalculatorViewController.swift in Sources */,
 				DB75591A20861B8900BA2DB7 /* UIView.swift in Sources */,
 				DB188D682089FB990052E77D /* CalculatorDetailViewModel.swift in Sources */,
+				DB68DE412098B86A00AF0B56 /* BookmarkTableViewCell.swift in Sources */,
 				DBB3FB8F2084B96800601085 /* StigmataTableViewCell.swift in Sources */,
 				DB1C72AF20888AE6006696C7 /* RxSwift.swift in Sources */,
 				DB4612C9209442AD003E7CAD /* PresetTeamModel.swift in Sources */,

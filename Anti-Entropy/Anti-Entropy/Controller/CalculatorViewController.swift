@@ -86,7 +86,8 @@ extension CalculatorViewController {
 
 extension CalculatorViewController {
     @objc func bookmarksBarButtonItemPressed(_ sender: UIBarButtonItem) {
-
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BookmarkNavigationController")
+        self.navigationController?.present(controller, animated: true, completion: nil)
     }
 }
 

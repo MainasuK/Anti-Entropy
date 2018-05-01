@@ -31,7 +31,9 @@ struct CalculatorViewModel {
 
     let presetTeam = Variable<PresetTeam?>(nil)
 
-    let basicStatusViewModel: BasicStatusViewModel
+    let selectValkyrja = Variable<ValkyrjaIntelligence?>(nil)
+    let basicStatusViewModel = BasicStatusViewModel()
+
 
     private let team = Variable<[Valkyrja]>([])
 
@@ -45,10 +47,37 @@ struct CalculatorViewModel {
 
     init() {
         presetTeam.asObservable()
-            .unwrap()
-            .map { PresetTeamModel.clone(from: $0) }
+            .map { $0.flatMap { PresetTeamModel.clone(from: $0) } ?? [] }
             .bind(to: team)
             .disposed(by: disposeBag)
+
+        presetTeam.asObservable()
+            .map { $0?.member.first }
+            .bind(to: selectValkyrja)
+            .disposed(by: disposeBag)
+
+        selectValkyrja.asObservable()
+            .bind(to: basicStatusViewModel.intelligence)
+            .disposed(by: disposeBag)
+
+        Observable.combineLatest(basicStatusViewModel.basicStatus.asObservable(), selectValkyrja.asObservable())
+            .subscribe(onNext: { (basicStatus, intelligence) in
+                guard let newBasicStatus = basicStatus, let intelligence = intelligence,
+                newBasicStatus != intelligence.basicStatus else { return }
+
+                let realm = try! Realm()
+                try! realm.write {
+                    intelligence.HP  = newBasicStatus.HP
+                    intelligence.SP  = newBasicStatus.SP
+                    intelligence.ATK = newBasicStatus.ATK
+                    intelligence.DEF = newBasicStatus.DEF
+                    intelligence.CRT = newBasicStatus.CRT
+                    intelligence.LV  = newBasicStatus.LV
+                }
+
+            })
+            .disposed(by: disposeBag)
+
 
 //        team.asObservable()
 //            .map { $0.member.toArray() }
@@ -72,6 +101,16 @@ struct CalculatorViewModel {
 //        }
 //
 //        basicStatusViewModel = BasicStatusViewModel(with: presetTeam.value.leader!)
+
+        presetTeam.value = PresetTeamModel.shared.currentTeam
+    }
+
+}
+
+extension CalculatorViewModel {
+
+    private func update(basicStatus to: BasicStatus) {
+
     }
 
 }
@@ -79,11 +118,11 @@ struct CalculatorViewModel {
 extension CalculatorViewModel {
 
     func numberOfSections() -> Int {
-        return leader.value?.skills.count ?? 0
+        return 0
     }
 
     func numberOfRows(in section: Int) -> Int {
-        return leader.value?.skills[section].count ?? 0
+        return 0
     }
 
 }
@@ -91,15 +130,16 @@ extension CalculatorViewModel {
 extension CalculatorViewModel {
 
     func titleForHeader(in section: Int) -> String? {
-        return leader.value?.skills[section].localized.caption
+        return nil
+//        return leader.value?.skills[section].localized.caption
     }
 
     func configure(_ cell: CalculatorTableViewCell, at indexPath: IndexPath) {
-        guard let skill = leader.value?.skills[indexPath.section] else { return }
-        let measurables = leader.value?.measurables ?? V_WhiteComet().measurables
-        let filterdMeasurables = measurables.filter { $0.scope == .oneself }
-        cell.measurables = filterdMeasurables       // TODO:
-        cell.configure(with: skill, of: basicStatusViewModel.basicStatus.value, at: indexPath)
+//        guard let skill = leader.value?.skills[indexPath.section] else { return }
+//        let measurables = leader.value?.measurables ?? V_WhiteComet().measurables
+//        let filterdMeasurables = measurables.filter { $0.scope == .oneself }
+//        cell.measurables = filterdMeasurables       // TODO:
+//        cell.configure(with: skill, of: basicStatusViewModel.basicStatus.value, at: indexPath)
     }
 
 }

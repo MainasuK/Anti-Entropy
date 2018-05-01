@@ -20,6 +20,37 @@ class PresetTeam: Object {
     }
 }
 
+extension PresetTeam {
+    static var defaultTeam: PresetTeam {
+        let whiteComet: ValkyrjaIntelligence = {
+            let intelligence = ValkyrjaIntelligence()
+            intelligence.valkyrjaCode = .whiteComet
+            return intelligence
+        }()
+
+        let valkyrieChariot: ValkyrjaIntelligence = {
+            let intelligence = ValkyrjaIntelligence()
+            intelligence.valkyrjaCode = .valkyrieChariot
+            return intelligence
+        }()
+
+        let crimsonImpulse: ValkyrjaIntelligence = {
+            let intelligence = ValkyrjaIntelligence()
+            intelligence.valkyrjaCode = .crimsonImpulse
+            return intelligence
+        }()
+
+        let presetTeam: PresetTeam = {
+            let team = PresetTeam()
+            team.member.removeAll()
+            team.member.append(objectsIn: [whiteComet, valkyrieChariot, crimsonImpulse])
+            return team
+        }()
+
+        return presetTeam
+    }
+}
+
 class ValkyrjaIntelligence: Object {
     @objc dynamic var valkyrjaCode: ValkyrjaCode = .whiteComet
 
