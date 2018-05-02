@@ -1,16 +1,12 @@
 //
-//  Weapon.swift
+//  Weapon+WeaponType.swift
 //  Schicksal
 //
-//  Created by Cirno MainasuK on 2018-4-16.
+//  Created by Cirno MainasuK on 2018-5-2.
 //  Copyright © 2018年 MainasuK. All rights reserved.
 //
 
 import Foundation
-
-@objc public enum WeaponCode: Int {
-    case USP45
-}
 
 public enum WeaponType: String {
     case pistol
@@ -41,9 +37,9 @@ public enum WeaponType: String {
     case laser                   // 激光
 
     // TODO:
-//    case fuxiThunder           // 伏羲
-//    case fuxiFire
-//    case fuxiIce
+    //    case fuxiThunder           // 伏羲
+    //    case fuxiFire
+    //    case fuxiIce
 
     case claymore
     case cross
@@ -64,9 +60,15 @@ public enum WeaponType: String {
     }
 }
 
-public protocol Weapon: Attackable {
-    var ATK: ATK { get }
-    var CRT: CRT { get }
-
-    var type: WeaponType { get }
+extension WeaponType {
+    static var cannonType: [WeaponType] {
+        return [.lightCannon,
+                .cannon,
+                .heavyCannon,
+                .superHaveryCannon,
+                .clusterMissiles,
+                .multipleClusterMissiles,
+                .shotgun,
+                .laser]
+    }
 }

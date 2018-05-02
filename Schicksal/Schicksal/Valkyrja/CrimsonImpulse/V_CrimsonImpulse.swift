@@ -17,9 +17,10 @@ public struct V_CrimsonImpulse: Valkyrja {
     public let fullName: String    = "V_CrimsonImpulse_FullName"
     public let description: String = "V_CrimsonImpulse_Description"
 
-    public let localizeTableName: String? =  "Localizable_V_V_CrimsonImpulse"
+    public let localizeTableName: String? =  "Localizable_V_CrimsonImpulse"
 
     public let initialRank: ValkyrjaRank = .none
+    public let weaponType: [WeaponType] = [.katana]
 
     public let skills: Skills = [SKS_CrimsonImpulse_SpecialAttack(),
                                  SKS_CrimsonImpulse_Ultimate(),
@@ -29,10 +30,14 @@ public struct V_CrimsonImpulse: Valkyrja {
 
     public var basicStatus: BasicStatus
     public var rank: ValkyrjaRank
+    public var weapon: Weapon
 
-    public init(basicStatus: BasicStatus = BasicStatus(), rank: ValkyrjaRank = .SSS) {
+    public init(basicStatus: BasicStatus = BasicStatus(),
+                rank: ValkyrjaRank = .SSS,
+                weapon: Weapon = SeishuuMuramasa()) {
         self.basicStatus = basicStatus
         self.rank = rank
+        self.weapon = weapon
     }
 
 }

@@ -18,11 +18,7 @@ class PresetTeamModel {
 
     private let realm = try! Realm()
 
-    lazy var presetTeams: Observable<[PresetTeam]> = {
-        let battleIntelligences = realm.objects(PresetTeam.self)
-        return Observable.array(from: battleIntelligences)
-    }()
-
+    let presetTeams: Observable<[PresetTeam]>
     var currentTeam: PresetTeam? {
         return realm.object(ofType: PresetTeam.self, forPrimaryKey: currentTeamID)
     }
@@ -36,7 +32,8 @@ class PresetTeamModel {
     private static let instance = PresetTeamModel()
 
     private init() {
-
+        let battleIntelligences = realm.objects(PresetTeam.self)
+        presetTeams = Observable.array(from: battleIntelligences)
     }
 
     public static var shared: PresetTeamModel {

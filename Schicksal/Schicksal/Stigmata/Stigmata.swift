@@ -17,19 +17,6 @@ public enum StigmataSlot {
     case B
 }
 
-public enum Rarity: Int, Codable {
-    /// 5
-    case S1 = 5
-    /// 15
-    case S2 = 15
-    /// 25
-    case S3 = 25
-    /// 35
-    case S4 = 35
-    /// 50
-    case S5 = 50
-}
-
 struct EmptyStigmataSetSkill: Measurable {
     let damageUP: Percentage               = 0.0
     let physicalDamageUP: Percentage       = 0.0

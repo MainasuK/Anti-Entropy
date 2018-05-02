@@ -13,6 +13,7 @@ import RxRealm
 
 class PresetTeam: Object {
     @objc dynamic var id = 0
+    @objc dynamic var name = ""
     let member = List<ValkyrjaIntelligence>()
 
     override static func primaryKey() -> String? {
@@ -22,23 +23,9 @@ class PresetTeam: Object {
 
 extension PresetTeam {
     static var defaultTeam: PresetTeam {
-        let whiteComet: ValkyrjaIntelligence = {
-            let intelligence = ValkyrjaIntelligence()
-            intelligence.valkyrjaCode = .whiteComet
-            return intelligence
-        }()
-
-        let valkyrieChariot: ValkyrjaIntelligence = {
-            let intelligence = ValkyrjaIntelligence()
-            intelligence.valkyrjaCode = .valkyrieChariot
-            return intelligence
-        }()
-
-        let crimsonImpulse: ValkyrjaIntelligence = {
-            let intelligence = ValkyrjaIntelligence()
-            intelligence.valkyrjaCode = .crimsonImpulse
-            return intelligence
-        }()
+        let whiteComet      = defaultWhiteComet
+        let valkyrieChariot = defaultValkyrieChariot
+        let crimsonImpulse  = defaultCrimsonImpulse
 
         let presetTeam: PresetTeam = {
             let team = PresetTeam()
@@ -49,6 +36,30 @@ extension PresetTeam {
 
         return presetTeam
     }
+}
+
+extension PresetTeam {
+    static var defaultWhiteComet: ValkyrjaIntelligence {
+        let intelligence = ValkyrjaIntelligence()
+        intelligence.valkyrjaCode = .whiteComet
+        intelligence.weaponCode = .USP45
+        return intelligence
+    }
+
+    static var defaultValkyrieChariot: ValkyrjaIntelligence {
+        let intelligence = ValkyrjaIntelligence()
+        intelligence.valkyrjaCode = .valkyrieChariot
+        intelligence.weaponCode = .SeishuuMuramasa
+        return intelligence
+    }
+
+    static var defaultCrimsonImpulse: ValkyrjaIntelligence {
+        let intelligence = ValkyrjaIntelligence()
+        intelligence.valkyrjaCode = .crimsonImpulse
+        intelligence.weaponCode = .SU_22Howitzer
+        return intelligence
+    }
+
 }
 
 class ValkyrjaIntelligence: Object {
@@ -64,10 +75,15 @@ class ValkyrjaIntelligence: Object {
     @objc dynamic var rank: ValkyrjaRank = .SSS
 
     @objc dynamic var weaponCode: WeaponCode = .USP45
+    @objc dynamic var weaponRarity: Rarity = .S1
 
     @objc dynamic var stigmataCode_T: StigmataCode = .none
     @objc dynamic var stigmataCode_C: StigmataCode = .none
     @objc dynamic var stigmataCode_B: StigmataCode = .none
+
+    @objc dynamic var stigmataCode_T_Rarity: Rarity = .S1
+    @objc dynamic var stigmataCode_C_Rarity: Rarity = .S1
+    @objc dynamic var stigmataCode_B_Rarity: Rarity = .S1
 }
 
 extension ValkyrjaIntelligence {

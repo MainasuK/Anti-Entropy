@@ -14,25 +14,28 @@ import Schicksal
 
 class CalculatorViewController: UIViewController {
 
+    private let topPagingScrollViewHeight: CGFloat = 180
+    private let scrollViewContentHeight: CGFloat = 152
     private let disposeBag = DisposeBag()
 
     var viewModel = CalculatorViewModel()
 
-    // All buff damage - 1 sections (0)
-//    var damage = [Measurable]()
-
-    // TODO: ViewModel
-    // All skill - 6 sections (1 - 6)
-
+    @IBOutlet weak var scrollViewPageControl: UIPageControl!
 
     lazy var basicStatusView = BasicStatusView()
-    lazy var basicStatusView2 = BasicStatusView()
+    lazy var equipmentView_1 = EquipmentView()
+    lazy var equipmentView_2 = EquipmentView()
+    lazy var equipmentView_3 = EquipmentView()
 
-    @IBOutlet weak var topPagingScrollView: UIScrollView!
+    @IBOutlet weak var topPagingScrollView: UIScrollView! {
+        didSet {
+            topPagingScrollView.delegate = self
+        }
+    }
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.contentInset.top             = 160.0
-            tableView.scrollIndicatorInsets.top    = 160.0
+            tableView.contentInset.top             = topPagingScrollViewHeight
+            tableView.scrollIndicatorInsets.top    = topPagingScrollViewHeight
             tableView.backgroundColor              = .black
             tableView.indicatorStyle               = .white
             tableView.insetsContentViewsToSafeArea = true
@@ -66,6 +69,8 @@ extension CalculatorViewController {
 
         setupTopPagingScrollView()
         setupViewModel()
+
+        viewModel.presetTeam.value = PresetTeamModel.shared.currentTeam
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -95,7 +100,7 @@ extension CalculatorViewController {
 extension CalculatorViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelect(tableView, at: indexPath)
+//        viewModel.didSelect(tableView, at: indexPath)
 //        let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalculatorDetailViewController") as! CalculatorDetailViewController
 //        detailViewController.viewModel = viewModel.createCalculatorDetailViewModel()
 //        navigationController?.pushViewController(detailViewController, animated: true)
@@ -131,14 +136,18 @@ extension CalculatorViewController: UITableViewDataSource {
 extension CalculatorViewController {
 
     private func setupTopPagingScrollView() {
-        topPagingScrollView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 160.0)
-        topPagingScrollView.contentSize.width = view.bounds.width * 2
-        topPagingScrollView.contentSize.height = 160.0
+        topPagingScrollView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: topPagingScrollViewHeight)
+        topPagingScrollView.contentSize.width = view.bounds.width * 5
+        topPagingScrollView.contentSize.height = topPagingScrollViewHeight
         topPagingScrollView.isPagingEnabled = true
 
+        topPagingScrollView.setContentOffset(CGPoint(x: topPagingScrollView.bounds.width, y: 0), animated: false)
+
         // margin left & right
-        let effectViewFrame = CGRect(x: -view.bounds.width, y: 0,
-                                     width: topPagingScrollView.contentSize.width * 2, height: topPagingScrollView.bounds.height)
+        let effectViewFrame = CGRect(x: -view.bounds.width,
+                                     y: 0,
+                                     width: topPagingScrollView.contentSize.width + topPagingScrollView.bounds.width * 2,
+                                     height: topPagingScrollView.bounds.height)
 
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -153,21 +162,43 @@ extension CalculatorViewController {
         topPagingScrollView.addSubview(blurEffectView)
         blurEffectView.contentView.addSubview(vibrancyEffectView)
 
-        basicStatusView.frame = topPagingScrollView.bounds
-        basicStatusView2.frame = topPagingScrollView.bounds
-        basicStatusView.frame.origin.x = topPagingScrollView.bounds.width
-        basicStatusView2.frame.origin.x = topPagingScrollView.bounds.width * 2
+        let contentFrame = CGRect(x: 0, y: 0, width: view.bounds.width, height: scrollViewContentHeight)
+        basicStatusView.frame = contentFrame
+        equipmentView_1.frame = contentFrame
+        equipmentView_2.frame = contentFrame
+        equipmentView_3.frame = contentFrame
+        basicStatusView.frame.origin.x = topPagingScrollView.bounds.width * 2
+        equipmentView_1.frame.origin.x = topPagingScrollView.bounds.width * 3
+        equipmentView_2.frame.origin.x = topPagingScrollView.bounds.width * 4
+        equipmentView_3.frame.origin.x = topPagingScrollView.bounds.width * 5
 
         vibrancyEffectView.contentView.addSubview(basicStatusView)
-        vibrancyEffectView.contentView.addSubview(basicStatusView2)
+        vibrancyEffectView.contentView.addSubview(equipmentView_1)
+        vibrancyEffectView.contentView.addSubview(equipmentView_2)
+        vibrancyEffectView.contentView.addSubview(equipmentView_3)
+
+        scrollViewPageControl.numberOfPages = 5
+        scrollViewPageControl.currentPage = 1
     }
 
     private func setupViewModel() {
         viewModel.basicStatusViewModel.bind(to: basicStatusView)
+        viewModel.equipmentViewModel_1.bind(to: equipmentView_1)
         viewModel.basicStatusViewModel.basicStatus.asObservable()
             .subscribe(onNext: { [weak self] _ in
                 self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
     }
+}
+
+// MARK: - UIScrollViewDelegate
+extension CalculatorViewController: UIScrollViewDelegate {
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.width
+        let page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1
+        scrollViewPageControl.currentPage = Int(page)
+    }
+
 }

@@ -10,7 +10,7 @@ import Foundation
 import Localize_Swift
 import Schicksal
 
-private let schicksalBundle = Bundle(identifier: Schicksal.frameworkBundleIdentifier)
+let schicksalBundle = Bundle(identifier: Schicksal.frameworkBundleIdentifier)
 
 private struct ExplainableContainer: Explainable {
     var caption: String

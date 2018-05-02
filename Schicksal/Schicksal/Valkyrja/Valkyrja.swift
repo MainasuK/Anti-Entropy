@@ -8,22 +8,6 @@
 
 import Foundation
 
-@objc public enum ValkyrjaCode: Int {
-    case whiteComet
-    case valkyrieChariot
-    case crimsonImpulse
-}
-
-public struct ValkyrjaModel {
-    public static func clone(from code: ValkyrjaCode, with basicStatus: BasicStatus = BasicStatus(), rank: ValkyrjaRank = .SSS) -> Valkyrja {
-        switch code {
-        case .whiteComet:       return V_WhiteComet(basicStatus: basicStatus, rank: rank)
-        case .valkyrieChariot:  return V_ValkyrieChariot(basicStatus: basicStatus, rank: rank)
-        case .crimsonImpulse:   return V_CrimsonImpulse(basicStatus: basicStatus, rank: rank)
-        }
-    }
-}
-
 public protocol Valkyrja: Measurable {
     var code: ValkyrjaCode { get }
 
@@ -43,13 +27,13 @@ public protocol Valkyrja: Measurable {
 //    var recommendedStigmataSuitForAdvancedPlayers: StigmataSuit { get }
 
     var initialRank: ValkyrjaRank { get }
-//    var weaponType: WeaponType { get }
+    var weaponType: [WeaponType] { get }
 //    var initalWeapon: Weapon { get }
     var skills: Skills { get }
 
     var basicStatus: BasicStatus { get set }
     var rank: ValkyrjaRank { get set }
-//    var weapon: Weapon { get }
+    var weapon: Weapon { get set }
 //    var stigmataSuit: StigmataSuit { get }
 }
 

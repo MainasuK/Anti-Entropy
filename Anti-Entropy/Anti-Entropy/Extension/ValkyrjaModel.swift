@@ -18,9 +18,16 @@ extension ValkyrjaModel {
                                       DEF: intelligence.DEF,
                                       CRT: intelligence.CRT,
                                       LV: intelligence.LV)
-        let valkyrja = ValkyrjaModel.clone(from: intelligence.valkyrjaCode, with: basicStatus, rank: intelligence.rank)
 
-        // TODO: weaon & stigmata
+        let weapon = WeaponModel.clone(from: intelligence.weaponCode,
+                                       of: intelligence.weaponRarity)
+
+        let valkyrja = ValkyrjaModel.clone(from: intelligence.valkyrjaCode,
+                                           with: basicStatus,
+                                           rank: intelligence.rank,
+                                           weapon: weapon)
+
+        // TODO: stigmata
 
         return valkyrja
     }

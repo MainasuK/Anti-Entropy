@@ -40,6 +40,11 @@
 		DBB11059208BC6460059A017 /* PresetTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB11058208BC6460059A017 /* PresetTeam.swift */; };
 		DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */; };
 		DBB3FB8F2084B96800601085 /* StigmataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */; };
+		DBE32F4D20997B2F003E1437 /* DarkPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F4C20997B2F003E1437 /* DarkPickerView.swift */; };
+		DBE32F502099A0AE003E1437 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F522099A0AE003E1437 /* Localizable.strings */; };
+		DBE32F6E2099CC72003E1437 /* EquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F6D2099CC72003E1437 /* EquipmentView.swift */; };
+		DBE32F702099CC80003E1437 /* EquipmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F6F2099CC80003E1437 /* EquipmentView.xib */; };
+		DBE32F722099D499003E1437 /* EquipmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F712099D499003E1437 /* EquipmentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +115,13 @@
 		DBB11058208BC6460059A017 /* PresetTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeam.swift; sourceTree = "<group>"; };
 		DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewController.swift; sourceTree = "<group>"; };
 		DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewCell.swift; sourceTree = "<group>"; };
+		DBE32F4C20997B2F003E1437 /* DarkPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkPickerView.swift; sourceTree = "<group>"; };
+		DBE32F512099A0AE003E1437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBE32F532099A0B0003E1437 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DBE32F542099A0B5003E1437 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBE32F6D2099CC72003E1437 /* EquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentView.swift; sourceTree = "<group>"; };
+		DBE32F6F2099CC80003E1437 /* EquipmentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EquipmentView.xib; sourceTree = "<group>"; };
+		DBE32F712099D499003E1437 /* EquipmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentViewModel.swift; sourceTree = "<group>"; };
 		E8BEC70720E4680ED48ED56C /* Pods-Anti-EntropyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anti-EntropyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anti-EntropyTests/Pods-Anti-EntropyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				DB1C72AC208886F4006696C7 /* BasicStatusViewModel.swift */,
+				DBE32F712099D499003E1437 /* EquipmentViewModel.swift */,
 				DB188D652089FB480052E77D /* CalculatorViewModel.swift */,
 				DB188D672089FB990052E77D /* CalculatorDetailViewModel.swift */,
 			);
@@ -178,8 +191,11 @@
 		DB188D642089FB180052E77D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DBE32F4C20997B2F003E1437 /* DarkPickerView.swift */,
 				DB7559152086156100BA2DB7 /* BasicStatusView.xib */,
 				DB7559172086159400BA2DB7 /* BasicStatusView.swift */,
+				DBE32F6F2099CC80003E1437 /* EquipmentView.xib */,
+				DBE32F6D2099CC72003E1437 /* EquipmentView.swift */,
 				DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */,
 				DB06B9F92089D13800776553 /* CalculatorTableViewCell.xib */,
 				DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */,
@@ -211,6 +227,7 @@
 		DB7158A920846A1400FC164B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBE32F522099A0AE003E1437 /* Localizable.strings */,
 				DB92E4F22084693D00ED4A3E /* AppDelegate.swift */,
 				DB92E4F92084693E00ED4A3E /* Assets.xcassets */,
 				DB92E4FB2084693E00ED4A3E /* LaunchScreen.storyboard */,
@@ -344,6 +361,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = DB92E4E62084693D00ED4A3E;
 			productRefGroup = DB92E4F02084693D00ED4A3E /* Products */;
@@ -364,7 +383,9 @@
 				DB92E4FD2084693E00ED4A3E /* LaunchScreen.storyboard in Resources */,
 				DB06B9FB2089D13800776553 /* CalculatorTableViewCell.xib in Resources */,
 				DB7559162086156100BA2DB7 /* BasicStatusView.xib in Resources */,
+				DBE32F502099A0AE003E1437 /* Localizable.strings in Resources */,
 				DB92E4FA2084693E00ED4A3E /* Assets.xcassets in Resources */,
+				DBE32F702099CC80003E1437 /* EquipmentView.xib in Resources */,
 				DB92E4F82084693D00ED4A3E /* Main.storyboard in Resources */,
 				DB68DE422098B86A00AF0B56 /* BookmarkTableViewCell.xib in Resources */,
 			);
@@ -457,12 +478,15 @@
 			files = (
 				DB1AA04A20909B10001D4A88 /* ConsolePrint.swift in Sources */,
 				DB4612CB20944DE0003E7CAD /* AppSettings.swift in Sources */,
+				DBE32F722099D499003E1437 /* EquipmentViewModel.swift in Sources */,
+				DBE32F4D20997B2F003E1437 /* DarkPickerView.swift in Sources */,
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
 				DB68DE3E2098B36500AF0B56 /* BookmarkTableViewController.swift in Sources */,
 				DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
 				DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */,
 				DB06B9F72089CF3300776553 /* CalculatorDetailViewController.swift in Sources */,
+				DBE32F6E2099CC72003E1437 /* EquipmentView.swift in Sources */,
 				DBB11059208BC6460059A017 /* PresetTeam.swift in Sources */,
 				DB7559182086159400BA2DB7 /* BasicStatusView.swift in Sources */,
 				DB188D662089FB480052E77D /* CalculatorViewModel.swift in Sources */,
@@ -517,6 +541,16 @@
 				DB1AA046208F17DD001D4A88 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DBE32F522099A0AE003E1437 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE32F512099A0AE003E1437 /* en */,
+				DBE32F532099A0B0003E1437 /* zh-Hans */,
+				DBE32F542099A0B5003E1437 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

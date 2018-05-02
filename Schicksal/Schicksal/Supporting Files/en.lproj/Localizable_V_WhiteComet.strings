@@ -21,6 +21,9 @@
 "SK_WhiteComet_CometFall_BringDown_Caption" = "Bring Down";
 "SK_WhiteComet_CometFall_BringDown_Content" = "Deals AOE physical damage equal to 275% of ATK.";
 
+"SK_WhiteComet_CometFall_Caption" = "Comet Fall";
+"SK_WhiteComet_CometFall_Content" = "Attacks enemy with a double-kick, punting it into the air and then bringing to it down.";
+
 // MARK: Special Attack - Comet Explosion
 "SK_WhiteComet_CometExplosion_Caption" = "Coment Explosion";
 "SK_WhiteComet_CometExplosion_Content" = "Unleashes a crushing attack upon entering the battle, dealing (275% of ATK) physical damage. stuns enemy for 6.0 sec upon a successful interrupt.";

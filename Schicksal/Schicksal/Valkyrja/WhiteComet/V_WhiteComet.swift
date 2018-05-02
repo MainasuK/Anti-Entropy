@@ -20,6 +20,7 @@ public struct V_WhiteComet: Valkyrja {
     public let localizeTableName: String? = "Localizable_V_WhiteComet"
 
     public let initialRank: ValkyrjaRank = .none
+    public let weaponType: [WeaponType] = [.pistol]
 
     public let skills: Skills = [SKS_WhiteComet_SpecialAttack(),
                                  SKS_WhiteComet_Ultimate(),
@@ -30,10 +31,14 @@ public struct V_WhiteComet: Valkyrja {
 
     public var basicStatus: BasicStatus
     public var rank: ValkyrjaRank
+    public var weapon: Weapon
 
-    public init(basicStatus: BasicStatus = BasicStatus(), rank: ValkyrjaRank = .SSS) {
+    public init(basicStatus: BasicStatus = BasicStatus(),
+                rank: ValkyrjaRank = .SSS,
+                weapon: Weapon = USP45()) {
         self.basicStatus = basicStatus
         self.rank = rank
+        self.weapon = weapon
     }
 
 }
