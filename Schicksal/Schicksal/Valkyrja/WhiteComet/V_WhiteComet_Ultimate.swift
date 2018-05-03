@@ -52,6 +52,7 @@ struct SK_WhiteComet_ValkyrieImpact: SubSkill {
 }
 
 extension SK_WhiteComet_ValkyrieImpact {
+    var code: MeasurableCode { return .SK_WhiteComet_ValkyrieImpact }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_WhiteComet_ValkyrieImpact else {
             return [:]

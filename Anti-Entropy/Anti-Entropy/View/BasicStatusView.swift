@@ -9,7 +9,13 @@
 import UIKit
 import RxCocoa
 
+protocol BasicStatusViewDelegate: class {
+    func presentPresetTeamViewController()
+}
+
 class BasicStatusView: UIView {
+
+    weak var delegate: BasicStatusViewDelegate?
 
     private let lvPickerView = DarkPickerView()
     private let valkyrjiaPickerView = DarkPickerView()
@@ -24,6 +30,14 @@ class BasicStatusView: UIView {
 
         return toolbar
     }()
+
+    @IBAction func teamButtonPressed(_ sender: UIButton) {
+        delegate?.presentPresetTeamViewController()
+    }
+
+    @IBAction func valkyrjiaTextFieldLongPressed(_ sender: UILongPressGestureRecognizer) {
+        delegate?.presentPresetTeamViewController()
+    }
 
     @IBOutlet var textFields: [UITextField]! {
         didSet {

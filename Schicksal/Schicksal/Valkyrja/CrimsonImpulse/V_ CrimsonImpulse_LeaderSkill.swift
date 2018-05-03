@@ -17,6 +17,7 @@ struct SK_CrimsonImpulse_SpiritOfLoyalty_SpiritOfLoyalty: MainSubskill {
 
 extension SK_CrimsonImpulse_SpiritOfLoyalty_SpiritOfLoyalty {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_CrimsonImpulse_SpiritOfLoyalty_SpiritOfLoyalty }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState.contains(.combo) else {
             return [:]
@@ -36,6 +37,7 @@ struct SK_CrimsonImpulse_SpiritOfLoyalty: MainSkill {
 
 extension SK_CrimsonImpulse_SpiritOfLoyalty {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_CrimsonImpulse_SpiritOfLoyalty }
 }
 
 struct SK_CrimsonImpulse_SpiritOfLoyalty2: SubSkill {
@@ -48,6 +50,7 @@ struct SK_CrimsonImpulse_SpiritOfLoyalty2: SubSkill {
 
 extension SK_CrimsonImpulse_SpiritOfLoyalty2 {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_CrimsonImpulse_SpiritOfLoyalty2 }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState.contains(.combo) else {
             return [:]

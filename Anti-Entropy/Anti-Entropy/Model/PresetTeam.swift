@@ -23,9 +23,9 @@ class PresetTeam: Object {
 
 extension PresetTeam {
     static var defaultTeam: PresetTeam {
-        let whiteComet      = defaultWhiteComet
-        let valkyrieChariot = defaultValkyrieChariot
-        let crimsonImpulse  = defaultCrimsonImpulse
+        let whiteComet      = ValkyrjaIntelligence.defaultWhiteComet
+        let valkyrieChariot = ValkyrjaIntelligence.defaultValkyrieChariot
+        let crimsonImpulse  = ValkyrjaIntelligence.defaultCrimsonImpulse
 
         let presetTeam: PresetTeam = {
             let team = PresetTeam()
@@ -38,7 +38,15 @@ extension PresetTeam {
     }
 }
 
-extension PresetTeam {
+extension ValkyrjaIntelligence {
+    static var defaults: [ValkyrjaIntelligence] {
+        return [defaultWhiteComet,
+                defaultValkyrieChariot,
+                defaultCrimsonImpulse]
+    }
+}
+
+extension ValkyrjaIntelligence {
     static var defaultWhiteComet: ValkyrjaIntelligence {
         let intelligence = ValkyrjaIntelligence()
         intelligence.valkyrjaCode = .whiteComet
@@ -49,14 +57,14 @@ extension PresetTeam {
     static var defaultValkyrieChariot: ValkyrjaIntelligence {
         let intelligence = ValkyrjaIntelligence()
         intelligence.valkyrjaCode = .valkyrieChariot
-        intelligence.weaponCode = .SeishuuMuramasa
+        intelligence.weaponCode = .SU_22Howitzer
         return intelligence
     }
 
     static var defaultCrimsonImpulse: ValkyrjaIntelligence {
         let intelligence = ValkyrjaIntelligence()
         intelligence.valkyrjaCode = .crimsonImpulse
-        intelligence.weaponCode = .SU_22Howitzer
+        intelligence.weaponCode = .SeishuuMuramasa
         return intelligence
     }
 

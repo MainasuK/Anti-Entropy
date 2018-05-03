@@ -47,6 +47,7 @@ struct SK_CrimsonImpulse_SoulPower: SubSkill {
 }
 
 extension SK_CrimsonImpulse_SoulPower {
+    var code: MeasurableCode { return .SK_CrimsonImpulse_SoulPower }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_CrimsonImpulse_Amaterasu_Amaterasu else {
             return [:]
@@ -75,6 +76,7 @@ struct SK_CrimsonImpulse_SakuraNoHaku: SubSkill {
 }
 
 extension SK_CrimsonImpulse_SakuraNoHaku {
+    var code: MeasurableCode { return .SK_CrimsonImpulse_SakuraNoHaku }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState.contains(.utilityState) else {
             return [:]

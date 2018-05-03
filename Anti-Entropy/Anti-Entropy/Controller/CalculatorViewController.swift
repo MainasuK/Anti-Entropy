@@ -22,7 +22,11 @@ class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var scrollViewPageControl: UIPageControl!
 
-    lazy var basicStatusView = BasicStatusView()
+    lazy var basicStatusView: BasicStatusView = {
+        let view = BasicStatusView()
+        view.delegate = self
+        return view
+    }()
     lazy var equipmentView_1 = EquipmentView()
     lazy var equipmentView_2 = EquipmentView()
     lazy var equipmentView_3 = EquipmentView()
@@ -201,4 +205,12 @@ extension CalculatorViewController: UIScrollViewDelegate {
         scrollViewPageControl.currentPage = Int(page)
     }
 
+}
+
+// MARK: - BasicStatusViewDelegate
+extension CalculatorViewController: BasicStatusViewDelegate {
+    func presentPresetTeamViewController() {
+        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PresetTeamNavigationViewController")
+        present(navigationController, animated: true, completion: nil)
+    }
 }

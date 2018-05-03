@@ -24,6 +24,7 @@ struct SK_ValkyrieChariot_RiotArmor_RiotArmor: MainSubskill {
 
 extension SK_ValkyrieChariot_RiotArmor_RiotArmor {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_ValkyrieChariot_RiotArmor_RiotArmor }
 }
 
 // MARK: - Riot Armor
@@ -37,6 +38,7 @@ struct SK_ValkyrieChariot_RiotArmor: MainSkill {
 
 extension SK_ValkyrieChariot_RiotArmor {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_ValkyrieChariot_RiotArmor }
 }
 
 // MARK: - Riot Armor (2)
@@ -50,4 +52,5 @@ struct SK_ValkyrieChariot_RiotArmor2: SubSkill {
 
 extension SK_ValkyrieChariot_RiotArmor2 {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_ValkyrieChariot_RiotArmor2 }
 }

@@ -46,6 +46,7 @@ struct SK_ValkyrieChariot_AirSmash: SubSkill {
 }
 
 extension SK_ValkyrieChariot_AirSmash {
+    var code: MeasurableCode { return .SK_ValkyrieChariot_AirSmash }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_ValkyrieChariot_AirSmash,
         determination.abilityState.contains(.airborne) else {
@@ -67,6 +68,7 @@ struct SK_ValkyrieChariot_HighGravity: SubSkill {
 
 extension SK_ValkyrieChariot_HighGravity {
     var meleePhysicalDamageTransform: Percentage { return 1.0 }
+    var code: MeasurableCode { return .SK_ValkyrieChariot_HighGravity }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_ValkyrieChariot_HighGravity else { return [:] }
         return [.meleePhysicalDamagePlus: 4158.0]

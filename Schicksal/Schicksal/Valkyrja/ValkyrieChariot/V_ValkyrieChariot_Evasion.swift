@@ -53,10 +53,11 @@ struct SK_ValkyrieChariot_QuantumLock: SubSkill {
 }
 
 extension SK_ValkyrieChariot_QuantumLock {
+    var code: MeasurableCode { return .SK_ValkyrieChariot_QuantumLock }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState == .witchTimeSlowed,
         let weapon = determination.attackable as? Weapon,
-        weapon.type.isCannon || weapon.type.isMissiles else {
+        type(of: weapon).type.isCannon || type(of: weapon).type.isMissiles else {
             return [:]
         }
 

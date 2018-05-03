@@ -45,6 +45,7 @@ struct SK_CrimsonImpulse_InstantDash: SubSkill {
 
 extension SK_CrimsonImpulse_InstantDash {
     var meleePhysicalDamageTransform: Percentage { return 1.0 }
+    var code: MeasurableCode { return .SK_CrimsonImpulse_InstantDash }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState.contains(.witchTimeSlowed),
         determination.attackable is SK_CrimsonImpulse_InstantDash else {

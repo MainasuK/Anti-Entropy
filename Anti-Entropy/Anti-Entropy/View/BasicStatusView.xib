@@ -38,11 +38,23 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-26-R6k">
                             <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dau-Ww-nTh">
+                                    <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
+                                    <color key="tintColor" red="0.54901963470000004" green="0.45490196350000001" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" image="team"/>
+                                    <connections>
+                                        <action selector="teamButtonPressed:" destination="-1" eventType="touchUpInside" id="kbZ-YT-JEl"/>
+                                    </connections>
+                                </button>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6A-1a-MeS">
-                                    <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                    <rect key="frame" x="37" y="0.0" width="322" height="30"/>
+                                    <gestureRecognizers/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="W8l-LE-d0C" appends="YES" id="mQH-YZ-vtG"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>
@@ -166,6 +178,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="sXc-1a-f5j" firstAttribute="width" secondItem="aNx-bb-stI" secondAttribute="width" id="4BG-WX-Mup"/>
+                        <constraint firstItem="dau-Ww-nTh" firstAttribute="width" secondItem="aNx-bb-stI" secondAttribute="width" id="5Mf-O2-LLl"/>
                         <constraint firstItem="HSW-1Q-pPF" firstAttribute="width" secondItem="7hE-nO-Ye8" secondAttribute="width" id="Er0-MW-LrX"/>
                         <constraint firstItem="8zA-b1-Abp" firstAttribute="width" secondItem="sXc-1a-f5j" secondAttribute="width" id="JDa-to-Jkc"/>
                         <constraint firstItem="7hE-nO-Ye8" firstAttribute="width" secondItem="8zA-b1-Abp" secondAttribute="width" id="TOe-RG-yg3"/>
@@ -183,5 +196,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="25.5" y="-173"/>
         </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="W8l-LE-d0C">
+            <connections>
+                <action selector="valkyrjiaTextFieldLongPressed:" destination="-1" id="SIl-Ik-xdj"/>
+            </connections>
+        </pongPressGestureRecognizer>
     </objects>
+    <resources>
+        <image name="team" width="30" height="30"/>
+    </resources>
 </document>

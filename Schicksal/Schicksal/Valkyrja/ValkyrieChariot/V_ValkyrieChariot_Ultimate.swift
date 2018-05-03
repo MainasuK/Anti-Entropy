@@ -34,6 +34,7 @@ struct SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse: MainSubskill {
 
 extension SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_ValkyrieChariot_VoidExplosion_GravitationalCollapse }
 }
 
 // MARK: - Void Explosion
@@ -75,6 +76,7 @@ struct SK_ValkyrieChariot_GravityTreaing: SubSkill {
 
 extension SK_ValkyrieChariot_GravityTreaing {
     var scope: Scope { return .others }
+    var code: MeasurableCode { return .SK_ValkyrieChariot_GravityTreaing }
     func determine(_ determination: Determination) -> Addition {
         return [.rangedPhysicalDamageUP: 0.30]
     }

@@ -18,6 +18,11 @@ public typealias LV  = Int
 public typealias DMG = Double
 
 public protocol Explainable {
+    static var caption: String { get }
+    static var content: String { get }
+    static var localizeTableName: String? { get }
+    static var bundleIdentifier: String { get }
+
     var caption: String { get }
     var content: String { get }
     var localizeTableName: String? { get }
@@ -25,10 +30,15 @@ public protocol Explainable {
 }
 
 extension Explainable {
-    public var caption: String { return "" }
-    public var content: String { return "" }
-    public var localizeTableName: String? { return nil }
-    public var bundleIdentifier: String { return frameworkBundleIdentifier }
+    public static var caption: String { return "" }
+    public static var content: String { return "" }
+    public static var localizeTableName: String? { return nil }
+    public static var bundleIdentifier: String { return frameworkBundleIdentifier }
+
+    public var caption: String { return Self.caption }
+    public var content: String { return Self.content }
+    public var localizeTableName: String? { return Self.localizeTableName }
+    public var bundleIdentifier: String { return Self.bundleIdentifier }
 }
 
 public struct AbilityState: OptionSet {

@@ -9,10 +9,12 @@
 import Foundation
 
 public struct SeishuuMuramasa: Weapon {
-    public let code: WeaponCode = .SeishuuMuramasa
+    public static let code: WeaponCode = .SeishuuMuramasa
 
-    public let type: WeaponType = .katana
-    public let rarity: [Rarity] = [.S1, .S2]
+    public static let caption: String = "SeishuuMuramasa"
+
+    public static let type: WeaponType = .katana
+    public static let rarity: [Rarity] = [.S1, .S2]
 
     public var currentRarity: Rarity
 

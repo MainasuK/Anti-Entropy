@@ -109,6 +109,7 @@ struct SK_CrimsonImpulse_NightSakura: SubSkill {
 }
 
 extension SK_CrimsonImpulse_NightSakura {
+    var code: MeasurableCode { return .SK_CrimsonImpulse_NightSakura }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackTag == .branch else {
             return [:]

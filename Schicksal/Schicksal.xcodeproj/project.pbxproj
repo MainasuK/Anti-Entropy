@@ -65,6 +65,7 @@
 		DBE32F642099BB2D003E1437 /* Rarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F632099BB2D003E1437 /* Rarity.swift */; };
 		DBE32F682099C522003E1437 /* SeishuuMuramasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F672099C522003E1437 /* SeishuuMuramasa.swift */; };
 		DBE32F6B2099C605003E1437 /* SU-22Howitzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F6A2099C605003E1437 /* SU-22Howitzer.swift */; };
+		DBE32F84209AE415003E1437 /* MeasurableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F83209AE415003E1437 /* MeasurableModel.swift */; };
 		DBE6FFC2208B97B200EC634C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE6FFC4208B97B200EC634C /* Localizable.strings */; };
 		DBE6FFCC208BA57F00EC634C /* Localizable_V_WhiteComet.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE6FFCE208BA57F00EC634C /* Localizable_V_WhiteComet.strings */; };
 		DBE6FFD2208BA72800EC634C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6FFD1208BA72800EC634C /* Settings.swift */; };
@@ -146,6 +147,7 @@
 		DBE32F632099BB2D003E1437 /* Rarity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rarity.swift; sourceTree = "<group>"; };
 		DBE32F672099C522003E1437 /* SeishuuMuramasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeishuuMuramasa.swift; sourceTree = "<group>"; };
 		DBE32F6A2099C605003E1437 /* SU-22Howitzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SU-22Howitzer.swift"; sourceTree = "<group>"; };
+		DBE32F83209AE415003E1437 /* MeasurableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurableModel.swift; sourceTree = "<group>"; };
 		DBE6FFC3208B97B200EC634C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DBE6FFC5208B97C200EC634C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DBE6FFC6208B97C800EC634C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -223,11 +225,12 @@
 		DB715891208469B300FC164B /* Schicksal */ = {
 			isa = PBXGroup;
 			children = (
-				DBE32F552099B5AA003E1437 /* WeaponBase.swift */,
 				DBB3FB802084AD0D00601085 /* Album.swift */,
+				DBE32F552099B5AA003E1437 /* WeaponBase.swift */,
 				DBE32F632099BB2D003E1437 /* Rarity.swift */,
 				DB7158AE20846B5900FC164B /* Property.swift */,
 				DBB3FB792084842E00601085 /* Measurable.swift */,
+				DBE32F83209AE415003E1437 /* MeasurableModel.swift */,
 				DBB1105A208CC1A30059A017 /* Attackable.swift */,
 				DBCE87B020859EB200704B3B /* Enemy.swift */,
 				DBE32F592099B7B8003E1437 /* Weapon */,
@@ -480,6 +483,7 @@
 				DBE32F612099BAE9003E1437 /* USP45.swift in Sources */,
 				DBB3FB7F2084A21A00601085 /* S_JixuanyuanAqua_T.swift in Sources */,
 				DB8DD6022092E8EA0069BD89 /* V_ValkyrieChariot_Evasion.swift in Sources */,
+				DBE32F84209AE415003E1437 /* MeasurableModel.swift in Sources */,
 				DB8DD60820932A120069BD89 /* V_CrimsonImpulse.swift in Sources */,
 				DBE32F5D2099B821003E1437 /* ValkyrjaModel.swift in Sources */,
 				DB188D5B2089F2010052E77D /* Valkyrjia+MainSubskill.swift in Sources */,

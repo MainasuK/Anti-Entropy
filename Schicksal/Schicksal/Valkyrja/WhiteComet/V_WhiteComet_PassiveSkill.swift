@@ -43,6 +43,7 @@ struct SK_WhiteComet_CriticalMastery: SubSkill {
 }
 
 extension SK_WhiteComet_CriticalMastery {
+    var code: MeasurableCode { return .SK_WhiteComet_CriticalMastery }
     func determine(_ determination: Determination) -> Addition {
         return [.criticalDamageUP: 0.40]
     }

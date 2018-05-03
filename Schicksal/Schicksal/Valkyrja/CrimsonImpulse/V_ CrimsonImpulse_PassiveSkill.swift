@@ -34,6 +34,7 @@ struct SK_CrimsonImpulse_BladePuncture: SubSkill {
 }
 
 extension SK_CrimsonImpulse_BladePuncture {
+    var code: MeasurableCode { return .SK_CrimsonImpulse_BladePuncture }
     func determine(_ determination: Determination) -> Addition {
         guard !determination.abilityState.contains(.shielded) else {
             return [:]

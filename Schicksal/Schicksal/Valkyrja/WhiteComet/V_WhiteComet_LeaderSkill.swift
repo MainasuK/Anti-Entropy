@@ -24,6 +24,7 @@ struct SK_WhiteComet_MeteorBless_Guider: MainSubskill {
 
 extension SK_WhiteComet_MeteorBless_Guider {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_WhiteComet_MeteorBless_Guider }
 }
 
 // MARK: - Meteor Bless
@@ -37,6 +38,7 @@ struct SK_WhiteComet_MeteorBless: MainSkill {
 
 extension SK_WhiteComet_MeteorBless {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_WhiteComet_MeteorBless }
 }
 
 // MARK: - Guide
@@ -50,4 +52,5 @@ struct SK_WhiteComet_Guider: SubSkill {
 
 extension SK_WhiteComet_Guider {
     var scope: Scope { return .all }
+    var code: MeasurableCode { return .SK_WhiteComet_Guider }
 }

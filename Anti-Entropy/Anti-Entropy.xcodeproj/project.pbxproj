@@ -40,11 +40,25 @@
 		DBB11059208BC6460059A017 /* PresetTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB11058208BC6460059A017 /* PresetTeam.swift */; };
 		DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */; };
 		DBB3FB8F2084B96800601085 /* StigmataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */; };
+		DBD9F855209AF8DB00F6BE40 /* NewMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9F853209AF8DB00F6BE40 /* NewMemberTableViewCell.swift */; };
+		DBD9F856209AF8DB00F6BE40 /* NewMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD9F854209AF8DB00F6BE40 /* NewMemberTableViewCell.xib */; };
+		DBD9F858209AFBE800F6BE40 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9F857209AFBE800F6BE40 /* UIToolbar.swift */; };
+		DBD9F85A209AFFE900F6BE40 /* NewMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9F859209AFFE900F6BE40 /* NewMemberViewModel.swift */; };
+		DBD9F86C209B32CB00F6BE40 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9F86B209B32CB00F6BE40 /* Weapon.swift */; };
 		DBE32F4D20997B2F003E1437 /* DarkPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F4C20997B2F003E1437 /* DarkPickerView.swift */; };
 		DBE32F502099A0AE003E1437 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F522099A0AE003E1437 /* Localizable.strings */; };
 		DBE32F6E2099CC72003E1437 /* EquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F6D2099CC72003E1437 /* EquipmentView.swift */; };
 		DBE32F702099CC80003E1437 /* EquipmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F6F2099CC80003E1437 /* EquipmentView.xib */; };
 		DBE32F722099D499003E1437 /* EquipmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F712099D499003E1437 /* EquipmentViewModel.swift */; };
+		DBE32F74209AC050003E1437 /* PresetTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F73209AC050003E1437 /* PresetTeamTableViewController.swift */; };
+		DBE32F77209AD089003E1437 /* PresetTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F75209AD089003E1437 /* PresetTeamTableViewCell.swift */; };
+		DBE32F78209AD089003E1437 /* PresetTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F76209AD089003E1437 /* PresetTeamTableViewCell.xib */; };
+		DBE32F7A209AD4FE003E1437 /* PresetTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F79209AD4FE003E1437 /* PresetTeamViewModel.swift */; };
+		DBE32F7D209AD793003E1437 /* PresetTeamAddMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F7B209AD793003E1437 /* PresetTeamAddMemberTableViewCell.swift */; };
+		DBE32F7E209AD793003E1437 /* PresetTeamAddMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F7C209AD793003E1437 /* PresetTeamAddMemberTableViewCell.xib */; };
+		DBE32F81209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F7F209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.swift */; };
+		DBE32F82209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE32F80209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.xib */; };
+		DBE32F86209AEB5B003E1437 /* NewMemberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE32F85209AEB5B003E1437 /* NewMemberTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +129,11 @@
 		DBB11058208BC6460059A017 /* PresetTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeam.swift; sourceTree = "<group>"; };
 		DBB3FB8A2084B03300601085 /* StigmataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewController.swift; sourceTree = "<group>"; };
 		DBB3FB8E2084B96800601085 /* StigmataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StigmataTableViewCell.swift; sourceTree = "<group>"; };
+		DBD9F853209AF8DB00F6BE40 /* NewMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemberTableViewCell.swift; sourceTree = "<group>"; };
+		DBD9F854209AF8DB00F6BE40 /* NewMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMemberTableViewCell.xib; sourceTree = "<group>"; };
+		DBD9F857209AFBE800F6BE40 /* UIToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
+		DBD9F859209AFFE900F6BE40 /* NewMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemberViewModel.swift; sourceTree = "<group>"; };
+		DBD9F86B209B32CB00F6BE40 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		DBE32F4C20997B2F003E1437 /* DarkPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkPickerView.swift; sourceTree = "<group>"; };
 		DBE32F512099A0AE003E1437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DBE32F532099A0B0003E1437 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -122,6 +141,15 @@
 		DBE32F6D2099CC72003E1437 /* EquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentView.swift; sourceTree = "<group>"; };
 		DBE32F6F2099CC80003E1437 /* EquipmentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EquipmentView.xib; sourceTree = "<group>"; };
 		DBE32F712099D499003E1437 /* EquipmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentViewModel.swift; sourceTree = "<group>"; };
+		DBE32F73209AC050003E1437 /* PresetTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeamTableViewController.swift; sourceTree = "<group>"; };
+		DBE32F75209AD089003E1437 /* PresetTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeamTableViewCell.swift; sourceTree = "<group>"; };
+		DBE32F76209AD089003E1437 /* PresetTeamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresetTeamTableViewCell.xib; sourceTree = "<group>"; };
+		DBE32F79209AD4FE003E1437 /* PresetTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeamViewModel.swift; sourceTree = "<group>"; };
+		DBE32F7B209AD793003E1437 /* PresetTeamAddMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeamAddMemberTableViewCell.swift; sourceTree = "<group>"; };
+		DBE32F7C209AD793003E1437 /* PresetTeamAddMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresetTeamAddMemberTableViewCell.xib; sourceTree = "<group>"; };
+		DBE32F7F209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetTeamMeasurableTableViewCell.swift; sourceTree = "<group>"; };
+		DBE32F80209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresetTeamMeasurableTableViewCell.xib; sourceTree = "<group>"; };
+		DBE32F85209AEB5B003E1437 /* NewMemberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemberTableViewController.swift; sourceTree = "<group>"; };
 		E8BEC70720E4680ED48ED56C /* Pods-Anti-EntropyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anti-EntropyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anti-EntropyTests/Pods-Anti-EntropyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +201,8 @@
 				DB75590D208607A500BA2DB7 /* CalculatorViewController.swift */,
 				DB06B9F62089CF3300776553 /* CalculatorDetailViewController.swift */,
 				DB68DE3D2098B36500AF0B56 /* BookmarkTableViewController.swift */,
+				DBE32F73209AC050003E1437 /* PresetTeamTableViewController.swift */,
+				DBE32F85209AEB5B003E1437 /* NewMemberTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +214,8 @@
 				DBE32F712099D499003E1437 /* EquipmentViewModel.swift */,
 				DB188D652089FB480052E77D /* CalculatorViewModel.swift */,
 				DB188D672089FB990052E77D /* CalculatorDetailViewModel.swift */,
+				DBE32F79209AD4FE003E1437 /* PresetTeamViewModel.swift */,
+				DBD9F859209AFFE900F6BE40 /* NewMemberViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,6 +233,14 @@
 				DB5E6C712086E88600631BDD /* CalculatorTableViewCell.swift */,
 				DB68DE3F2098B86A00AF0B56 /* BookmarkTableViewCell.swift */,
 				DB68DE402098B86A00AF0B56 /* BookmarkTableViewCell.xib */,
+				DBE32F75209AD089003E1437 /* PresetTeamTableViewCell.swift */,
+				DBE32F76209AD089003E1437 /* PresetTeamTableViewCell.xib */,
+				DBE32F7B209AD793003E1437 /* PresetTeamAddMemberTableViewCell.swift */,
+				DBE32F7C209AD793003E1437 /* PresetTeamAddMemberTableViewCell.xib */,
+				DBE32F7F209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.swift */,
+				DBE32F80209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.xib */,
+				DBD9F853209AF8DB00F6BE40 /* NewMemberTableViewCell.swift */,
+				DBD9F854209AF8DB00F6BE40 /* NewMemberTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +284,8 @@
 				DB188D69208A17FD0052E77D /* String.swift */,
 				DB1AA03B208F0C9E001D4A88 /* Explainable.swift */,
 				DB1AA047209083D7001D4A88 /* ValkyrjaModel.swift */,
+				DBD9F857209AFBE800F6BE40 /* UIToolbar.swift */,
+				DBD9F86B209B32CB00F6BE40 /* Weapon.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -380,7 +422,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD9F856209AF8DB00F6BE40 /* NewMemberTableViewCell.xib in Resources */,
 				DB92E4FD2084693E00ED4A3E /* LaunchScreen.storyboard in Resources */,
+				DBE32F78209AD089003E1437 /* PresetTeamTableViewCell.xib in Resources */,
+				DBE32F82209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.xib in Resources */,
 				DB06B9FB2089D13800776553 /* CalculatorTableViewCell.xib in Resources */,
 				DB7559162086156100BA2DB7 /* BasicStatusView.xib in Resources */,
 				DBE32F502099A0AE003E1437 /* Localizable.strings in Resources */,
@@ -388,6 +433,7 @@
 				DBE32F702099CC80003E1437 /* EquipmentView.xib in Resources */,
 				DB92E4F82084693D00ED4A3E /* Main.storyboard in Resources */,
 				DB68DE422098B86A00AF0B56 /* BookmarkTableViewCell.xib in Resources */,
+				DBE32F7E209AD793003E1437 /* PresetTeamAddMemberTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,28 +522,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE32F86209AEB5B003E1437 /* NewMemberTableViewController.swift in Sources */,
 				DB1AA04A20909B10001D4A88 /* ConsolePrint.swift in Sources */,
+				DBE32F77209AD089003E1437 /* PresetTeamTableViewCell.swift in Sources */,
+				DBD9F85A209AFFE900F6BE40 /* NewMemberViewModel.swift in Sources */,
 				DB4612CB20944DE0003E7CAD /* AppSettings.swift in Sources */,
 				DBE32F722099D499003E1437 /* EquipmentViewModel.swift in Sources */,
 				DBE32F4D20997B2F003E1437 /* DarkPickerView.swift in Sources */,
 				DB92E4F32084693D00ED4A3E /* AppDelegate.swift in Sources */,
 				DB68DE3E2098B36500AF0B56 /* BookmarkTableViewController.swift in Sources */,
+				DBE32F7D209AD793003E1437 /* PresetTeamAddMemberTableViewCell.swift in Sources */,
+				DBD9F86C209B32CB00F6BE40 /* Weapon.swift in Sources */,
 				DB1AA03C208F0C9E001D4A88 /* Explainable.swift in Sources */,
+				DBE32F74209AC050003E1437 /* PresetTeamTableViewController.swift in Sources */,
 				DB188D6A208A17FD0052E77D /* String.swift in Sources */,
 				DB1AA048209083D7001D4A88 /* ValkyrjaModel.swift in Sources */,
+				DBE32F7A209AD4FE003E1437 /* PresetTeamViewModel.swift in Sources */,
 				DB06B9F72089CF3300776553 /* CalculatorDetailViewController.swift in Sources */,
 				DBE32F6E2099CC72003E1437 /* EquipmentView.swift in Sources */,
 				DBB11059208BC6460059A017 /* PresetTeam.swift in Sources */,
+				DBE32F81209ADF48003E1437 /* PresetTeamMeasurableTableViewCell.swift in Sources */,
 				DB7559182086159400BA2DB7 /* BasicStatusView.swift in Sources */,
 				DB188D662089FB480052E77D /* CalculatorViewModel.swift in Sources */,
 				DBB3FB8B2084B03300601085 /* StigmataTableViewController.swift in Sources */,
 				DB75590E208607A500BA2DB7 /* CalculatorViewController.swift in Sources */,
 				DB75591A20861B8900BA2DB7 /* UIView.swift in Sources */,
 				DB188D682089FB990052E77D /* CalculatorDetailViewModel.swift in Sources */,
+				DBD9F858209AFBE800F6BE40 /* UIToolbar.swift in Sources */,
 				DB68DE412098B86A00AF0B56 /* BookmarkTableViewCell.swift in Sources */,
 				DBB3FB8F2084B96800601085 /* StigmataTableViewCell.swift in Sources */,
 				DB1C72AF20888AE6006696C7 /* RxSwift.swift in Sources */,
 				DB4612C9209442AD003E7CAD /* PresetTeamModel.swift in Sources */,
+				DBD9F855209AF8DB00F6BE40 /* NewMemberTableViewCell.swift in Sources */,
 				DB5E6C722086E88600631BDD /* CalculatorTableViewCell.swift in Sources */,
 				DB4612CD20944EFC003E7CAD /* PresetTeamSetting.swift in Sources */,
 				DB1C72AD208886F4006696C7 /* BasicStatusViewModel.swift in Sources */,

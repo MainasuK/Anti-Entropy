@@ -34,6 +34,7 @@ struct SK_ValkyrieChariot_AgravityWall: SubSkill {
 }
 
 extension SK_ValkyrieChariot_AgravityWall {
+    var code: MeasurableCode { return .SK_ValkyrieChariot_AgravityWall }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState.contains(.stun) ||
         determination.abilityState.contains(.paralyze) else {
@@ -54,9 +55,10 @@ struct SK_ValkyrieChariot_ParticleCharge: SubSkill {
 }
 
 extension SK_ValkyrieChariot_ParticleCharge {
+    var code: MeasurableCode { return .SK_ValkyrieChariot_ParticleCharge }
     func determine(_ determination: Determination) -> Addition {
         guard let weapon = determination.attackable as? Weapon,
-        weapon.type.isCannon else {
+        type(of: weapon).type.isCannon else {
             return [:]
         }
 

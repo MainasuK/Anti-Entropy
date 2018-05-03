@@ -25,3 +25,9 @@ public struct WeaponModel {
         }
     }
 }
+
+extension WeaponModel {
+    public static var allWeaponType: [Weapon.Type] {
+        return [USP45.self, SeishuuMuramasa.self, SU_22Howitzer.self]
+    }
+}

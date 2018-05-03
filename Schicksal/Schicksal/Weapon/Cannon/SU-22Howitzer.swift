@@ -9,10 +9,11 @@
 import Foundation
 
 public struct SU_22Howitzer: Weapon {
-    public let code: WeaponCode = .SU_22Howitzer
+    public static let code: WeaponCode = .SU_22Howitzer
 
-    public let type: WeaponType = .cannon
-    public let rarity: [Rarity] = [.S1, .S2]
+    public static let caption: String = "SU_22Howitzer"
+    public static let type: WeaponType = .cannon
+    public static let rarity: [Rarity] = [.S1, .S2]
 
     public var currentRarity: Rarity
 

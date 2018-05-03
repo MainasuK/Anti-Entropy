@@ -8,11 +8,14 @@
 
 import Foundation
 
-public protocol Weapon: Measurable {
-    var code: WeaponCode { get }
+public protocol Weapon: Measurable, Explainable {
+    static var code: WeaponCode { get }
 
-    var type: WeaponType { get }
-    var rarity: [Rarity] { get }
+    static var caption: String { get }
+    static var content: String { get }
+
+    static var type: WeaponType { get }
+    static var rarity: [Rarity] { get }
 
     var currentRarity: Rarity { get set }
 
@@ -20,6 +23,12 @@ public protocol Weapon: Measurable {
     var CRT: CRT { get }
 
     var weaponSkills: [WeaponSkill] { get }
+}
+
+extension Weapon {
+    public static var content: String { return Self.caption }
+    public var caption: String { return Self.caption }
+    public var content: String { return Self.content }
 }
 
 public protocol WeaponSkill: WeaponSkillBase {

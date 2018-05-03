@@ -73,6 +73,7 @@ struct SK_WhiteComet_TopHelix: SubSkill {
 
 extension SK_WhiteComet_TopHelix {
     var meleePhysicalDamageTransform: Percentage { return 3.75 }
+    var code: MeasurableCode { return .SK_WhiteComet_TopHelix }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_WhiteComet_TopHelix else {
             return [:]
@@ -92,6 +93,7 @@ struct SK_WhiteComet_GravityFreak: SubSkill {
 }
 
 extension SK_WhiteComet_GravityFreak {
+    var code: MeasurableCode { return .SK_WhiteComet_GravityFreak }
     func determine(_ determination: Determination) -> Addition {
         guard determination.attackable is SK_WhiteComet_CometFall_BringDown ||
               determination.attackable is SK_WhiteComet_CometExplosion else {

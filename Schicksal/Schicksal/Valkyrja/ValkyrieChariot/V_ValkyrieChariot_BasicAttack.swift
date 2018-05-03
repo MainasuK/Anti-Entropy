@@ -61,6 +61,7 @@ struct SK_ValkyrieChariot_ChainReaction: SubSkill {
 }
 
 extension SK_ValkyrieChariot_ChainReaction {
+    var code: MeasurableCode { return .SK_ValkyrieChariot_ChainReaction }
     func determine(_ determination: Determination) -> Addition {
         guard determination.abilityState.contains(.burn),
         determination.attackTag == .charge ||

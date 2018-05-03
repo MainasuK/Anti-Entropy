@@ -101,6 +101,7 @@ struct SK_WhiteComet_MeteorShard: SubSkill {
 }
 
 extension SK_WhiteComet_MeteorShard {
+    var code: MeasurableCode { return .SK_WhiteComet_MeteorShard }
     func determine(_ determination: Determination) -> Addition {
         switch determination.attackTag {
         case .normal, .branch, .charge: return [.physicalDamagePlus: 143.0]

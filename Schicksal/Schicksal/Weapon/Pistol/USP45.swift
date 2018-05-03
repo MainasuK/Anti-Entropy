@@ -9,10 +9,12 @@
 import Foundation
 
 public struct USP45: Weapon {
-    public let code: WeaponCode = .USP45
+    public static let code: WeaponCode = .USP45
 
-    public let type: WeaponType = .pistol
-    public let rarity: [Rarity] = [.S1, .S2]
+    public static let caption: String = "USP45"
+
+    public static let type: WeaponType = .pistol
+    public static let rarity: [Rarity] = [.S1, .S2]
 
     public var currentRarity: Rarity
 

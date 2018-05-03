@@ -100,11 +100,13 @@ public enum Scope {
 }
 
 public protocol Measurable {
+    var code: MeasurableCode { get }
     var scope: Scope { get }
     func determine(_ determination: Determination) -> Addition
 }
 
 extension Measurable {
+    public var code: MeasurableCode { return .none }
     public var scope: Scope { return .oneself }
     public func determine(_ determination: Determination) -> Addition {
         return [:]
